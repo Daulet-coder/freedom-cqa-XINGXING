@@ -107,3 +107,8 @@ Voxtral проверяется как дополнительная расшиф�
 Полная конфигурация критериев сравнивается по содержимому, а не по меткам версий разных хостов. При полном совпадении официальных правил Kaggle-v42 и локального чек-листа экспорт доступен; изменение правила, шкалы или веса делает прошлый результат неактуальным до переоценки.
 
 Официальные источники: [Ollama для macOS](https://docs.ollama.com/macos), [GGUF из Hugging Face](https://huggingface.co/docs/hub/en/ollama), [Qwen GGUF](https://huggingface.co/unsloth/Qwen3.5-9B-MTP-GGUF).
+
+
+## Проверка на Mac - 8 ноября 2026
+
+После запуска `start_model_mac.command` из обычного терминала Ollama обнаружила Apple M4 Pro через Metal. GGUF с multimodal projector загружен полностью (6 786 993 840 байт по Ollama manifest). Новый учебный CUSTOM `mac-live-20261108-001` прошёл полный путь UI/API → CQA adapter → Ollama → валидация → SQLite. Статус ok, 8 критериев, итог 65/100, pipeline ollama-bm25-v1, источник inference. Время одного запроса `/api/chat` - около 27,4 секунды. Это один технический smoke-check, не метрика качества или гарантия скорости. DEV v42 не переоценивался.

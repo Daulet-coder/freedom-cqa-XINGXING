@@ -76,10 +76,16 @@ def create_worker(model=DEFAULT_MODEL,base='http://127.0.0.1:11434',timeout=900)
         faq=index.search(query)
         data={'conversation_id':record['conversation_id'],'language':record['language'],'channel':record.get('channel'),
               'transcript':[{'turn':i+1,**m} for i,m in enumerate(turns)],'checklist':rubric,'faq':faq}
+        schema=output_schema(rubric,len(turns))
+        # UTF-8 bytes conservatively bound byte-level BPE tokens. Never let
+        # Ollama silently truncate the original transcript or user rules.
+        def input_bound():return len((SYSTEM+json.dumps(data,ensure_ascii=False)+json.dumps(schema)).encode())
+        while input_bound()>32768-4096-1024 and faq:faq.pop()
+        if input_bound()>32768-4096-1024:raise ValueError('Полный диалог и чек-лист превышают безопасный контекст локальной ветки. Используйте GPU-пайплайн с большим контекстом.')
         response=post_json(base+'/api/chat',{'model':model,'stream':False,'think':False,'keep_alive':'30m',
             'messages':[{'role':'system','content':SYSTEM},{'role':'user','content':json.dumps(data,ensure_ascii=False)}],
-            'format':output_schema(rubric,len(turns)),
-            'options':{'temperature':0,'seed':42,'num_ctx':16384,'num_predict':6000}},timeout)
+            'format':schema,
+            'options':{'temperature':0,'seed':42,'num_ctx':32768,'num_predict':4096}},timeout)
         if response.get('done_reason')=='length':raise ValueError('Ответ модели обрезан: увеличьте лимит генерации')
         raw=response.get('message',{}).get('content','')
         parsed=json.loads(raw)
