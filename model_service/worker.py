@@ -34,9 +34,8 @@ def create_worker(assets_dir=None):
     if model_source == MODEL_ID and revision:
         checkpoint_fingerprint = revision
     tokenizer = AutoTokenizer.from_pretrained(model_source, revision=revision)
-    model = AutoModelForCausalLM.from_pretrained(model_source, revision=revision,
-        quantization_config=BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type='nf4',
-            bnb_4bit_use_double_quant=True, bnb_4bit_compute_dtype=torch.float16),
+    quantization_args = {'quantization_config': BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type='nf4', bnb_4bit_use_double_quant=True, bnb_4bit_compute_dtype=torch.float16)} if model_source == MODEL_ID else {}
+    model = AutoModelForCausalLM.from_pretrained(model_source, revision=revision, **quantization_args,
         dtype=torch.float16, device_map={'': 'cuda:0'}, attn_implementation='sdpa')
     model._cqa_checkpoint_fingerprint = checkpoint_fingerprint
     model.eval()

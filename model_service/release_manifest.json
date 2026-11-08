@@ -1,11 +1,13 @@
 {
   "runtime_files_sha256": {
-    "worker.py": "4328cb33cada17fef08b8d170ed96dde5d83c014408ef42c4da2af8089dc8af8",
-    "cqa_runtime.py": "fc072f1fdff219b1a65a2ff4982e262682ebc1e6ee0d1f56bf8ec93b5e9fc702",
+    "worker.py": "27f93db6fa6590553580df2e6c360bf0ae782ee73afe263cc25f41b89f914ad0",
+    "cqa_runtime.py": "be4152ab531b7075ba36c6b1efbfb0b30dd5f6f2294552d623a400e7e82bfa77",
     "service.py": "03d3e94b0f4cf7bc5cbd20326faf3c14c20fc0c8540b9c350e7a05ca4fe75661",
+    "refresh_communication.py": "2dc764c1d9f21b9de997ec627e0c607219f3de631c19c31c425ee88e0629e3e2",
     "checkpoint.py": "f50a10ea69ef8ea1a039ebadad978c08f0e672165c5624ba60850e8cb0a6a006",
-    "import_freedom_results.py": "2068aadade73042397a14ae760308805993e12786d75074c439072ce21df0e97",
-    "cqa_engine.py": "3ec31bf8d01f876feb391894b7ae2403e0e005d43f0f9e01e9d0c0625b4e15e5",
+    "import_freedom_results.py": "67a20c28b43e2e21e220b8de93500348edfa0d45989044700a0a0f1ce7d6f1f7",
+    "cqa_engine.py": "95d87f05b129785b9d329cb6bd1e198838c42bb616ac5a7556c5ca6c32e9b41f",
+    "ollama_service.py": "427ba0167362bc9f38cfc46a2848d33ac26e9db8f74d3874d9e74136a67dae9d",
     "attention_t4.py": "9e9f35db46a94b698c381683d9a80c8bd2984a0b2308a430ad6ba38fa5179c4f",
     "audio.py": "70ce149cc598b94785ee117a202f5a8efead4e8da29c704572de4e232931383c"
   },
@@ -60,5 +62,17 @@
     }
   },
   "training_status": "base_weights_not_finetuned",
-  "qlora": "excluded_by_user"
+  "qlora": "excluded_by_user",
+  "pipeline_version": "43.1",
+  "weights_finetuned": false,
+  "validated_records": 65,
+  "source_fingerprints_verified": true,
+  "cpu_contract_tests": 20,
+  "partial_regression_checks": {
+    "passed": 28,
+    "total": 28,
+    "provenance": "agent_derived_development_checks_not_expert_accuracy"
+  },
+  "gpu_smoke_status": "ok",
+  "checkpoint_manifest_sha256": "3ef6c92ab69ac604f231f51eb17aadf1d6242b5ae7ddee88160a1da9f1ad081f"
 }

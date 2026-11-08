@@ -43,7 +43,7 @@ def score_with_breakdown(criteria, rubric):
     details = []
     for c in rubric:
         value = values[c['id']]
-        if not any(type(value) is type(v) and value == v for v in c['values']):
+        if not any((type(value) is type(v) or (type(value) in (int,float) and type(v) in (int,float))) and value == v for v in c['values']):
             raise ValueError('Invalid typed value: ' + c['id'])
         weight = Decimal(str(c['weight']))
         fraction = Decimal(0)

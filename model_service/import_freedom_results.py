@@ -18,15 +18,24 @@ def import_results(project,envelope_path,apply=False):
     if len(ids)!=len(set(ids)):raise ValueError('Duplicate result IDs')
     checksum=hashlib.sha256(Path(envelope_path).read_bytes()).hexdigest()
     stamp=datetime.now(timezone.utc).isoformat()
-    prepared=[]
+    prepared=[];skipped=[]
+    fingerprints_path=Path(envelope_path).parent/'record_fingerprints.json'
+    fingerprints=json.loads(fingerprints_path.read_text()) if fingerprints_path.exists() else None
+    def record_fingerprint(record):
+        value={'language':record['language'],'channel':record['channel'],'transcript':[{k:m.get(k,'') for k in ['speaker','text','timestamp']} for m in record['transcript']]}
+        return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
     with sqlite3.connect(project/'data'/'cqa.sqlite3') as db:
         pending=[json.loads(row[0]) for row in db.execute('SELECT body FROM appeals')]
+        if db.execute("SELECT 1 FROM sqlite_master WHERE name='jobs'").fetchone():
+            if any(json.loads(row[0]).get('status') in {'queued','running','cancelling'} for row in db.execute('SELECT body FROM jobs')):raise ValueError('A workspace job is active; import after it completes')
         for result in results:
             cid=result['conversation_id']
-            if any(a['conversation_id']==cid and a['status']=='pending' for a in pending):raise ValueError('Pending appeal: '+cid)
+            if any(a['conversation_id']==cid and a['status']=='pending' for a in pending):
+                skipped.append({'conversation_id':cid,'reason':'pending_appeal_preserved'});continue
             row=db.execute('SELECT body FROM conversations WHERE id=?',(cid,)).fetchone()
             if not row:raise ValueError('Transcript not in Freedom: '+cid)
             record=json.loads(row[0])
+            if fingerprints is not None and record_fingerprint(record)!=fingerprints.get(cid):raise ValueError('Transcript fingerprint mismatch: '+cid)
             if result['status']!='ok':raise ValueError('Failed result must be handled separately: '+cid)
             validate_result(result['criteria'],rubric,len(record['transcript']))
             if total(result['criteria'],rubric)!=result['score']:raise ValueError('Score mismatch: '+cid)
@@ -34,7 +43,8 @@ def import_results(project,envelope_path,apply=False):
             if old:
                 previous=json.loads(old[0])
                 if previous.get('import_sha256')==checksum:continue
-                if previous.get('reviews'):raise ValueError('Reviewed evaluation needs manual merge: '+cid)
+                if previous.get('reviews'):
+                    skipped.append({'conversation_id':cid,'reason':'reviewed_evaluation_preserved'});continue
             value={**copy.deepcopy(result),'original_score':result['score'],'original_criteria':copy.deepcopy(result['criteria']),
                 'checklist':{'version':'Kaggle-v42-official','criteria':copy.deepcopy(rubric)},
                 'provider':envelope['model']['name']+' (Kaggle; unreviewed)', 'mode':'local',
@@ -49,7 +59,7 @@ def import_results(project,envelope_path,apply=False):
                 body=json.dumps(value,ensure_ascii=False)
                 db.execute('INSERT OR REPLACE INTO evaluations VALUES(?,?)',(cid,body))
                 db.execute('INSERT OR IGNORE INTO evaluation_history VALUES(?,?,?)',(value['revision'],cid,body))
-    return {'apply':apply,'records':len(prepared),'previous_evaluations_archived':sum(old is not None for _,_,old in prepared),'import_sha256':checksum}
+    return {'apply':apply,'records':len(prepared),'previous_evaluations_archived':sum(old is not None for _,_,old in prepared),'skipped':skipped,'import_sha256':checksum}
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--project',required=True);parser.add_argument('--results',required=True);parser.add_argument('--apply',action='store_true')
