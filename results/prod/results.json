@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "team_name": "Freedom CQA",
+  "team_name": "XINGXING",
   "model": {
     "mode": "local",
     "name": "Qwen3.5-9B GGUF + E5/BM25/BGE; CQA 43.1 (Ollama Metal; base, unreviewed)"

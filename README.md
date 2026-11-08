@@ -1,5 +1,7 @@
 # Freedom CQA
 
+**Team name: XINGXING**
+
 ![Freedom](frontend/assets/freedom-logo.svg)
 
 **Диалог → обоснованная оценка → проверка → апелляция → результат.**
