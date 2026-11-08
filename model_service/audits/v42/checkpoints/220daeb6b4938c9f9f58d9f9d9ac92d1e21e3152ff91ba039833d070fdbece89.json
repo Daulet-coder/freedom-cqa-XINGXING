@@ -1,0 +1,336 @@
+{
+  "result": {
+    "conversation_id": "p4-ru-002",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": false,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          3
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": true,
+        "rationale": "Оператору необходимо полное имя и адрес клиента для соединения с трейдером.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": false,
+        "rationale": "Для запроса по конкретному счету подтверждение личности до защищенного действия не найдено.",
+        "evidence_turns": [
+          9
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно объяснил причину отказа в лимитном приказе (ограничение на покупку только через сделку 'уйти' для данной бумаги) и прояснил, почему стакан отображается, но заявки не проходят, ответив на все ключевые вопросы клиента.",
+        "evidence_turns": [
+          9,
+          11,
+          64,
+          65,
+          66,
+          67,
+          68,
+          70
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент проявил легкое недоумение по поводу противоречия между отображением стакана и отказом в сделке, оператор вежливо объяснил причину (доступ к другим юрисдикциям), но не выразил сочувствия к технической проблеме.",
+        "evidence_turns": [
+          65,
+          66
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог содержит явные сбои логики и ASR-ошибки (например, 'на 3 грамма решил', 'мальчишники', 'по учисе сделкам'), что затрудняет понимание хода разговора, хотя основная суть (невозможность покупки) была донесена.",
+        "evidence_turns": [
+          51,
+          53,
+          54,
+          55
+        ],
+        "value": 4
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          46,
+          71
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации; технические ошибки и ASR-галлюцинации не являются критическими нарушениями.",
+        "evidence_turns": [
+          3,
+          6,
+          8,
+          10,
+          12,
+          15,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          60,
+          62,
+          64,
+          66,
+          67,
+          69,
+          71
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 46.0,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "42",
+    "stages": {
+      "boundary_attempt": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 9,
+          "request_quote": "Сейчас попробую сейчас форму, просто я до твоей тоже указывал по цене и рыночной они не проходили. Ну сейчас попробую пару минут подождите.",
+          "first_protected_action_turn": 12,
+          "missing_details_required": true,
+          "missing_details_reason": "Оператору необходимо полное имя и адрес клиента для соединения с трейдером.",
+          "clarified_needed_details": true,
+          "clarification_turn": 12,
+          "clarification_quote": "Она да проверили тоже отказ, тогда подскажете, пожалуйста, ещё раз ваш ин полное имя и адрес. Я вас сейчас попробую соединить с трейдером.",
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 71,
+          "closing_quote": "Благодарю вас за уделенное время всего хорошего до свидания.",
+          "closing_reason": "Оператор объяснил клиенту причину отказа в покупке и завершил разговор.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "ACCOUNT_SPECIFIC",
+            "request_ref": "C_0009",
+            "first_protected_action_ref": "O_0012",
+            "missing_details_required": true,
+            "missing_details_reason": "Оператору необходимо полное имя и адрес клиента для соединения с трейдером.",
+            "clarified_needed_details": true,
+            "clarification_ref": "O_0012",
+            "closing_kind": "RESOLVED_OUTCOME",
+            "closing_ref": "O_0071",
+            "closing_reason": "Оператор объяснил клиенту причину отказа в покупке и завершил разговор."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_ref\": \"C_0009\",\n  \"first_protected_action_ref\": \"O_0012\",\n  \"missing_details_required\": true,\n  \"missing_details_reason\": \"Оператору необходимо полное имя и адрес клиента для соединения с трейдером.\",\n  \"clarified_needed_details\": true,\n  \"clarification_ref\": \"O_0012\",\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_ref\": \"O_0071\",\n  \"closing_reason\": \"Оператор объяснил клиенту причину отказа в покупке и завершил разговор.\"\n}\n",
+        "derived": [
+          {
+            "criterion_id": "contact",
+            "value": false,
+            "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+            "evidence_turns": [
+              3
+            ]
+          },
+          {
+            "criterion_id": "discovery",
+            "value": true,
+            "rationale": "Оператору необходимо полное имя и адрес клиента для соединения с трейдером.",
+            "evidence_turns": [
+              12
+            ]
+          },
+          {
+            "criterion_id": "identification",
+            "value": false,
+            "rationale": "Для запроса по конкретному счету подтверждение личности до защищенного действия не найдено.",
+            "evidence_turns": [
+              9
+            ]
+          },
+          {
+            "criterion_id": "closure",
+            "value": true,
+            "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+            "evidence_turns": [
+              46,
+              71
+            ]
+          }
+        ]
+      },
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 9,
+          "request_quote": "Сейчас попробую сейчас форму, просто я до твоей тоже указывал по цене и рыночной они не проходили. Ну сейчас попробую пару минут подождите.",
+          "first_protected_action_turn": 12,
+          "missing_details_required": true,
+          "missing_details_reason": "Оператору необходимо полное имя и адрес клиента для соединения с трейдером.",
+          "clarified_needed_details": true,
+          "clarification_turn": 12,
+          "clarification_quote": "Она да проверили тоже отказ, тогда подскажете, пожалуйста, ещё раз ваш ин полное имя и адрес. Я вас сейчас попробую соединить с трейдером.",
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 71,
+          "closing_quote": "Благодарю вас за уделенное время всего хорошего до свидания.",
+          "closing_reason": "Оператор объяснил клиенту причину отказа в покупке и завершил разговор.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "ACCOUNT_SPECIFIC",
+            "request_ref": "C_0009",
+            "first_protected_action_ref": "O_0012",
+            "missing_details_required": true,
+            "missing_details_reason": "Оператору необходимо полное имя и адрес клиента для соединения с трейдером.",
+            "clarified_needed_details": true,
+            "clarification_ref": "O_0012",
+            "closing_kind": "RESOLVED_OUTCOME",
+            "closing_ref": "O_0071",
+            "closing_reason": "Оператор объяснил клиенту причину отказа в покупке и завершил разговор."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_ref\": \"C_0009\",\n  \"first_protected_action_ref\": \"O_0012\",\n  \"missing_details_required\": true,\n  \"missing_details_reason\": \"Оператору необходимо полное имя и адрес клиента для соединения с трейдером.\",\n  \"clarified_needed_details\": true,\n  \"clarification_ref\": \"O_0012\",\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_ref\": \"O_0071\",\n  \"closing_reason\": \"Оператор объяснил клиенту причину отказа в покупке и завершил разговор.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            46,
+            71
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Благодарю вас за уделенное время всего хорошего до свидания."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент проявил легкое недоумение по поводу противоречия между отображением стакана и отказом в сделке, оператор вежливо объяснил причину (доступ к другим юрисдикциям), но не выразил сочувствия к технической проблеме.\",\n    \"evidence_turns\": [65, 66],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог содержит явные сбои логики и ASR-ошибки (например, 'на 3 грамма решил', 'мальчишники', 'по учисе сделкам'), что затрудняет понимание хода разговора, хотя основная суть (невозможность покупки) была донесена.\",\n    \"evidence_turns\": [51, 53, 54, 55],\n    \"value\": 4\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации; технические ошибки и ASR-галлюцинации не являются критическими нарушениями.\",\n    \"evidence_turns\": [],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [
+          {
+            "criterion": "critical",
+            "field": "evidence_turns",
+            "action": "scope negative finding to all original operator turns"
+          }
+        ],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно объяснил причину отказа в лимитном приказе (ограничение на покупку только через сделку 'уйти' для данной бумаги) и прояснил, почему стакан отображается, но заявки не проходят, ответив на все ключевые вопросы клиента.\",\n    \"evidence_turns\": [9, 11, 64, 65, 66, 67, 68, 70],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "3": "",
+        "6": "",
+        "8": "",
+        "10": "",
+        "12": "",
+        "15": "",
+        "20": "",
+        "21": "",
+        "22": "",
+        "23": "",
+        "24": "",
+        "25": "",
+        "26": "",
+        "27": "",
+        "28": "",
+        "29": "",
+        "30": "",
+        "31": "",
+        "32": "",
+        "33": "",
+        "34": "",
+        "35": "",
+        "36": "",
+        "37": "",
+        "38": "",
+        "39": "",
+        "40": "",
+        "41": "",
+        "42": "",
+        "43": "",
+        "44": "",
+        "45": "",
+        "46": "",
+        "48": "",
+        "49": "",
+        "50": "",
+        "51": "",
+        "52": "",
+        "53": "",
+        "54": "",
+        "55": "",
+        "56": "",
+        "57": "",
+        "58": "",
+        "60": "",
+        "62": "",
+        "64": "",
+        "66": "",
+        "67": "",
+        "69": "",
+        "71": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":3,\"query\":\"\"},{\"turn\":6,\"query\":\"\"},{\"turn\":8,\"query\":\"\"},{\"turn\":10,\"query\":\"\"},{\"turn\":12,\"query\":\"\"},{\"turn\":15,\"query\":\"\"},{\"turn\":20,\"query\":\"\"},{\"turn\":21,\"query\":\"\"},{\"turn\":22,\"query\":\"\"},{\"turn\":23,\"query\":\"\"},{\"turn\":24,\"query\":\"\"},{\"turn\":25,\"query\":\"\"},{\"turn\":26,\"query\":\"\"},{\"turn\":27,\"query\":\"\"},{\"turn\":28,\"query\":\"\"},{\"turn\":29,\"query\":\"\"},{\"turn\":30,\"query\":\"\"},{\"turn\":31,\"query\":\"\"},{\"turn\":32,\"query\":\"\"},{\"turn\":33,\"query\":\"\"},{\"turn\":34,\"query\":\"\"},{\"turn\":35,\"query\":\"\"},{\"turn\":36,\"query\":\"\"},{\"turn\":37,\"query\":\"\"},{\"turn\":38,\"query\":\"\"},{\"turn\":39,\"query\":\"\"},{\"turn\":40,\"query\":\"\"},{\"turn\":41,\"query\":\"\"},{\"turn\":42,\"query\":\"\"},{\"turn\":43,\"query\":\"\"},{\"turn\":44,\"query\":\"\"},{\"turn\":45,\"query\":\"\"},{\"turn\":46,\"query\":\"\"},{\"turn\":48,\"query\":\"\"},{\"turn\":49,\"query\":\"\"},{\"turn\":50,\"query\":\"\"},{\"turn\":51,\"query\":\"\"},{\"turn\":52,\"query\":\"\"},{\"turn\":53,\"query\":\"\"},{\"turn\":54,\"query\":\"\"},{\"turn\":55,\"query\":\"\"},{\"turn\":56,\"query\":\"\"},{\"turn\":57,\"query\":\"\"},{\"turn\":58,\"query\":\"\"},{\"turn\":60,\"query\":\"\"},{\"turn\":62,\"query\":\"\"},{\"turn\":64,\"query\":\"\"},{\"turn\":66,\"query\":\"\"},{\"turn\":67,\"query\":\"\"},{\"turn\":69,\"query\":\"\"},{\"turn\":71,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 122.41,
+    "label_provenance": "model_generated_unreviewed",
+    "peak_gpu0_allocated_gib": 10.013
+  },
+  "signature": "43f2b843ab2152cc69adfcd7e66999dd362b38aaf0e296e2a72edab09bfbed0b",
+  "label_provenance": "model_generated_unreviewed"
+}

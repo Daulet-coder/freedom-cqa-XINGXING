@@ -1,0 +1,152 @@
+{
+  "fingerprint": "da5d546b51424357fea5a43d6749880136aeb031406d8bd611b3aa6305363d87",
+  "result": {
+    "conversation_id": "p1-ru-005",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "клиент указал способ перевода по реквизитам, что достаточно для ответа",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно передал запрос на реквизиты и дал инструкцию по их поиску, но не смог ответить на ключевой вопрос клиента о том, кто именно (банк или брокер) возьмет комиссию за перевод по реквизитам, что является существенным пробелом в консультации.",
+        "evidence_turns": [
+          1,
+          4,
+          5,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "value": 15
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор не отреагировал на явное недовольство клиента (просьбу об операторе), ограничившись вежливым объяснением невозможности назвать комиссию без условий банка.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор четко инструктировал по навигации в меню после уточнения клиента, что решение было понято.",
+        "evidence_turns": [
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          16
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.",
+        "evidence_turns": [
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 69.23,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "клиент указал способ перевода по реквизитам, что достаточно для ответа",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 16,
+          "closing_reason": "оператор подтвердил, что клиент проверил комиссию в банке и завершил разговор",
+          "request_quote": "Хочу пополнить счёт и не понимаю, кто возьмёт комиссию — банк или брокер.",
+          "clarification_quote": "",
+          "closing_quote": "Хорошо. Перед переводом проверьте комиссию в банке. До свидания!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"клиент указал способ перевода по реквизитам, что достаточно для ответа\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 16,\n  \"closing_reason\": \"оператор подтвердил, что клиент проверил комиссию в банке и завершил разговор\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            16
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Хорошо. Перед переводом проверьте комиссию в банке. До свидания!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор не отреагировал на явное недовольство клиента (просьбу об операторе), ограничившись вежливым объяснением невозможности назвать комиссию без условий банка.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор четко инструктировал по навигации в меню после уточнения клиента, что решение было понято.\",\n    \"evidence_turns\": [11, 12, 13, 14, 15],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.\",\n    \"evidence_turns\": [10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно передал запрос на реквизиты и дал инструкцию по их поиску, но не смог ответить на ключевой вопрос клиента о том, кто именно (банк или брокер) возьмет комиссию за перевод по реквизитам, что является существенным пробелом в консультации.\",\n    \"evidence_turns\": [1, 4, 5, 10, 11, 12, 13, 14],\n    \"value\": 15\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "",
+        "12": "",
+        "14": "",
+        "16": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"\"},{\"turn\":12,\"query\":\"\"},{\"turn\":14,\"query\":\"\"},{\"turn\":16,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 56.52,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

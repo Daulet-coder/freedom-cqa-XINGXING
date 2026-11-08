@@ -1,0 +1,17 @@
+{
+  "fingerprint": "a593bd4a62c2e2bb79d1dafdeee10ba265a323a03692c26cfa2af48313b4dc7b",
+  "result": {
+    "conversation_id": "p1-kz-008",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "ValueError: Fact references wrong speaker or turn: 13 expected operator"
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {},
+    "rag": {},
+    "elapsed_seconds": 25.76
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

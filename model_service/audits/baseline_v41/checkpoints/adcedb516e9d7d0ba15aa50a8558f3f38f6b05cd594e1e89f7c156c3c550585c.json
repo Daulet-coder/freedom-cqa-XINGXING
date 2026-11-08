@@ -1,0 +1,382 @@
+{
+  "fingerprint": "adcedb516e9d7d0ba15aa50a8558f3f38f6b05cd594e1e89f7c156c3c550585c",
+  "result": {
+    "conversation_id": "p1-en-010",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент уже предоставил достаточно информации о своих счетах.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор Nina в turn 10 прямо и однозначно ответила на вопрос клиента из turn 1 о возможности использования D-аккаунта для покупки акций, объяснив, что средства нужно переводить на торговый счет, что соответствует сути вопроса и правилам.",
+        "evidence_turns": [
+          1,
+          4,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент не проявил недовольства или неудобства, поэтому вежливое завершение без выраженных сочувственных фраз является достаточным.",
+        "evidence_turns": [
+          11,
+          12
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Оператор четко объяснил разницу между счетами, сразу ответил на уточняющий вопрос клиента о порядке действий при размещении заказа и вежливо завершил диалог.",
+        "evidence_turns": [
+          5,
+          10,
+          11,
+          12
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В диалоге отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.",
+        "evidence_turns": [
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 92.31,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент уже предоставил достаточно информации о своих счетах.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 12,
+          "closing_reason": "Оператор подтвердил, что вопрос решен и попрощался.",
+          "request_quote": "I can see a D account and a trading account. Can I use the D account to buy stock?",
+          "clarification_quote": "",
+          "closing_quote": "You're welcome. Bye!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент уже предоставил достаточно информации о своих счетах.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор подтвердил, что вопрос решен и попрощался.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "You're welcome. Bye!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент не проявил недовольства или неудобства, поэтому вежливое завершение без выраженных сочувственных фраз является достаточным.\",\n    \"evidence_turns\": [11, 12],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Оператор четко объяснил разницу между счетами, сразу ответил на уточняющий вопрос клиента о порядке действий при размещении заказа и вежливо завершил диалог.\",\n    \"evidence_turns\": [5, 10, 11, 12],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В диалоге отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.\",\n    \"evidence_turns\": [10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор Nina в turn 10 прямо и однозначно ответила на вопрос клиента из turn 1 о возможности использования D-аккаунта для покупки акций, объяснив, что средства нужно переводить на торговый счет, что соответствует сути вопроса и правилам.\",\n    \"evidence_turns\": [1, 4, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как использовать деньги с депозитного счета для покупки ценных бумаг",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\": [{\"turn\": 10, \"query\": \"как использовать деньги с депозитного счета для покупки ценных бумаг\"}, {\"turn\": 12, \"query\": \"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "dec504ac4515570a",
+            "title": "7 шагов, чтобы начать инвестировать",
+            "url": "https://fbroker.kz/faq/question/7-simple-steps-to-investing",
+            "score": 0.023760071556465975,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 0.8407118320465088
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 14,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 8.128808758190917
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 21,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 0.7834959626197815
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 29,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 3.734441289520648
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 36,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 0.7843796014785767
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 10,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 6.875903944604405
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 86,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 0.7956724166870117
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 40,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 3.1414626550837568
+              }
+            ],
+            "chunk_ids": [
+              "fee728de5e973bedebc0"
+            ],
+            "rerank_score": 0.178466796875,
+            "best_index": 465
+          },
+          {
+            "document_id": "d90548813f72bbdf",
+            "title": "Специальный накопительный субсчет (D-счет)",
+            "url": "https://fbroker.kz/faq/question/savings-d-account2727",
+            "score": 0.027691239548877897,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 8,
+                "chunk_id": "d831a6415a963164cb54",
+                "raw_score": 0.833407461643219
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 10.102727389586859
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 0.818975567817688
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 12.677180639549483
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 0.81855309009552
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 12.677180639549483
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 120,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 0.785679817199707
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 33,
+                "chunk_id": "d831a6415a963164cb54",
+                "raw_score": 3.2285450358343963
+              }
+            ],
+            "chunk_ids": [
+              "151d2fa7ad1b87d8c062",
+              "d831a6415a963164cb54"
+            ],
+            "rerank_score": 0.12139892578125,
+            "best_index": 451
+          },
+          {
+            "document_id": "8a719d2bc9cb5305",
+            "title": "Маржинальные сделки",
+            "url": "https://fbroker.kz/faq/question/what-is-margin-trading-2743",
+            "score": 0.01907471342955214,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 6,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 0.8352148532867432
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 11.376209251298425
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 122,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 0.7648385167121887
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 83,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 0.7747079133987427
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 33,
+                "chunk_id": "206ba63ebc1394d4f530",
+                "raw_score": 4.745737448119837
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 51,
+                "chunk_id": "206ba63ebc1394d4f530",
+                "raw_score": 0.8129309415817261
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 14,
+                "chunk_id": "206ba63ebc1394d4f530",
+                "raw_score": 4.745737448119837
+              }
+            ],
+            "chunk_ids": [
+              "206ba63ebc1394d4f530",
+              "8d911389276e6181d0b7"
+            ],
+            "rerank_score": 0.11614990234375,
+            "best_index": 290
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "fee728de5e973bedebc0",
+        "document_id": "dec504ac4515570a",
+        "title": "7 шагов, чтобы начать инвестировать",
+        "url": "https://fbroker.kz/faq/question/7-simple-steps-to-investing",
+        "text": "Узнайте, как начать инвестировать, не совершая типичных ошибок. В этой статье вы найдете информацию, пошаговые инструкции и советы от наших экспертов о том, как правильно купить свою первую ценную бумагу!\nШаг 1.\nОткрытие брокерского счета\nПройдите регистрацию онлайн за 10 минут в приложении Freedom Broker.\nШаг 2.\nДоступ ко всем финансовым инструментам\nДля этого нужно заполнить экономический профиль в Freedom Broker. После заполнения вам станут доступны все финансовые инструменты для розничных инвесторов (акции, облигации, ETF, некоторые опционы).\nШаг 3.\nПополнение брокерского счета\nОзнакомьтесь со всеми способами пополнения брокерского счета и выберите удобный для вас.\nШаг 4.\nНакопительный D-счет с пассивным доходом\nПри открытии основного брокерского счета клиенту автоматически открывается специальный накопительный субсчёт – D-счёт. Клиент может перевести на него свободные деньги, не вложенные в ценные бумаги, и получать пассивный доход в USD по ставке SOFR.\nШаг 5.\nПервая сделка\nОзнакомьтесь с подробной инструкцией как можно выставить торговый приказ в платформе в Freedom Broker.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "d831a6415a963164cb54",
+        "document_id": "d90548813f72bbdf",
+        "title": "Специальный накопительный субсчет (D-счет)",
+        "url": "https://fbroker.kz/faq/question/savings-d-account2727",
+        "text": "При открытии брокерского (торгового) счета в компании Freedom Finance Global PLC Вам автоматически открывается\nспециальный накопительный субсчет (D-счет)\n.\nЧерез торговый счет вы можете совершать сделки на фондовых биржах — покупать и продавать ценные бумаги.\nD-счет - специальный накопительный субсчет, который можно использовать для пополнения торгового счета, хранения и вывода денег. Перевод между торговым и специальным накопительным D-счетом происходит почти моментально и без комиссий.\nТакже вы сможете получать ежедневный доход на остаток по D-счету в USD, KZT и EUR. Посмотреть актуальные ставки и рассчитать потенциальный доход можно\nв специальном калькуляторе\nна сайте Freedom Finance Global PLC.\nРазмещая денежные средства на D-счете в валютах USD, EUR, KZT клиент поручает брокеру совершить с ними сделки овернайт РЕПО в интересах клиента на условиях Приложения 6 к Регламенту и с применением актуальных ставок доходности.\nДоходность привязана к межбанковским ставкам SOFR* и EURIBOR**.\nПримечание!\n*SOFR (Secured Overnight Financing Rate)",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "8d911389276e6181d0b7",
+        "document_id": "8a719d2bc9cb5305",
+        "title": "Маржинальные сделки",
+        "url": "https://fbroker.kz/faq/question/what-is-margin-trading-2743",
+        "text": "Заемные деньги (во всех валютах, кроме тенге\nKZT)\n﻿Маржинальные сделки\nможно также назвать торговлей с\n«Кредитным плечом»\n. Это возможность купить ценные бумаги на большую сумму, чем у вас имеется. Вы занимаете деньги у брокера и покупаете акции в долг. Заём происходит под залог стоимости активов на вашем счёте.\nКак работает «кредитное плечо»?\nПерспективная акция (\nпотенциал +25%\n)\n→ Вложить нужно 4 млн тг\n→ «На руках» есть 1 млн тг\n→ Брокер дает взаймы 3 млн тг\n﻿Если акция вырастет на прогнозируемые\n25%\n, то с этой сделки:\n→ вы получите 1 млн тенге прибыли\n→ брокер получит назад З заемных миллиона\n﻿Как воспользоваться «кредитным плечом»?\nПолучить заемные средства -\nпросто\n. Объем акций, доступных к покупке с учетом «кредитного плеча», автоматически отображается в торговом терминале Freedom Broker.\n\nПримечание:\nне забудьте включить опцию\n«использовать маржу»\nво вкладке\n«Приказ - Настройки приказа»\n.\n\n﻿Чтобы получить маржинальный кредит, торговая платформа оценит ваш портфель ценных бумаг. Активы должны быть ликвидны и иметь достаточную стоимость, чтобы стать залогом для кредита от брокера.\nЗа маржинальную торговлю брокер\nвзимает комиссию:",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 55.53,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

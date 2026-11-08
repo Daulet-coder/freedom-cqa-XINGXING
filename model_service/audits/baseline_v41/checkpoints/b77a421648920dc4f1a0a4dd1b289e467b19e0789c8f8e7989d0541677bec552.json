@@ -1,0 +1,307 @@
+{
+  "fingerprint": "b77a421648920dc4f1a0a4dd1b289e467b19e0789c8f8e7989d0541677bec552",
+  "result": {
+    "conversation_id": "p1-ru-013",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Достаточно информации для ответа.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно указал путь к разделу Financial Information на сайте, что полностью закрывает запрос клиента по поиску отчетности, несмотря на то, что клиент искал в новостях.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент выразил недовольство сложностью навигации на сайте, но оператор в ответе 10 лишь подтвердил информацию и пожелал хорошего дня, не предложив альтернативы или проявив эмпатии к трудности.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот дал инструкцию, клиент уточнил контекст поиска, оператор подтвердил путь и завершил разговор четко.",
+        "evidence_turns": [
+          4,
+          5,
+          10
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.",
+        "evidence_turns": [
+          1,
+          4,
+          5,
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 76.92,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Достаточно информации для ответа.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 12,
+          "closing_reason": "Оператор подтвердил правильность раздела и завершил диалог.",
+          "request_quote": "Где отчётность вашей компании посмотреть? Мне не выписка по счёту нужна.",
+          "clarification_quote": "",
+          "closing_quote": "Да, нужный раздел в меню для инвесторов. Хорошего дня!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Достаточно информации для ответа.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор подтвердил правильность раздела и завершил диалог.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Да, нужный раздел в меню для инвесторов. Хорошего дня!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент выразил недовольство сложностью навигации на сайте, но оператор в ответе 10 лишь подтвердил информацию и пожелал хорошего дня, не предложив альтернативы или проявив эмпатии к трудности.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот дал инструкцию, клиент уточнил контекст поиска, оператор подтвердил путь и завершил разговор четко.\",\n    \"evidence_turns\": [4, 5, 10],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.\",\n    \"evidence_turns\": [1, 4, 5, 10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\"consultation\": {\"rationale\": \"Оператор корректно указал путь к разделу Financial Information на сайте, что полностью закрывает запрос клиента по поиску отчетности, несмотря на то, что клиент искал в новостях.\", \"evidence_turns\": [1, 5, 10, 11], \"value\": 20}}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "Freedom Holding Corp Investors Financial Information",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"Freedom Holding Corp Investors Financial Information\"},{\"turn\":12,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "c54fe8386426bfc9",
+            "title": "Информация о Компании",
+            "url": "https://fbroker.kz/faq/question/information-about-the-company1205",
+            "score": 0.03252247488101534,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "9d8287d4c2c0206b3e9e",
+                "raw_score": 0.8413783311843872
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "663332bf3dcfb31e7424",
+                "raw_score": 12.773908579982248
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "9d8287d4c2c0206b3e9e",
+                "raw_score": 0.8720250129699707
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "663332bf3dcfb31e7424",
+                "raw_score": 13.114627785658652
+              }
+            ],
+            "chunk_ids": [
+              "663332bf3dcfb31e7424",
+              "9d8287d4c2c0206b3e9e"
+            ],
+            "rerank_score": 0.86669921875,
+            "best_index": 394
+          },
+          {
+            "document_id": "34f02b088de94067",
+            "title": "Информационный отчет для налоговой декларации",
+            "url": "https://fbroker.kz/faq/question/tax-declaration-report",
+            "score": 0.02306965351641301,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 14,
+                "chunk_id": "7f864e1c19a6db054e92",
+                "raw_score": 0.7971729040145874
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 7,
+                "chunk_id": "7f864e1c19a6db054e92",
+                "raw_score": 4.17474399123202
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 89,
+                "chunk_id": "675b6866019396bf31a0",
+                "raw_score": 0.8207656145095825
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 31,
+                "chunk_id": "7f864e1c19a6db054e92",
+                "raw_score": 4.596473463086998
+              }
+            ],
+            "chunk_ids": [
+              "675b6866019396bf31a0",
+              "7f864e1c19a6db054e92"
+            ],
+            "rerank_score": 0.85107421875,
+            "best_index": 108
+          },
+          {
+            "document_id": "cb7a1b22feefde63",
+            "title": "Доступные инструменты и отчёты по сделкам на ITS в выходные дни",
+            "url": "https://fbroker.kz/faq/question/available-instruments-and-trade-reports-on-its-on-weekends",
+            "score": 0.022498796597111594,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 69,
+                "chunk_id": "68cd5e34a097dc41e2ca",
+                "raw_score": 0.7782435417175293
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "68cd5e34a097dc41e2ca",
+                "raw_score": 8.016556119417352
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 107,
+                "chunk_id": "a6700d774a67eb2f2c6d",
+                "raw_score": 0.8168341517448425
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "68cd5e34a097dc41e2ca",
+                "raw_score": 8.167344018606816
+              }
+            ],
+            "chunk_ids": [
+              "68cd5e34a097dc41e2ca",
+              "a6700d774a67eb2f2c6d"
+            ],
+            "rerank_score": 0.37451171875,
+            "best_index": 417
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "663332bf3dcfb31e7424",
+        "document_id": "c54fe8386426bfc9",
+        "title": "Информация о Компании",
+        "url": "https://fbroker.kz/faq/question/information-about-the-company1205",
+        "text": "Freedom Broker\n– системообразующая инвестиционная компания международного уровня. Представлена в Казахстане, США, Германии, Франции, Испании, Украине, Кыргызстане, Узбекистане, Азербайджане, Армении, Греции и Кипре.\nМы даем нашим клиентам возможности:\n✓\nПокупать ценные бумаги таких компаний, как Apple, Tesla, Microsoft и тысячи других известных брендов;\n✓\nИнвестировать в крупнейших фондовых биржах мира;\n✓\nТорговать онлайн на мобильной платформе Freedom Broker;\n✓\nПолучить качественную аналитику по IPO – первичным размещениям акций с максимально потенциальным доходом;\n✓\nПолучить бесплатную финансовую аналитику и профессиональные консультации;\n✓\nОбучаться инвестированию и трейдингу на любом уровне знаний.\n\nFreedom Broker входит в состав Freedom Holding Corp.– американской холдинговой компании со штаб-квартирой в г. Алматы, Казахстан.\nДоказанная надёжность\nАкции Freedom Holding Corp. торгуются в Нью-Йорке на бирже NASDAQ под тикером FRHC;\nДеятельность холдинга регулирует Комиссия США по ценным бумагам и биржам (SEC);\n«B/B» – кредитные рейтинги компаний Freedom Broker.\nКакие брокерские компании Freedom Broker обслуживают клиентов в Казахстане?",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "7f864e1c19a6db054e92",
+        "document_id": "34f02b088de94067",
+        "title": "Информационный отчет для налоговой декларации",
+        "url": "https://fbroker.kz/faq/question/tax-declaration-report",
+        "text": "Н налогооблагаемый доход на сумму 18000 и уплатит ИПН на этот доход.\nЕсли бы по результатам сделок с NCLH.US за год инвестор реализовал убыток, такой убыток был бы приравнен нулю. Также этот убыток не может быть перенесён на следующие годы для уменьшения доходов будущих налоговых периодов.\n5.  Ценные бумаги на момент реализации находящийся в официальном списке AIX, по которым проходили торги на иностранных биржах.\nИнвестор (физлицо) активно торговал на NYSE акциями Freedom Holding(тикер FRHC.US).\nFRHC.US – льготируемая ценная бумага, так как зарегистрирована в официальном списке AIX и в связи с этим соответствует критериям льготируемости.\n3. Купля-продажа опционов\nРеализованный финансовый результат по закрытым сделкам с производными финансовыми инструментами (ПФИ) за отчётный год.\nУчитывается только реализованная прибыль по закрытым позициям без учета комиссии брокера, так как ПФИ не считаются ценными бумагами. Убытки от операций с ПФИ не сальдируются с прибылью и не переносятся на будущие налоговые периоды. Так в налогооблагаемый доход включаются все прибыльные сделки, а убыточные сделки не учитываются и не уменьшают налогооблагаемый доход.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "68cd5e34a097dc41e2ca",
+        "document_id": "cb7a1b22feefde63",
+        "title": "Доступные инструменты и отчёты по сделкам на ITS в выходные дни",
+        "url": "https://fbroker.kz/faq/question/available-instruments-and-trade-reports-on-its-on-weekends",
+        "text": "lied Optoelectronics, Inc.\nАкция\n10:00–24:00\nUS03823U1025\nMRNA\nModerna, Inc.\nАкция\n10:00–24:00\nUS60770K1079\nARM\nCitibank, N.A. / Arm Holdings plc\nДепозитарная расписка\n10:00–24:00\nUS0420682058\nCRCL\nCircle Internet Group, Inc.\nАкция класса A\n10:00–24:00\nUS1725731079\nAPP\nAppLovin Corporation\nАкция класса A\n10:00–24:00\nUS03831W1080\nCRWD\nCrowdStrike Holdings, Inc.\nАкция класса A\n10:00–24:00\nUS22788C1053\nTTWO\nTake-Two Interactive Software, Inc.\nАкция\n10:00–24:00\nUS8740541094\nLITE\nLumentum Holdings Inc.\nАкция\n10:00–24:00\nUS55024U1097\nCOHR\nCoherent Corp.\nАкция\n10:00–24:00\nUS19247G1076\nCIEN\nCiena Corporation\nАкция\n10:00–24:00\nUS1717793095\nRDDT\nReddit, Inc.\nАкция класса A\n10:00–24:00\nUS75734B1008\nFRHC\nFreedom Holding Corp.\nАкция\n10:00–24:00\nUS3563901046\nGOOG\nAlphabet Inc.\nАкция класса C\n10:00–24:00\nUS02079K1079\nIBIT\nBlackRock Fund Advisors\nETF\n10:00–24:00\nUS46438F1012\nITSD\nIPS Capital Ltd.\nETF\n10:00–24:00\nKZX000005061\nITSS\nIPS Capital Ltd.\nETF\n10:00–24:00\nKZX000003256\nITSW\nIPS Capital Ltd.\nETF\n10:00–24:00\nKZX000002878\nAAPL/100\nIPS Capital Ltd.\nETF\n10:00–24:00\nKZX000004684\nAMD/100\nIPS Capital Ltd.\nETF\n10:00–24:00\nKZX000004445\nAMZN/100\nIPS Capital Ltd.\nETF\n10:00–24:00\nKZX000004437\nCOIN/100",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 53.52,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

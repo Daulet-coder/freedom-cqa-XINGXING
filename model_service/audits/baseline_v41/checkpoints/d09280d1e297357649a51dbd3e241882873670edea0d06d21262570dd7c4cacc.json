@@ -1,0 +1,554 @@
+{
+  "fingerprint": "d09280d1e297357649a51dbd3e241882873670edea0d06d21262570dd7c4cacc",
+  "result": {
+    "conversation_id": "p1-en-004",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент указал конкретный период времени (прошлый год).",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор Alex четко ответил на оба вопроса клиента: объяснил шаги по выбору дат и подтвердил необходимость загрузки файла после их выбора, полностью закрыв запрос.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11,
+          12,
+          13
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент не выражал недовольства или неудобства, поэтому отдельной реакции сочувствия не требовалось; оператор вежливо ответил на уточняющий вопрос о скачивании.",
+        "evidence_turns": [
+          11,
+          12,
+          13
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор четко объяснил шаги в приложении, ответил на уточнение о скачивании, подтвердил успешное выполнение и вежливо завершил разговор.",
+        "evidence_turns": [
+          5,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          14
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.",
+        "evidence_turns": [
+          10,
+          12
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 69.23,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент указал конкретный период времени (прошлый год).",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 14,
+          "closing_reason": "Оператор предложил клиенту хорошего дня.",
+          "request_quote": "I need my broker statement for last year, not just the current balance.",
+          "clarification_quote": "",
+          "closing_quote": "You're welcome. Have a good day!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент указал конкретный период времени (прошлый год).\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 14,\n  \"closing_reason\": \"Оператор предложил клиенту хорошего дня.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            14
+          ],
+          "interruption_turns": [],
+          "closing_quote": "You're welcome. Have a good day!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент не выражал недовольства или неудобства, поэтому отдельной реакции сочувствия не требовалось; оператор вежливо ответил на уточняющий вопрос о скачивании.\",\n    \"evidence_turns\": [11, 12, 13],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор четко объяснил шаги в приложении, ответил на уточнение о скачивании, подтвердил успешное выполнение и вежливо завершил разговор.\",\n    \"evidence_turns\": [5, 10, 11, 12, 13, 14],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.\",\n    \"evidence_turns\": [10, 12],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор Alex четко ответил на оба вопроса клиента: объяснил шаги по выбору дат и подтвердил необходимость загрузки файла после их выбора, полностью закрыв запрос.\",\n    \"evidence_turns\": [1, 5, 10, 11, 12, 13],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как открыть отчет агента и выбрать даты",
+        "12": "как скачать отчет после выбора дат",
+        "14": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"как открыть отчет агента и выбрать даты\"},{\"turn\":12,\"query\":\"как скачать отчет после выбора дат\"},{\"turn\":14,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "283315a2266f7fd3",
+            "title": "Формирование Отчета брокера и Отчета депозитария",
+            "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+            "score": 0.02973993362056887,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8423625230789185
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 8.451978518229383
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.812049388885498
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 122,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 1.0598961517331615
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.837365448474884
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 16.265656403407842
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.86906498670578
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 16.265656403407842
+              }
+            ],
+            "chunk_ids": [
+              "c9bb4045c63d192a9d31"
+            ],
+            "rerank_score": 0.319091796875,
+            "best_index": 81
+          },
+          {
+            "document_id": "b6647556479f2f57",
+            "title": "Как читать Отчет брокера?",
+            "url": "https://fbroker.kz/faq/question/how-to-read-the-broker-report",
+            "score": 0.024722613675864286,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 10,
+                "chunk_id": "a5d5e1ce69bcd07f1a65",
+                "raw_score": 0.8136518001556396
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 21,
+                "chunk_id": "a5d5e1ce69bcd07f1a65",
+                "raw_score": 5.773727822958416
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 16,
+                "chunk_id": "a5d5e1ce69bcd07f1a65",
+                "raw_score": 0.7841054201126099
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "4007bfd13cb0a689c2e8",
+                "raw_score": 0.817529559135437
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 13,
+                "chunk_id": "4007bfd13cb0a689c2e8",
+                "raw_score": 7.214248632657322
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "4007bfd13cb0a689c2e8",
+                "raw_score": 0.875324010848999
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 12,
+                "chunk_id": "4007bfd13cb0a689c2e8",
+                "raw_score": 7.214248632657322
+              }
+            ],
+            "chunk_ids": [
+              "4007bfd13cb0a689c2e8",
+              "a5d5e1ce69bcd07f1a65"
+            ],
+            "rerank_score": 0.0203704833984375,
+            "best_index": 367
+          },
+          {
+            "document_id": "b7f8e3bb588d5255",
+            "title": "Как читать Отчет депозитария?",
+            "url": "https://fbroker.kz/faq/question/how-to-read-the-custody-report",
+            "score": 0.023511430144624854,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 12,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.8127657175064087
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 7.330419804976737
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 29,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 0.7784776091575623
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 10,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 0.8061516880989075
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 21,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 5.402345246842403
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 7,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 0.8508629202842712
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 19,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 5.402345246842403
+              }
+            ],
+            "chunk_ids": [
+              "53e8b1274a5e9e8022ee",
+              "fdfa06f441f65f18e024"
+            ],
+            "rerank_score": 0.01395416259765625,
+            "best_index": 370
+          }
+        ],
+        "12": [
+          {
+            "document_id": "283315a2266f7fd3",
+            "title": "Формирование Отчета брокера и Отчета депозитария",
+            "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+            "score": 0.019442223110755698,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8337461352348328
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 10.840895682562518
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.7944585084915161
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.7930545806884766
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 22,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.7830402851104736
+              }
+            ],
+            "chunk_ids": [
+              "c9bb4045c63d192a9d31"
+            ],
+            "rerank_score": 0.176513671875,
+            "best_index": 81
+          },
+          {
+            "document_id": "485ce46be7e29c48",
+            "title": "Что такое форма 1042-S, как ее получить и чем она полезна",
+            "url": "https://fbroker.kz/faq/question/what-is-1042-s-form",
+            "score": 0.02458730121383461,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.815650224685669
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 14,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 4.792580335909308
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 11,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.7732366323471069
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.7771516442298889
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 15,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 3.223608745186077
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 33,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.779705286026001
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 6,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 3.223608745186077
+              }
+            ],
+            "chunk_ids": [
+              "480735807a1575e46f9d"
+            ],
+            "rerank_score": 0.03179931640625,
+            "best_index": 151
+          },
+          {
+            "document_id": "b7f8e3bb588d5255",
+            "title": "Как читать Отчет депозитария?",
+            "url": "https://fbroker.kz/faq/question/how-to-read-the-custody-report",
+            "score": 0.015721029061600438,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 10,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.8056083917617798
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 21,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 4.347379659229052
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.7798108458518982
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.7732272148132324
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 103,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.7703091502189636
+              }
+            ],
+            "chunk_ids": [
+              "53e8b1274a5e9e8022ee",
+              "fdfa06f441f65f18e024"
+            ],
+            "rerank_score": 0.00453948974609375,
+            "best_index": 370
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "c9bb4045c63d192a9d31",
+        "document_id": "283315a2266f7fd3",
+        "title": "Формирование Отчета брокера и Отчета депозитария",
+        "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+        "text": "1.\nВ\nмобильном приложении\nFreedom Broker перейдите:\nМеню → Отчеты и документы → Отчеты брокера.\nВыберите тип документа - «Отчет брокера» или «Отчет депозитария» - и укажите отчетный период.\nДля Отчета брокера при необходимости можно включить функцию\n«Сальдировать сделки и комиссии»\n. Сальдирование изменяет только способ представления информации и не изменяет итоговые суммы, остатки или финансовый результат.\nЧтобы сформировать Отчет брокера с печатью Компании, дата окончания отчетного периода должна быть не позднее даты, предшествующей текущей не менее чем на два рабочих дня. После выбора параметров нажмите\n«Получить отчет»\n.\nПри необходимости включите отправку на e-mail и выберите формат файла: PDF, Excel, JSON или XML. Также можно настроить регулярную отправку отчетов на электронную почту. Рассылка приходит со вторника по субботу и содержит отчет за предыдущий торговый день. Отключить регулярную рассылку можно в web-версии.\n2.\nВ\nweb-версии\nперейдите: Кабинет → Отчеты брокера и выберите «Отчет брокера» или «Отчет депозитария».\nПараметры формирования отчета аналогичны мобильному приложению.\nКак отключить регулярную рассылку отчетов?",
+        "operator_turns": [
+          10,
+          12
+        ]
+      },
+      {
+        "evidence_id": "a5d5e1ce69bcd07f1a65",
+        "document_id": "b6647556479f2f57",
+        "title": "Как читать Отчет брокера?",
+        "url": "https://fbroker.kz/faq/question/how-to-read-the-broker-report",
+        "text": "ет состояние портфеля на начало отчетного периода в логике Отчета брокера.\nОстатки на конец периода\nОтражает состояние портфеля на конец отчетного периода в логике Отчета брокера. Показатели могут учитывать плановые движения и обязательства по сделкам, расчеты по которым еще не завершены.\nЦенные бумаги\nНесмотря на системное наименование раздела, содержит данные о финансовых инструментах на счетах клиента: идентификаторы, тип актива, количество, валюта и оценку.\nВвод/вывод денежных средств\nОтражает операции по пополнению счета и переводу денежных средств со счета за выбранный период.\nВвод/вывод ценных бумаг\nОтражает операции по пополнению счета и переводу денежных средств со счета за выбранный период.\nСделки с ценными бумагами\nСодержит сведения о сделках с финансовыми инструментами: операция, количество, цена, сумма, комиссия, даты сделки и расчетов и финансовый результат по закрытым позициям, если применимо.\nКомиссии\nСодержит расшифровку комиссий по операциям и итоговую сумму за отчетный период.\nКорпоративные действия\nОтражает дивиденды, сплиты, конвертации, погашения и иные события по финансовым инструментам, если применимо.\nДвижение денег",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "480735807a1575e46f9d",
+        "document_id": "485ce46be7e29c48",
+        "title": "Что такое форма 1042-S, как ее получить и чем она полезна",
+        "url": "https://fbroker.kz/faq/question/what-is-1042-s-form",
+        "text": "когда у клиента в компании-брокере была в наличии действующая форма W-8BEN или W-8BEN-E. Для каждого вида дохода и/или применимой ставки налога заполняется отдельная форма 1042-S. Каждая из форм 1042-S составляется в пяти экземплярах.\nОстальные доходы, дата среза которых не выпадала на период, когда у клиентов были действующие формы W-8BEN или W-8BEN-E, отражаются в единых формах 1042-S, где указывается совокупная сумма таких доходов без указания индивидуальных получателей.\nКак использовать форму 1042-S\nФорма помогает гражданам некоторых стран засчитать американский подоходный налог в счет налогов в их стране.\n\nВАЖНО:\nпо действующему налоговому законодательству, форма 1042-S не дает такого права налоговым резидентам Казахстана.\nКак скачать форму 1042-S\nЧтобы получить форму 1042-S, войдите в веб-версию торговой платформы Freedom Broker. Откройте на компьютере сайт платформы\nFreedom Broker\nи авторизуйтесь.\nДалее перейдите в раздел «Кабинет – Форма 1042-S».\nВыберите год, за который хотите посмотреть форму и нажмите «Показать». Либо скачайте PDF-файл.\nСроки предоставления формы 1042-S\nОтчетность по форме 1042-S, как правило, предоставляется клиентам не позднее 15 июня каждого года.",
+        "operator_turns": [
+          12
+        ]
+      },
+      {
+        "evidence_id": "fdfa06f441f65f18e024",
+        "document_id": "b7f8e3bb588d5255",
+        "title": "Как читать Отчет депозитария?",
+        "url": "https://fbroker.kz/faq/question/how-to-read-the-custody-report",
+        "text": "Отчет депозитария отражает фактические учетные остатки финансовых инструментов и денежных средств, а также сведения об операциях и расчетах. Если по недавно заключенной сделке расчеты еще не завершены, плановые показатели Отчета брокера и фактические учетные остатки Отчета депозитария могут временно отличаться.\nКак быстро найти нужную информацию\nФактические остатки финансовых инструментов → «Совокупные остатки бумаг по всем счетам»;\nФактический остаток по конкретному инструменту → «Операции и остатки бумаг по торговым счетам»;\nСведения о сделке и дата расчетов → «Исполненные сделки»;\nИтоговый фактический остаток денежных средств → «Совокупные остатки денег по всем счетам»;\nДвижение денежных средств → «Операции и остатки денег по торговым счетам».\nРаздел\nОписание\n\nИнформация о счете\n\nСодержит реквизиты счета и данные клиента, включая код клиента, тарифный план и даты открытия/активации счета.\n\nИсполненные сделки\n\nСодержит сведения о сделках, отражаемых в выбранном периоде согласно логике Отчета депозитария: финансовый инструмент, дата сделки, дата расчетов, цена, количество, комиссия и идентификаторы операции.\n\nОперации и остатки бумаг по торговым счетам",
+        "operator_turns": [
+          10,
+          12
+        ]
+      }
+    ],
+    "elapsed_seconds": 57.92,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

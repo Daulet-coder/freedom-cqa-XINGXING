@@ -1,0 +1,413 @@
+{
+  "fingerprint": "7313a4b902aebdc9ddc4917f3a0ccf87a4b7c7c80926d8d13ccf1b7dac550003",
+  "result": {
+    "conversation_id": "p1-kz-012",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": false,
+        "rationale": "Оператору облигация тикері қажет",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": false,
+        "rationale": "Для запроса по конкретному счету подтверждение личности до защищенного действия не найдено.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно инициировал сбор информации (тикер и скриншот ошибки), но клиент не смог предоставить данные из-за занятости, что привело к закрытию диалога без решения проблемы; ключевой вопрос клиента («почему отклонён» и «как исправить») остался без ответа.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          12,
+          13,
+          14
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент выразил недовольство автоматическим ботом и потребовал оператора, но оператор лишь подтвердил действие и попрощался, не отреагировав на фрустрацию клиента.",
+        "evidence_turns": [
+          5,
+          14
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор уточняет детали, клиент объясняет задержку, оператор дает четкую инструкцию на будущее.",
+        "evidence_turns": [
+          10,
+          12,
+          13,
+          14
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          14
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода платных услуг или утечка конфиденциальной информации.",
+        "evidence_turns": [
+          5,
+          10,
+          12,
+          13,
+          14
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 40.0,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": true,
+          "missing_details_reason": "Оператору облигация тикері қажет",
+          "clarified_needed_details": false,
+          "clarification_turn": 12,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 14,
+          "closing_reason": "Оператор клиенттен қосымша ақпарат күтеді",
+          "request_quote": "Облигация сатып алайын десем, өтінім қабылданбай жатыр.",
+          "clarification_quote": "",
+          "closing_quote": "Жарайды, дайын болғанда осы мәліметтерді жіберіңіз. Сау болыңыз!"
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": true,\n  \"missing_details_reason\": \"Оператору облигация тикері қажет\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": 12,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 14,\n  \"closing_reason\": \"Оператор клиенттен қосымша ақпарат күтеді\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            14
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Жарайды, дайын болғанда осы мәліметтерді жіберіңіз. Сау болыңыз!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент выразил недовольство автоматическим ботом и потребовал оператора, но оператор лишь подтвердил действие и попрощался, не отреагировав на фрустрацию клиента.\",\n    \"evidence_turns\": [5, 14],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор уточняет детали, клиент объясняет задержку, оператор дает четкую инструкцию на будущее.\",\n    \"evidence_turns\": [10, 12, 13, 14],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода платных услуг или утечка конфиденциальной информации.\",\n    \"evidence_turns\": [5, 10, 12, 13, 14],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно инициировал сбор информации (тикер и скриншот ошибки), но клиент не смог предоставить данные из-за занятости, что привело к закрытию диалога без решения проблемы; ключевой вопрос клиента («почему отклонён» и «как исправить») остался без ответа.\",\n    \"evidence_turns\": [1, 5, 10, 12, 13, 14],\n    \"value\": 10\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как проверить статус облигации по тикеру",
+        "12": "как проверить статус облигации по тикеру и скриншоту",
+        "14": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"как проверить статус облигации по тикеру\"},{\"turn\":12,\"query\":\"как проверить статус облигации по тикеру и скриншоту\"},{\"turn\":14,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "beee68415e4dc03f",
+            "title": "Как подать голосовой торговый приказ в компании Freedom Broker?",
+            "url": "https://fbroker.kz/faq/question/how-to-submit-a-voice-trading-order-at-freedom-broker",
+            "score": 0.015003066345348225,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 10,
+                "chunk_id": "30c1a29e88bd96fcb819",
+                "raw_score": 0.8170294761657715
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 89,
+                "chunk_id": "30c1a29e88bd96fcb819",
+                "raw_score": 1.6492941959505276
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 51,
+                "chunk_id": "30c1a29e88bd96fcb819",
+                "raw_score": 0.7641376852989197
+              }
+            ],
+            "chunk_ids": [
+              "30c1a29e88bd96fcb819"
+            ],
+            "rerank_score": 0.048675537109375,
+            "best_index": 383
+          },
+          {
+            "document_id": "21d5df9fc533fd5b",
+            "title": "Как найти информацию об ордерах (приказах)",
+            "url": "https://fbroker.kz/faq/question/how-to-find-orders-information-2725",
+            "score": 0.0214158766157654,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "5012276365f90e1199e3",
+                "raw_score": 0.8346638679504395
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "5012276365f90e1199e3",
+                "raw_score": 7.04568203319058
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 37,
+                "chunk_id": "5012276365f90e1199e3",
+                "raw_score": 0.7662950158119202
+              }
+            ],
+            "chunk_ids": [
+              "5012276365f90e1199e3"
+            ],
+            "rerank_score": 0.00878143310546875,
+            "best_index": 64
+          },
+          {
+            "document_id": "05aa603a45373453",
+            "title": "Как купить Single Stock ETF?",
+            "url": "https://fbroker.kz/faq/question/how-to-buy-a-single-stock-etf-",
+            "score": 0.01924149128450204,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 33,
+                "chunk_id": "5d6fc18084517ead6eb0",
+                "raw_score": 0.8075060248374939
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "5d6fc18084517ead6eb0",
+                "raw_score": 6.488735357393876
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 21,
+                "chunk_id": "5d6fc18084517ead6eb0",
+                "raw_score": 0.771098256111145
+              }
+            ],
+            "chunk_ids": [
+              "5d6fc18084517ead6eb0"
+            ],
+            "rerank_score": 0.00547027587890625,
+            "best_index": 9
+          }
+        ],
+        "12": [
+          {
+            "document_id": "beee68415e4dc03f",
+            "title": "Как подать голосовой торговый приказ в компании Freedom Broker?",
+            "url": "https://fbroker.kz/faq/question/how-to-submit-a-voice-trading-order-at-freedom-broker",
+            "score": 0.01641997708174179,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 20,
+                "chunk_id": "30c1a29e88bd96fcb819",
+                "raw_score": 0.812819242477417
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 76,
+                "chunk_id": "30c1a29e88bd96fcb819",
+                "raw_score": 1.9852122223155955
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 17,
+                "chunk_id": "30c1a29e88bd96fcb819",
+                "raw_score": 0.7537362575531006
+              }
+            ],
+            "chunk_ids": [
+              "30c1a29e88bd96fcb819"
+            ],
+            "rerank_score": 0.01422882080078125,
+            "best_index": 383
+          },
+          {
+            "document_id": "5191024da195860d",
+            "title": "Как посмотреть историю сделок?",
+            "url": "https://fbroker.kz/faq/question/how-to-view-transactions-history-2726",
+            "score": 0.014779380662971126,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 33,
+                "chunk_id": "17de41eaefb4c816d961",
+                "raw_score": 0.8100957870483398
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 66,
+                "chunk_id": "17de41eaefb4c816d961",
+                "raw_score": 2.097485669491579
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 32,
+                "chunk_id": "17de41eaefb4c816d961",
+                "raw_score": 0.7459542751312256
+              }
+            ],
+            "chunk_ids": [
+              "17de41eaefb4c816d961"
+            ],
+            "rerank_score": 0.0057525634765625,
+            "best_index": 178
+          },
+          {
+            "document_id": "3e609fa13b0f345f",
+            "title": "API и FIX-подключение в платформе Freedom Broker",
+            "url": "https://fbroker.kz/faq/question/api-and-fix-connection-in-the-freedom-broker-platform",
+            "score": 0.016692476486567118,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "63875495b8b96d91f565",
+                "raw_score": 0.8166921734809875
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 148,
+                "chunk_id": "63875495b8b96d91f565",
+                "raw_score": 1.2638924006928813
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 11,
+                "chunk_id": "63875495b8b96d91f565",
+                "raw_score": 0.7596515417098999
+              }
+            ],
+            "chunk_ids": [
+              "63875495b8b96d91f565"
+            ],
+            "rerank_score": 0.00473785400390625,
+            "best_index": 142
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "30c1a29e88bd96fcb819",
+        "document_id": "beee68415e4dc03f",
+        "title": "Как подать голосовой торговый приказ в компании Freedom Broker?",
+        "url": "https://fbroker.kz/faq/question/how-to-submit-a-voice-trading-order-at-freedom-broker",
+        "text": "азвание компании, тикер или ISIN-код ценных бумаг, по которым хотите совершить сделку.\nНаправление сделки – покупка или продажа.\nТип приказа и цену, по которой планируется сделка.\nКоличество ценных бумаг для покупки или продажи.\nЛюбые дополнительные параметры – например, цены Stop Loss и Take Profit.\nСотрудник ещё раз уточнит все детали и отправит на ваше устройство одноразовый код. Он необходим, чтобы открыть сессию безопасности и подтвердить торговый приказ.\nНазовите код сотруднику.\n\nОбратите внимание, работники Freedom Broker никогда не запрашивают пароль от вашего личного кабинета или данные банковских карт. Не передавайте сотруднику эти данные.\nГотово\n, поручение будет выставлено. Рыночный приказ обычно исполняется почти моментально. За статусом лимитного приказа необходимо будет следить дополнительно в приложении (раздел «Портфель – Приказы/Сделки»), либо через менеджера или службу поддержки Freedom Broker.\nСлужба поддержки доступна по будням с 9:00 до 21:00 по времени Астаны.",
+        "operator_turns": [
+          10,
+          12
+        ]
+      },
+      {
+        "evidence_id": "5012276365f90e1199e3",
+        "document_id": "21d5df9fc533fd5b",
+        "title": "Как найти информацию об ордерах (приказах)",
+        "url": "https://fbroker.kz/faq/question/how-to-find-orders-information-2725",
+        "text": "В\nFreedom Broker\nвы можете отслеживать информацию по своим текущим приказам: их статус (активный, исполненный, отмененный и иное) или узнать номер приказа.\nВ\nбраузерной версии\nплатформы Freedom Broker → вкладка\n«Торговать»\n→\n«Приказы»\n.\nВ\nмобильном приложении\n→ в разделе\n«Портфель» →\n«Приказы»\n.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "17de41eaefb4c816d961",
+        "document_id": "5191024da195860d",
+        "title": "Как посмотреть историю сделок?",
+        "url": "https://fbroker.kz/faq/question/how-to-view-transactions-history-2726",
+        "text": "В торговой платформе Freedom Broker вы можете отслеживать информацию по своим завершённым торговым сделкам по ценным бумагам.\nВ\nвеб версии\nплатформы Freedom Broker: вкладка\n«Торговать»\n→\n«Сделки»\n.\nВ\nмобильном приложении\n: в разделе\n«Портфель»\n→\n«Сделки»\n.\nЛибо Вы можете выгрузить отчет брокера, в котором также содержится информация о совершенных сделках.",
+        "operator_turns": [
+          12
+        ]
+      },
+      {
+        "evidence_id": "5d6fc18084517ead6eb0",
+        "document_id": "05aa603a45373453",
+        "title": "Как купить Single Stock ETF?",
+        "url": "https://fbroker.kz/faq/question/how-to-buy-a-single-stock-etf-",
+        "text": "Откройте и пополните брокерский счет в\nмобильном приложении\nFreedom Broker.\nНайдите необходимый фонд по его тикеру (например, TSLA/100.ITS).\nОтправьте торговый приказ, как при покупке любых других акций.\n\nКак выставить торговый приказ?\n\nДоступные фонды\nТикер\nКомпания\nОписание\nСектор\nETF номинал\n\nFRHC/10000.ITS\n\nFreedom Holding Corp.\nЭкосистема компаний в сферах fintech, lifestyle, e-commerce и telecom. Работает в 22 странах.\nМногопрофильная холдинговая компания\n1/10000 акции\n\nAMZN/100.ITS\n\nAmazon\nМировой лидер в электронной коммерции и облачных технологиях.\nТехнологии / E-commerce\n1/100 акции\n\nTSLA/100.ITS\n\nTesla\nПроизводитель электромобилей №1 в мире и новатор в сфере устойчивой энергии.\nАвто / Технологии\n1/100 акции\n\nNFLX/100.ITS\n\nNetflix\nВедущий глобальный стриминговый сервис с оригинальным контентом.\nМедиа / Развлечения\n1/100 акции\n\nAMD/100.ITS\n\nAMD\nОдин из крупнейших производителей процессоров и видеокарт в мире.\nПолупроводники / IT\n1/100 акции\n\nMSTR/100.ITS\n\nMicroStrategy\nЛидер в области бизнес-аналитики и крупнейший институциональный инвестор в Bitcoin.\nIT / Крипто-активы\n1/100 акции\n\nCOIN/100.ITS\n\nCoinbase\nКрупнейшая криптовалютная биржа США, листинг на Nasdaq.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "63875495b8b96d91f565",
+        "document_id": "3e609fa13b0f345f",
+        "title": "API и FIX-подключение в платформе Freedom Broker",
+        "url": "https://fbroker.kz/faq/question/api-and-fix-connection-in-the-freedom-broker-platform",
+        "text": "ение и удаление тикеров, подписка на обновления котировок и получение исторических данных.\nПортфель:\nполучение информации о портфеле пользователя и подписка на изменения.\nПриказы:\nуправление приказами — получение текущих и исторических данных, отправка приказов на исполнение, установка Stop Loss и Take Profit, а также отмена приказов.\nЦеновые алерты:\nсоздание, получение и удаление ценовых оповещений.\nПоручения:\nполучение истории клиентских поручений и связанных файлов, а также отправка обратной связи.\nОтчёты брокера:\nполучение брокерских и депозитарных отчётов, а также информации о движении денежных средств.\nВалюты:\nполучение курсов валют на определённую дату и списка доступных валют.\nWebSocket и данные в реальном времени\n: подключение к WebSocket-серверу для получения обновлений котировок, стакана сделок, изменений в сессиях безопасности, портфеле, приказах и статусах рынков в режиме реального времени.\nРазное\n: дополнительная информация, такая как список действующих офисов FreedomBroker, имена системных файлов, торговые площадки, данные об инструментах, типы поручений, поля анкеты пользователя, типы документов, коды и ошибки, статусы приказов и вопросы безопасности.",
+        "operator_turns": [
+          12
+        ]
+      }
+    ],
+    "elapsed_seconds": 63.79,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

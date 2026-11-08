@@ -1,0 +1,18 @@
+{
+  "result": {
+    "conversation_id": "p1-ru-007",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "ValueError: ValueError: Invalid request_kind; ValueError: Invalid request_kind"
+  },
+  "audit": {
+    "pipeline_version": "42",
+    "stages": {},
+    "rag": {},
+    "elapsed_seconds": 56.91,
+    "peak_gpu0_allocated_gib": 7.608
+  },
+  "signature": "f45797b184d36c3265d46625f8371cec34edecf194b93faa49942c18b23e8ed3",
+  "label_provenance": "model_generated_unreviewed"
+}

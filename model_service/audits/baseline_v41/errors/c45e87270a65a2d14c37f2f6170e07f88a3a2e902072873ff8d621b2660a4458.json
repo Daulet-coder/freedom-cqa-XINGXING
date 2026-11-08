@@ -1,0 +1,17 @@
+{
+  "fingerprint": "c45e87270a65a2d14c37f2f6170e07f88a3a2e902072873ff8d621b2660a4458",
+  "result": {
+    "conversation_id": "p1-en-007",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "ValueError: Invalid first protected action turn"
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {},
+    "rag": {},
+    "elapsed_seconds": 27.91
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

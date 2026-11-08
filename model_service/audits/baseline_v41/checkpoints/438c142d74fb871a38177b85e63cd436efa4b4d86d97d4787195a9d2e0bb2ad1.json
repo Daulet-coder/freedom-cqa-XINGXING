@@ -1,0 +1,310 @@
+{
+  "fingerprint": "438c142d74fb871a38177b85e63cd436efa4b4d86d97d4787195a9d2e0bb2ad1",
+  "result": {
+    "conversation_id": "p1-ru-021",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Достаточно информации для ответа.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор Олеся в turn 10 четко ответила на оба вопроса клиента: подтвердила, что Nasdaq и NYSE разные, и объяснила ключевое отличие (технологический сектор против исторически широкого спектра отраслей), что соответствует запросу на простое объяснение.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент явно выразил желание понять простыми словами (turn 5), оператор передал запрос оператору и получил подтверждение, что объяснение было понятно (turn 11), что удовлетворяет потребность клиента в ясности.",
+        "evidence_turns": [
+          5,
+          7,
+          11
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен: бот четко ответил на вопрос, клиент попросил оператора для простого объяснения, оператор дал развернутый ответ, клиент подтвердил понимание, разговор завершился корректно.",
+        "evidence_turns": [
+          1,
+          4,
+          5,
+          10,
+          11,
+          12
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальной информации.",
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          11
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 92.31,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Достаточно информации для ответа.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 12,
+          "closing_reason": "Оператор предлагает помощь в будущем.",
+          "request_quote": "Насдак и Нью-Йоркская биржа — это одно и то же?",
+          "clarification_quote": "",
+          "closing_quote": "Рада помочь. До свидания!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Достаточно информации для ответа.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор предлагает помощь в будущем.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Рада помочь. До свидания!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент явно выразил желание понять простыми словами (turn 5), оператор передал запрос оператору и получил подтверждение, что объяснение было понятно (turn 11), что удовлетворяет потребность клиента в ясности.\",\n    \"evidence_turns\": [5, 7, 11],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен: бот четко ответил на вопрос, клиент попросил оператора для простого объяснения, оператор дал развернутый ответ, клиент подтвердил понимание, разговор завершился корректно.\",\n    \"evidence_turns\": [1, 4, 5, 10, 11, 12],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальной информации.\",\n    \"evidence_turns\": [1, 2, 4, 5, 10, 11],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор Олеся в turn 10 четко ответила на оба вопроса клиента: подтвердила, что Nasdaq и NYSE разные, и объяснила ключевое отличие (технологический сектор против исторически широкого спектра отраслей), что соответствует запросу на простое объяснение.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "чем отличаются биржи Nasdaq и NYSE",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\": [{\"turn\": 10, \"query\": \"чем отличаются биржи Nasdaq и NYSE\"}, {\"turn\": 12, \"query\": \"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "39c7860d958cb58f",
+            "title": "Пре- и постмаркет",
+            "url": "https://fbroker.kz/faq/question/pre-and-postmarket2735",
+            "score": 0.03176930596285435,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "13804d2a0152c7752cd9",
+                "raw_score": 0.8403979539871216
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "13804d2a0152c7752cd9",
+                "raw_score": 11.646782583829545
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 6,
+                "chunk_id": "13804d2a0152c7752cd9",
+                "raw_score": 0.8090997338294983
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "13804d2a0152c7752cd9",
+                "raw_score": 15.81828968973965
+              }
+            ],
+            "chunk_ids": [
+              "13804d2a0152c7752cd9"
+            ],
+            "rerank_score": 0.63818359375,
+            "best_index": 124
+          },
+          {
+            "document_id": "3cd98341c7f82fa9",
+            "title": "Что такое биржа?",
+            "url": "https://fbroker.kz/faq/question/what-is-a-stock-exchange",
+            "score": 0.03179263712662293,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "730fb2134a3ec71f3628",
+                "raw_score": 0.860095739364624
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 7,
+                "chunk_id": "730fb2134a3ec71f3628",
+                "raw_score": 9.339668950875954
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "730fb2134a3ec71f3628",
+                "raw_score": 0.8300967216491699
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "730fb2134a3ec71f3628",
+                "raw_score": 15.077712845812226
+              }
+            ],
+            "chunk_ids": [
+              "730fb2134a3ec71f3628"
+            ],
+            "rerank_score": 0.2386474609375,
+            "best_index": 135
+          },
+          {
+            "document_id": "074d4de3f84b49dc",
+            "title": "Какие торговые часы у ITS?",
+            "url": "https://fbroker.kz/faq/question/what-are-the-trading-hours-for-its",
+            "score": 0.026006416505908302,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 11,
+                "chunk_id": "8e766ab92bcfde2dd3c7",
+                "raw_score": 0.8106430768966675
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 10,
+                "chunk_id": "8e766ab92bcfde2dd3c7",
+                "raw_score": 7.759485222460015
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 37,
+                "chunk_id": "8e766ab92bcfde2dd3c7",
+                "raw_score": 0.7936170101165771
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 15,
+                "chunk_id": "8e766ab92bcfde2dd3c7",
+                "raw_score": 11.163503926616936
+              }
+            ],
+            "chunk_ids": [
+              "8e766ab92bcfde2dd3c7"
+            ],
+            "rerank_score": 0.1114501953125,
+            "best_index": 14
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "13804d2a0152c7752cd9",
+        "document_id": "39c7860d958cb58f",
+        "title": "Пре- и постмаркет",
+        "url": "https://fbroker.kz/faq/question/pre-and-postmarket2735",
+        "text": "Торги на американском фондовом рынке проходят\nс 9:30 до 16:00\nпо Нью-Йорку. Но на биржах есть также расширенные часы до открытия и после закрытия основной сессии. Они называются\n«Pre-Market»\nи\n«Post-Market»\n(иногда post-market называют\n«After Hours»\n).\nВ эти периоды вы тоже можете покупать и продавать акции, хотя у такой торговли есть несколько важных нюансов.\nРасписание пре-маркета и пост-маркета\nТрудно сказать однозначно, когда начинаются и заканчиваются дополнительные часы на рынке США. Единого времени как бы нет – на разных биржах оно свое:\n• На сайте Нью-Йоркской фондовой биржи (NYSE) указано, что предварительная активность начинается в 6:30 или 7:00 утра по Нью-Йорку. Пост-маркет на NYSE длится с 16:00 до 20:00.\n• По правилам NASDAQ пре-маркет стартует в 4:00 утра по Нью-Йорку. Пост-маркет начинается в 16:00 и завершается в 18:30.\n• Также кроме NYSE и NASDAQ в Штатах есть развитая сеть электронных бирж (Electronic Communication Network, ECN). На них расписание предварительных и послеторговых часов тоже может отличаться.\nВ любом случае, наиболее «адекватная» активность обычно разворачивается примерно\nс 8:00 до 9:30\nна\nпре-маркете\nи\nс 16:00 до 17:30\nна\nпост-маркете\n.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "730fb2134a3ec71f3628",
+        "document_id": "3cd98341c7f82fa9",
+        "title": "Что такое биржа?",
+        "url": "https://fbroker.kz/faq/question/what-is-a-stock-exchange",
+        "text": "Биржа\n– площадка, где покупают и продают ценные бумаги: акции, облигации, паи биржевых фондов ETF и другие.\nКрупнейшие фондовые биржи планеты – New York Stock Exchange, NASDAQ, London Stock Exchange. В Казахстане работают две биржи – Kazakhstan Stock Exchange (KASE) и Astana International Exchange (AIX, биржа Международного финансового центра «Астана»).\nМобильное приложение Freedom Broker от компании Freedom Broker дает доступ к торгам на всех ключевых биржах планеты.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "8e766ab92bcfde2dd3c7",
+        "document_id": "074d4de3f84b49dc",
+        "title": "Какие торговые часы у ITS?",
+        "url": "https://fbroker.kz/faq/question/what-are-the-trading-hours-for-its",
+        "text": "Время торгов на ITS охватывает время работы азиатских, европейских и американских биржевых площадок. Это позволяет инвесторам эффективнее управлять портфелями, реагируя на корпоративные и экономические события по всему миру.\nТорги на ITS проходят 18 часов в сутки, пять дней в неделю,\nс 09:00 до 03:45\nследующего дня по времени GMT+5, часовой пояс г. Астана.\nОтметим, что время торгов на ITS связано с расписанием на биржах США. Американский рынок переходит на летнее время в марте и на зимнее время в ноябре.\nБиржи NYSE и NASDAQ работают:\n– С 18:30 до 01:00 (GMT +5, часовой пояс г. Астана) с марта по ноябрь;\n– С 19:30 до 02:00 (GMT +5, часовой пояс г. Астана) с ноября по март.\nИз-за этого на ITS меняется время торгов по ряду инструментов.\nЛетний период\nВремя стандартной дополнительной ликвидности – с 16:30 (GMT +5, часовой пояс г. Астана).\nОкончание торгов по US Market ETFs в 01:00.\nВремя торгов по группам инструментов:\n\nhttps://itsx.kz/news/86fdaff9-a39e-4b0c-bf90-d8e92af3b35b/\nВремя торгов по каждому инструменту:\n\nhttps://itsx.kz/trading-and-data/trading-hours\nЗимний период\nВремя стандартной дополнительной ликвидности – с 17:30 (GMT +5, часовой пояс г. Астана).",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 57.92,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

@@ -1,0 +1,44 @@
+{
+  "fingerprint": "a43fab87b9df942c294f6022e7475e6d0492dfe05ce4b4b4807f66bf5c79b4dc",
+  "result": {
+    "conversation_id": "p4-ru-004",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 6.50 GiB. GPU 0 has a total capacity of 14.56 GiB of which 5.23 GiB is free. Including non-PyTorch memory, this process has 9.33 GiB memory in use. Of the allocated memory 9.01 GiB is allocated by PyTorch, and 188.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 19,
+          "first_protected_action_turn": 38,
+          "missing_details_required": true,
+          "missing_details_reason": "Оператору необходимо полное ФИО и адрес для проверки данных на брокерском счете.",
+          "clarified_needed_details": true,
+          "clarification_turn": 47,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 115,
+          "closing_reason": "Оператор спрашивает о наличии дополнительных вопросов у клиента.",
+          "request_quote": "Здравствуйте, я этот насчёт у облигации звоню. Я вот до этого не звонил, 05:00 только в поддержку.",
+          "clarification_quote": "Лучше полная фамилия, имя, отчество.",
+          "closing_quote": "Подскажите, пожалуйста, у вас стали дополнительные вопросы?"
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_turn\": 19,\n  \"first_protected_action_turn\": 38,\n  \"missing_details_required\": true,\n  \"missing_details_reason\": \"Оператору необходимо полное ФИО и адрес для проверки данных на брокерском счете.\",\n  \"clarified_needed_details\": true,\n  \"clarification_turn\": 47,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 115,\n  \"closing_reason\": \"Оператор спрашивает о наличии дополнительных вопросов у клиента.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [],
+          "interruption_turns": [],
+          "closing_quote": "Подскажите, пожалуйста, у вас стали дополнительные вопросы?"
+        }
+      }
+    },
+    "rag": {},
+    "elapsed_seconds": 23.46
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

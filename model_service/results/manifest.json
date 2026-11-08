@@ -1,364 +1,664 @@
 {
   "p1-ru-001": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "510b9c055d7ad1e4273793fa3f0260c07af0ee293427e396c91a81008fd7f0b9.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-002": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "b3c45e27bf2b409db5d0c66a78212b13b0d9397ba07b571fb92034947b2424e6.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-003": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "1d7511ff06a439ee7f46078d3b3d4f25f83489647f5bd17acd49d9381af504f8.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-004": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "35efc0cda7350b34a322458a1a8cc6c2bd0d20f820c3e6442dea52a35c47e3e1.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-005": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "96e2d51873ccdd83b662f10f2e6eadff15984e83c57db0a4b32e9f68aaf4227b.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-006": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "5078ac146001a8f3be1140bba47e04600ef2db4fc72f805421576ed182f9f160.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-007": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "312a8af2365d103ebea5af3ec81e6baabbab3291f5a8192cf53327c5570b7e15.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "11271fdb7c42aa3494b4d3a333acce711f9660bcd9209ce65998ff983c968428.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-008": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "bd0d718adaa5c6ae47726a0ee6284c235076e03a8340b033550e519e6cd1f6e4.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-009": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "8692b0f60a0b77513754965f6fc2da71ad8506533a201347e8fe5e9afb13c2b2.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-010": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "71962d6572cd3112a07e6cc1d86a7793a99758049296de0ef5eae937bea29f70.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-011": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "9106d8c9bb78c5e3a823cd96ec5272b8b4ec7aa25f8a8af48bc7545efe522679.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-012": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "3ea1443605fdea7abb320e68e12c5d18f26abd4446ab329e81cc50e4dacad162.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "514d2b42b0004c00ca20a497d8c8c573e0d01cd4bfded7d3142ec7f3f34daeda.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-013": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "4b5ab568a00ad71367f0f63daac500f01e650620af2ce6e1f6e1b01ac25e2b22.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-014": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "ecf63d87b92008e064cc7601ccc8eba58225736f3d24bfa9abb8a2b5c9473df9.json",
+    "dialogue_guard": [
+      {
+        "kind": "avoidable_repeat_of_known_platform",
+        "evidence_turns": [
+          5,
+          10,
+          11
+        ],
+        "already_provided_quote": "На сайте Freedom Finance Global. Дайте оператора, я запутался.",
+        "operator_question": "Привет, где именно ищете?",
+        "client_repeat_quote": "Я уже писал, на сайте компании, не в приложении."
+      }
+    ],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-015": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "5bde9359f8009b026c63331da8e3ad7375ef9c31141db67e188277b496c77b72.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-016": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "c33ed989da846193c4fc94eeb5de53c6f53569985dedf355fee87716b348d6d6.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-017": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "9318af8153e5781ae6bed9db37969a90fa724a66514f6de4e33989f3b4cdf188.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-018": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "fe691f959b11d18496c01c8b47dd1b32f28446045a7416bfa1357c89cf334aa5.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-019": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "863cf52ac0fabf197b920867eee02b441de4915138b5c6a1c411711897560700.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-020": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "7b3c846c0921e67fbaca905d6e5a9740b56988edd6d0848ef8171c3a86f0a713.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-021": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "d6c5158922232b29a60e1feaf8a56196e28669a68166d77e24852cfbeb309975.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-022": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "c1a609125772623dda32e24425d506ed0a753e37c414f0fb8f7f79ed26d10a0f.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-023": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "e9680067f03a9908d5db2f70c4fd1fdf5b12daff16910601d0c3852ece2a84f8.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-024": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "0c9f095f08b68296f97f46e63bf7dd9968c31f276713fec6df4679accc6ef459.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-025": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": [
-      {
-        "criterion_id": "consultation",
-        "from": 0,
-        "to": null,
-        "reason": "No substantive client request formulated"
-      }
-    ]
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "c8bdcea5a9b600a875d26c07dd153e81c3b0c4a219e6b6086586b9b711cd3d88.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-026": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "223240aa59c85fc83ce7aeb8d127c2bfbbf4a14d319163a4da64007215a91c8d.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-027": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "3553fbf2607324a6bdf882ce85f2b568317611028e1da88b4e170a7a294ae0bc.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-028": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "abdf6b2e68a0e1c300e9beb854cc3d2cc4fa8e15e8e11d4982f60a6382395962.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-029": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "057c809ece5dbebd9a4dfec875939eb5243de6233e93a546a642a711b4072053.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-ru-030": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "490d11ebb6412015c8e824f176ea7fe2ce11a87e1b1add8d6d765424b894a8c7.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-001": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "9d055151b7a17eaa2f157aa34b2e06751d8c43b7916095401f69f7a745a71914.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "a5e2f764d2f1140444340557d4f532a60b0e88e0f78c2c4ec9e7d421da237436.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-002": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "226355a96079e063695304af2d90f5717b624d7e70e69a9a9c2eb2e9cfc05463.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-003": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "e543564c1ff065701d6b5ac6afd1479eaaff0d384f79d5c7da42067115b0ec62.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-004": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "8edd5a0c78a83c4797c8280a8295853b7ba2601ceedbdad2797ccdeb18e8bbf2.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-005": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "4aae8e6a2f1918a40ffe71ac2540d6cdc843b761103e2c0820364c73cdd34da4.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-006": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "1e013b64aacb4f9173a1a08fcc219f349d5fd390264148cbaeaa15cf6bb267cf.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-007": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "76a042f1496a58e90fe7a27ad42e7a0e076369ea3b872fedcfdf3b975d6909c6.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-008": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "e648297b0ca123b9c3f55e99d6b90d4eab323690f8772bdc1ad9ac4a65f25a23.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "d2ed13883beba84665f52ccf41ae41a9afcc4e80d59d0fb5521f5d009e9f5e9f.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-009": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "738474fd9c4a0b5161f505bdd23fc31f9cf68626a83a3ed20aa498b7eeac885a.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-010": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "1b5fd90207ce7e36b115dc4facbff2eedcdeaa66a76b75e60426cee834ac3f13.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "753b437bf0940d49ec3f8d814114ffd2ea653e9def35b1a9afb572a06d22615c.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-011": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "188d34bac906a92b0196e4899306e6b41228d3501530d553b3cc3728d2303597.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-012": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "0acfbe9c32740a5eded49a6cb961dd88984a0a6416e0b9da4d015ac8edbc22ca.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-013": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "e39d41a61e22f0fdba5e9cfda9e72d72c5dd54e13bc7265f9bae007ab2faab3d.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-014": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "228e0d4008255f033172e327595245734ac3f34d611cabb6c0624b8f5bf54ca9.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-kz-015": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "12bcbe2455d71064d414299f4b83e4cff20d1d7cbfded076b249b1a241c36e18.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-001": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "4fb2f274b21bfdf3f1f0931e9878dda53c8758d2ee07aaec4daa9a063de0d9d0.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-002": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "f56b7066d12272cc090b86917a5d99af4b3cca069f88ff660ea97916ad5159e7.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-003": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "f3d6d2c1e4035c1f6e0d8a9484484958c9e67ef8c2614b7bd76f7c54510c89de.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-004": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "6b0167d6aa4a649ea4e61a5ca2c5cc0d109d91ccf491e7675f43fda64d3c9b4c.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-005": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "a9cbb34f034382e56fcb794e52bcacdbbee9b59d6e44a36d6db9b106e13cf807.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-006": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "e68e1c63d227a96b44841f86ccd9b05e8768cd028e35c5d83481e52c422c2d0d.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-007": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "c357afd9d3097456b59b0f1c615d1de77d679eaf68a01ba46d8c2868b04222df.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "a171cb40e55a61998d725edb31d492d3f9157c1f7b4b001d04ffd2d40d8d700b.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-008": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "bf4064c08dea36fdabb1c9f4b4143580c2aa398800808963b9cc44e7dffcb465.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-009": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "42f6b4b1d8775aa340e79f9ca69711ac1f91eb19ff71678290e0c129bbce7dc7.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-010": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "60cc70f41e4ab2b22affa5167f69bdbd0f1329052fc0ac90fb87c78c6e95fecf.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-011": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "0c765d165c80ee1bfd7d12cc33392e45a793b14747c8dfc9a9d0639d016302ae.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-012": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "c4a9aec43e3e8d4ecdc2167442fce5c2cc76abe702584e9491efb35882993157.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-013": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "ee39b071dc869b30d2a283dccb2f11e8a8cc1078be710bb554fd7b6238382ecd.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-014": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": false,
+    "checkpoint": "577580cf8c99e661bc42aa2d0a605bbd40145c3c26c3c98dd5de275e61a5c9cb.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p1-en-015": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "9dd3ab508dff43c5fe020a4225026f3897d13d3b014204faff126bf572c0783e.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p4-ru-003": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "c17f88c0f3b861d92f129748df7fe62bf96df1baf67cfedfa4d3c237c6184bde.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "99620a57084ee5cb5a2f5e39486462a9cd5c71eaa85e724fd24ab715b2fc6fc1.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p4-ru-002": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "220daeb6b4938c9f9f58d9f9d9ac92d1e21e3152ff91ba039833d070fdbece89.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "c2290f7a4fc97dc56d04316dfac5353ea1f9f1d6e7a3d7cf40c86f691d7abb6b.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p4-ru-001": {
-    "baseline_pipeline": "41",
-    "baseline_status": "ok",
-    "deterministic_adjustments": []
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": true,
+    "new_empathy": true,
+    "checkpoint": "2aa5f78724c20eef9c0747171a5c94396ff7cd264da28c82fb40047ab4c7ab7f.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p4-ru-005": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "5e6525784113619a569393b54c3212ac9651365c50f76d675127d66931bf9be6.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "ddb99666c1d8ce497d73f1d350da783920ad044957d1a8ec80ccb1546e6d8edf.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   },
   "p4-ru-004": {
-    "baseline_pipeline": "41",
-    "baseline_status": "error",
-    "deterministic_adjustments": [],
-    "repair_pipeline": "42",
-    "repair_status": "ok",
-    "repair_checkpoint": "3d823f26d12dc0118eac6a9dfd5f6b6de081a3065129592daa6787a83cd36135.json"
+    "status": "ok",
+    "communication_version": "43.1",
+    "remaining_criteria": "frozen baseline v42",
+    "old_empathy": false,
+    "new_empathy": true,
+    "checkpoint": "67449eb2ce751bf547e3cf9ec6b27f6cdefbf483b95ad93d3a89a5559b7af6fd.json",
+    "dialogue_guard": [],
+    "label_provenance": "model_generated_unreviewed"
   }
 }

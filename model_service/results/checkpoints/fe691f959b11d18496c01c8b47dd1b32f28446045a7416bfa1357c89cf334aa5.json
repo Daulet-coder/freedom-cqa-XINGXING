@@ -1,0 +1,32 @@
+{
+  "item": {
+    "criterion_id": "empathy",
+    "value": false,
+    "rationale": "В указанных репликах оператора выявлена невежливая или пренебрежительная формулировка.",
+    "evidence_turns": [
+      5,
+      10,
+      12
+    ]
+  },
+  "audit": {
+    "facts": {
+      "client_negative_affect": true,
+      "affect_turns": [
+        5
+      ],
+      "operator_impolite": true,
+      "impolite_turns": [
+        10,
+        12
+      ],
+      "responded_to_specific_inconvenience": false,
+      "response_turns": []
+    },
+    "raw": "{\n  \"client_negative_affect\": true,\n  \"affect_turns\": [\n    \"C_0005\"\n  ],\n  \"operator_impolite\": true,\n  \"impolite_turns\": [\n    \"O_0010\",\n    \"O_0012\"\n  ],\n  \"responded_to_specific_inconvenience\": false,\n  \"response_turns\": [\n    \"O_0010\",\n    \"O_0012\"\n  ]\n}\n",
+    "validation_errors": [],
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "code_signature": "be4152ab531b7075ba36c6b1efbfb0b30dd5f6f2294552d623a400e7e82bfa77",
+  "checkpoint_signature": "3ef6c92ab69ac604f231f51eb17aadf1d6242b5ae7ddee88160a1da9f1ad081f"
+}

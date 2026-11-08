@@ -1,0 +1,152 @@
+{
+  "fingerprint": "3cfcb4eb82c7a2cfb51052254e29006eb394a79f1e849b3c1008f83fef3030e1",
+  "result": {
+    "conversation_id": "p1-ru-025",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент попросил сразу подключить оператора, не указав конкретный вопрос.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор не успел ответить на запрос клиента, так как клиент покинул чат до начала диалога по существу.",
+        "evidence_turns": [
+          5,
+          10,
+          11
+        ],
+        "value": 0
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент явно выразил недовольство и требование немедленного подключения оператора, но оператор не отреагировал на эту конкретную проблему, а лишь поздоровался и спросил, чем помочь.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и понятен: бот представился, предложил варианты помощи, клиент запросил оператора, бот подтвердил эскалацию, оператор поздоровался и начал диалог, однако разговор оборвался до завершения.",
+        "evidence_turns": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "value": 7
+      },
+      {
+        "criterion_id": "closure",
+        "value": null,
+        "rationale": "Разговор прерван до завершения.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечка конфиденциальной информации.",
+        "evidence_turns": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 34.17,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент попросил сразу подключить оператора, не указав конкретный вопрос.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_reason": "Клиент покинул чат до ответа оператора.",
+          "request_quote": "Здравствуйте, можно поговорить с человеком?",
+          "clarification_quote": "",
+          "closing_quote": ""
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент попросил сразу подключить оператора, не указав конкретный вопрос.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_turn\": null,\n  \"closing_reason\": \"Клиент покинул чат до ответа оператора.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [],
+          "interruption_turns": [
+            11
+          ],
+          "closing_quote": ""
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент явно выразил недовольство и требование немедленного подключения оператора, но оператор не отреагировал на эту конкретную проблему, а лишь поздоровался и спросил, чем помочь.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и понятен: бот представился, предложил варианты помощи, клиент запросил оператора, бот подтвердил эскалацию, оператор поздоровался и начал диалог, однако разговор оборвался до завершения.\",\n    \"evidence_turns\": [2, 4, 5, 6, 7, 8, 10],\n    \"value\": 7\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечка конфиденциальной информации.\",\n    \"evidence_turns\": [2, 4, 5, 6, 7, 8, 10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\"consultation\": {\"rationale\": \"Оператор не успел ответить на запрос клиента, так как клиент покинул чат до начала диалога по существу.\", \"evidence_turns\": [5, 10, 11], \"value\": 0}}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\": [{\"turn\": 10, \"query\": \"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 49.12,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

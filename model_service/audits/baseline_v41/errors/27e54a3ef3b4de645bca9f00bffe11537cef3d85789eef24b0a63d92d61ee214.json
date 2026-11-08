@@ -1,0 +1,17 @@
+{
+  "fingerprint": "27e54a3ef3b4de645bca9f00bffe11537cef3d85789eef24b0a63d92d61ee214",
+  "result": {
+    "conversation_id": "p4-ru-005",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "ValueError: Fact references wrong speaker or turn: 73 expected operator"
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {},
+    "rag": {},
+    "elapsed_seconds": 35.01
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

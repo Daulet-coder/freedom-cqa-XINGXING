@@ -1,0 +1,149 @@
+{
+  "fingerprint": "9c0b199348e936d6761c8e0daf2bc26fe6545906c4698d7cedde6422fa3242b7",
+  "result": {
+    "conversation_id": "p1-ru-014",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": false,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "клиент указал конкретный сайт Freedom Finance Global",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно разъяснил, что сайт Freedom Finance Global является информационным и не содержит входа в личный кабинет, предложив альтернативные пути доступа (tradernet.global или приложение), что полностью закрыло вопрос клиента.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11,
+          12,
+          13
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент явно выразил растерянность и попросил оператора (turn 5), но оператор в turn 12 просто констатировал факт и дал инструкцию без выражения эмпатии к его затруднениям.",
+        "evidence_turns": [
+          5,
+          12
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен: бот уточняет сайт, клиент отвечает, оператор дает четкую инструкцию по альтернативному пути доступа, клиент подтверждает решение.",
+        "evidence_turns": [
+          4,
+          5,
+          12,
+          13
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          12,
+          14
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Взаимодействие корректно, нет оскорблений, утечек данных или попыток навязать платные услуги в обход компании.",
+        "evidence_turns": [
+          12
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 61.54,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "клиент указал конкретный сайт Freedom Finance Global",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 12,
+          "closing_reason": "оператор сообщил клиенту, что сайт для доступа к счёту открыт",
+          "request_quote": "Где личный кабинет? На сайте компании в меню не вижу входа.",
+          "clarification_quote": "",
+          "closing_quote": "Понял. Это информационный сайт. Для доступа к счёту откройте tradernet.global или мобильное приложение Freedom Broker."
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"клиент указал конкретный сайт Freedom Finance Global\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"оператор сообщил клиенту, что сайт для доступа к счёту открыт\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            14
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Понял. Это информационный сайт. Для доступа к счёту откройте tradernet.global или мобильное приложение Freedom Broker."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент явно выразил растерянность и попросил оператора (turn 5), но оператор в turn 12 просто констатировал факт и дал инструкцию без выражения эмпатии к его затруднениям.\",\n    \"evidence_turns\": [5, 12],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен: бот уточняет сайт, клиент отвечает, оператор дает четкую инструкцию по альтернативному пути доступа, клиент подтверждает решение.\",\n    \"evidence_turns\": [4, 5, 12, 13],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"Взаимодействие корректно, нет оскорблений, утечек данных или попыток навязать платные услуги в обход компании.\",\n    \"evidence_turns\": [12],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно разъяснил, что сайт Freedom Finance Global является информационным и не содержит входа в личный кабинет, предложив альтернативные пути доступа (tradernet.global или приложение), что полностью закрыло вопрос клиента.\",\n    \"evidence_turns\": [1, 5, 10, 11, 12, 13],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "",
+        "12": "",
+        "14": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"\"},{\"turn\":12,\"query\":\"\"},{\"turn\":14,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 52.97,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

@@ -1,0 +1,385 @@
+{
+  "result": {
+    "conversation_id": "p1-ru-007",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          11
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор ответил на вопрос о пути к обновлению данных, но проигнорировал критический вопрос клиента о том, можно ли сразу после отправки поручения снова подавать заявку на вывод средств, что является ключевым условием разблокировки операции.",
+        "evidence_turns": [
+          1,
+          5,
+          11,
+          12,
+          13
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент проявил недовольство и попросил оператора, но оператор проигнорировал эмоциональный запрос, ответив только инструкцией и пожеланием хорошего дня.",
+        "evidence_turns": [
+          5,
+          11,
+          13
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот дал инструкцию, клиент уточнил детали, оператор ответил на вопрос и завершил разговор, хотя и пропустил эскалацию.",
+        "evidence_turns": [
+          4,
+          5,
+          11,
+          12,
+          13
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          13
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Отсутствие реакции оператора на просьбу клиента о подключении оператора не является грубой ошибкой по критериям (не оскорбление, не утечка, не обход платной услуги).",
+        "evidence_turns": [
+          5,
+          11
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 53.85,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "42",
+    "stages": {
+      "boundary_attempt": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "request_quote": "Не могу вывести деньги, просит обновить анкетные данные.",
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "clarification_quote": "",
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_quote": "",
+          "closing_reason": "Оператор завершил разговор пожелав хорошего дня без подведения итогов или предложения дальнейшей помощи.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "GENERAL_INFORMATION",
+            "request_ref": "C_0001",
+            "first_protected_action_ref": null,
+            "missing_details_required": false,
+            "missing_details_reason": "Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.",
+            "clarified_needed_details": false,
+            "clarification_ref": null,
+            "closing_kind": "NONE",
+            "closing_ref": null,
+            "closing_reason": "Оператор завершил разговор пожелав хорошего дня без подведения итогов или предложения дальнейшей помощи."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_ref\": \"C_0001\",\n  \"first_protected_action_ref\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.\",\n  \"clarified_needed_details\": false,\n  \"clarification_ref\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_ref\": null,\n  \"closing_reason\": \"Оператор завершил разговор пожелав хорошего дня без подведения итогов или предложения дальнейшей помощи.\"\n}\n",
+        "derived": [
+          {
+            "criterion_id": "contact",
+            "value": true,
+            "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+            "evidence_turns": [
+              11
+            ]
+          },
+          {
+            "criterion_id": "discovery",
+            "value": null,
+            "rationale": "Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.",
+            "evidence_turns": [
+              1
+            ]
+          },
+          {
+            "criterion_id": "identification",
+            "value": null,
+            "rationale": "Общая инструкция не требует идентификации.",
+            "evidence_turns": [
+              1
+            ]
+          },
+          {
+            "criterion_id": "closure",
+            "value": false,
+            "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+            "evidence_turns": [
+              13
+            ]
+          }
+        ]
+      },
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "request_quote": "Не могу вывести деньги, просит обновить анкетные данные.",
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "clarification_quote": "",
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_quote": "",
+          "closing_reason": "Оператор завершил разговор пожелав хорошего дня без подведения итогов или предложения дальнейшей помощи.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "GENERAL_INFORMATION",
+            "request_ref": "C_0001",
+            "first_protected_action_ref": null,
+            "missing_details_required": false,
+            "missing_details_reason": "Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.",
+            "clarified_needed_details": false,
+            "clarification_ref": null,
+            "closing_kind": "NONE",
+            "closing_ref": null,
+            "closing_reason": "Оператор завершил разговор пожелав хорошего дня без подведения итогов или предложения дальнейшей помощи."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_ref\": \"C_0001\",\n  \"first_protected_action_ref\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Оператор предоставил полный путь к обновлению данных без запроса дополнительной информации.\",\n  \"clarified_needed_details\": false,\n  \"clarification_ref\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_ref\": null,\n  \"closing_reason\": \"Оператор завершил разговор пожелав хорошего дня без подведения итогов или предложения дальнейшей помощи.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            13
+          ],
+          "interruption_turns": [],
+          "closing_quote": ""
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент проявил недовольство и попросил оператора, но оператор проигнорировал эмоциональный запрос, ответив только инструкцией и пожеланием хорошего дня.\",\n    \"evidence_turns\": [5, 11, 13],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот дал инструкцию, клиент уточнил детали, оператор ответил на вопрос и завершил разговор, хотя и пропустил эскалацию.\",\n    \"evidence_turns\": [4, 5, 11, 12, 13],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"Отсутствие реакции оператора на просьбу клиента о подключении оператора не является грубой ошибкой по критериям (не оскорбление, не утечка, не обход платной услуги).\",\n    \"evidence_turns\": [5, 11],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\"consultation\": {\"rationale\": \"Оператор ответил на вопрос о пути к обновлению данных, но проигнорировал критический вопрос клиента о том, можно ли сразу после отправки поручения снова подавать заявку на вывод средств, что является ключевым условием разблокировки операции.\", \"evidence_turns\": [1, 5, 11, 12, 13], \"value\": 10}}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "11": "как изменить персональные данные в приложении",
+        "13": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":11,\"query\":\"как изменить персональные данные в приложении\"},{\"turn\":13,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "11": [
+          {
+            "document_id": "e177b222de63e390",
+            "title": "Обновление персональных данных (переанкетирование)",
+            "url": "https://fbroker.kz/faq/question/updating-personal-data--requestionnaire-",
+            "score": 0.03201806126184762,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "653ff98e1219112c7ef4",
+                "raw_score": 0.8551085591316223
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "653ff98e1219112c7ef4",
+                "raw_score": 11.278365243833495
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "653ff98e1219112c7ef4",
+                "raw_score": 0.852878987789154
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "653ff98e1219112c7ef4",
+                "raw_score": 29.50073486840752
+              }
+            ],
+            "chunk_ids": [
+              "653ff98e1219112c7ef4"
+            ],
+            "rerank_score": 0.95556640625,
+            "best_index": 478
+          },
+          {
+            "document_id": "6111d3d34d78a518",
+            "title": "Как актуализировать свои данные?",
+            "url": "https://fbroker.kz/faq/question/how-can-i-update-my-data-3815",
+            "score": 0.03265468006345849,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "de85be369b2a26cfcd83",
+                "raw_score": 0.871139407157898
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "de85be369b2a26cfcd83",
+                "raw_score": 12.231588211487754
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "de85be369b2a26cfcd83",
+                "raw_score": 0.8524518013000488
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "de85be369b2a26cfcd83",
+                "raw_score": 30.43897948691497
+              }
+            ],
+            "chunk_ids": [
+              "de85be369b2a26cfcd83"
+            ],
+            "rerank_score": 0.8544921875,
+            "best_index": 208
+          },
+          {
+            "document_id": "715c7966b963a06a",
+            "title": "Смена Email",
+            "url": "https://fbroker.kz/faq/question/-e-mail-change3817",
+            "score": 0.030318264693264693,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "36906c25a5bb128196a3",
+                "raw_score": 0.8355884552001953
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "36906c25a5bb128196a3",
+                "raw_score": 11.575509925749564
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 14,
+                "chunk_id": "36906c25a5bb128196a3",
+                "raw_score": 0.8034454584121704
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "36906c25a5bb128196a3",
+                "raw_score": 20.4883269175227
+              }
+            ],
+            "chunk_ids": [
+              "36906c25a5bb128196a3"
+            ],
+            "rerank_score": 0.431640625,
+            "best_index": 241
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "653ff98e1219112c7ef4",
+        "document_id": "e177b222de63e390",
+        "title": "Обновление персональных данных (переанкетирование)",
+        "url": "https://fbroker.kz/faq/question/updating-personal-data--requestionnaire-",
+        "text": "ведение отдельных операций;\nприостановить исполнение поручений на вывод денежных средств до подтверждения актуальности сведений клиента.\nКак подать поручение «Изменение сведений»?\nВойдите в платформу Freedom Broker удобным способом:\nВ мобильном приложении\n: Меню → Поручения → Персональные данные → Изменение сведений.\nВ веб-версии\n: Кабинет → Поручения → Изменение сведений.\nЗаполните необходимые поля, прикрепите требуемые документы и отправьте поручение на рассмотрение.",
+        "operator_turns": [
+          11
+        ]
+      },
+      {
+        "evidence_id": "de85be369b2a26cfcd83",
+        "document_id": "6111d3d34d78a518",
+        "title": "Как актуализировать свои данные?",
+        "url": "https://fbroker.kz/faq/question/how-can-i-update-my-data-3815",
+        "text": "В платформе\nFreedom Broker\nвы можете актуализировать свои данные, если ваши паспортные или иные личные данные были обновлены, подав соответствующее поручение на изменение сведений.\nВы можете обновить данные, подав поручение\n«Изменение сведений»\nв\nмобильном приложении\nили\nвеб-версии\nплатформы Freedom Broker.\nКак подать поручение на изменение сведений?\nВажно!\nПодать поручение на актуализацию анкетных данных можно только с торгового счета, номер которого начинается на 7*****.\nИнструкция\nкак переходить между счетами.\n1.\nВойдите в платформу Freedom Broker предпочитаемым способом:\n• в\nмобильном приложении\n→ «Меню» → «Поручения» → «Персональные данные» → «Изменение сведений»\n;\n• на\nсайте\nв разделе\n«Кабинет» → «Поручения» → «Изменение сведений»\n.\n2.\nОткройте сессию безопасности.\n3.\nЗаполните в соответствующих полях данные, которые были изменены.\nВажно!\nПаспортные данные необходимо заполнять в точности так, как указано в вашем документе, удостоверяющем личность.\nВ случае, смены адреса регистрации или адреса проживания, необходимо дополнительно прикрепить документ, подтверждающий адрес.",
+        "operator_turns": [
+          11
+        ]
+      },
+      {
+        "evidence_id": "36906c25a5bb128196a3",
+        "document_id": "715c7966b963a06a",
+        "title": "Смена Email",
+        "url": "https://fbroker.kz/faq/question/-e-mail-change3817",
+        "text": "Как обновить привязанную почту к брокерскому счету в мобильном приложении платформы Freedom Broker?\n1.\nАвторизуйтесь в\nприложении\nплатформы Freedom Broker.\n2.\nВ правом нижнем углу экрана перейдите в раздел\n«Меню» → «Поручения»\n.\n3.\nВ категории\n«Персональные данные»\nвыберите поручение\n«Смена Email»\n, и откройте сессию безопасности.\n4.\nВведите новый e-mail.\n5.\nПосле этого остается только нажать на\n«Подтвердить»\n.\nГотово!\nВаша электронная почта будет обновлена моментально.",
+        "operator_turns": [
+          11
+        ]
+      }
+    ],
+    "elapsed_seconds": 55.05,
+    "label_provenance": "model_generated_unreviewed",
+    "peak_gpu0_allocated_gib": 7.792
+  },
+  "signature": "43f2b843ab2152cc69adfcd7e66999dd362b38aaf0e296e2a72edab09bfbed0b",
+  "label_provenance": "model_generated_unreviewed"
+}

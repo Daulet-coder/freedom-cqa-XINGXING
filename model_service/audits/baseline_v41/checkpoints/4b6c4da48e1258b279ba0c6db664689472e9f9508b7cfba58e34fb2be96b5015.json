@@ -1,0 +1,287 @@
+{
+  "fingerprint": "4b6c4da48e1258b279ba0c6db664689472e9f9508b7cfba58e34fb2be96b5015",
+  "result": {
+    "conversation_id": "p1-en-001",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент подтвердил закрытие предыдущего аккаунта, дополнительная информация не требовалась.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно объяснил причину ошибки (логин занят из-за закрытого счета) и дал четкую инструкцию по решению (использовать другой логин), что полностью закрывает запрос клиента.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор вежливо объяснил причину проблемы и предложил решение, но не отреагировал на явное разочарование клиента (который ожидал просто подождать), поэтому критерий эмпатии не выполнен.",
+        "evidence_turns": [
+          5,
+          10,
+          11
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот уточнил статус аккаунта, клиент подтвердил, оператор дал четкую инструкцию по решению проблемы, клиент согласился, оператор завершил разговор.",
+        "evidence_turns": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных; несогласованность ожиданий клиента не является грубой ошибкой.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 69.23,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент подтвердил закрытие предыдущего аккаунта, дополнительная информация не требовалась.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 12,
+          "closing_reason": "Оператор предложил клиенту обращаться за помощью в будущем.",
+          "request_quote": "I'm opening a new account and the app says my login is taken.",
+          "clarification_quote": "",
+          "closing_quote": "You're welcome. Take care!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент подтвердил закрытие предыдущего аккаунта, дополнительная информация не требовалась.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор предложил клиенту обращаться за помощью в будущем.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "You're welcome. Take care!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор вежливо объяснил причину проблемы и предложил решение, но не отреагировал на явное разочарование клиента (который ожидал просто подождать), поэтому критерий эмпатии не выполнен.\",\n    \"evidence_turns\": [5, 10, 11],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот уточнил статус аккаунта, клиент подтвердил, оператор дал четкую инструкцию по решению проблемы, клиент согласился, оператор завершил разговор.\",\n    \"evidence_turns\": [1, 4, 5, 6, 7, 8, 10, 11],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных; несогласованность ожиданий клиента не является грубой ошибкой.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно объяснил причину ошибки (логин занят из-за закрытого счета) и дал четкую инструкцию по решению (использовать другой логин), что полностью закрывает запрос клиента.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как создать новую регистрацию если логин остался после закрытия аккаунта",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"как создать новую регистрацию если логин остался после закрытия аккаунта\"},{\"turn\":12,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "f86c5d707b5395f4",
+            "title": "Как восстановить/поменять пароль для входа в Freedom Broker?",
+            "url": "https://fbroker.kz/faq/question/how-to-recover-change-tradernet-login-password-3819",
+            "score": 0.018220968246641323,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "c893664f0dca4c0787d6",
+                "raw_score": 0.8067129850387573
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 23,
+                "chunk_id": "c893664f0dca4c0787d6",
+                "raw_score": 4.272910121913574
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 41,
+                "chunk_id": "c893664f0dca4c0787d6",
+                "raw_score": 0.7644644975662231
+              }
+            ],
+            "chunk_ids": [
+              "c893664f0dca4c0787d6"
+            ],
+            "rerank_score": 0.0116424560546875,
+            "best_index": 519
+          },
+          {
+            "document_id": "f52072f61549df76",
+            "title": "Как войти в личный кабинет?",
+            "url": "https://fbroker.kz/faq/question/how-to-log-in-to-the-personal-account-",
+            "score": 0.015671828171828172,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 28,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 0.7958081364631653
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 17,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 4.902760340304135
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 83,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 0.754391074180603
+              }
+            ],
+            "chunk_ids": [
+              "969e49f0480c9637518f"
+            ],
+            "rerank_score": 0.00572967529296875,
+            "best_index": 509
+          },
+          {
+            "document_id": "715c7966b963a06a",
+            "title": "Смена Email",
+            "url": "https://fbroker.kz/faq/question/-e-mail-change3817",
+            "score": 0.016208576998050683,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 16,
+                "chunk_id": "36906c25a5bb128196a3",
+                "raw_score": 0.8012685179710388
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 40,
+                "chunk_id": "36906c25a5bb128196a3",
+                "raw_score": 3.34944281741486
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 48,
+                "chunk_id": "36906c25a5bb128196a3",
+                "raw_score": 0.7609372138977051
+              }
+            ],
+            "chunk_ids": [
+              "36906c25a5bb128196a3"
+            ],
+            "rerank_score": 0.0025501251220703125,
+            "best_index": 241
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "c893664f0dca4c0787d6",
+        "document_id": "f86c5d707b5395f4",
+        "title": "Как восстановить/поменять пароль для входа в Freedom Broker?",
+        "url": "https://fbroker.kz/faq/question/how-to-recover-change-tradernet-login-password-3819",
+        "text": "Восстановление пароля\n1.\nВ\nмобильном приложении\nплатформы Freedom Broker вы можете нажать на стартовом экране на «Восстановить доступ».\n2.\nДалее приложение предложит вам варианты восстановления пароля - по номеру телефона, email, коду клиента или вашему логину.\n\n3.\nПосле выберите предпочитаемый способ получения кода подтверждения - по контактному номеру либо email.\n4.\nВведите полученный код и задайте новый пароль.\nСмена пароля\nДля смены пароля просто выйдите из системы, если вы уже авторизованы на платформе, далее следуйте описанной выше процедуре.\nОтметим также, что войти в приложение можно не только по паролю. Есть вход по\nодноразовому SMS-коду\n.\nЕсли войти всё равно не получается, обратитесь к своему персональному менеджеру или по номеру 7555.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "969e49f0480c9637518f",
+        "document_id": "f52072f61549df76",
+        "title": "Как войти в личный кабинет?",
+        "url": "https://fbroker.kz/faq/question/how-to-log-in-to-the-personal-account-",
+        "text": "Как войти в\nмобильное приложение\nFreedom Broker?\nКак войти в мобильное приложение Freedom Broker:\n1. Откройте приложение.\nВыберите «Войти», если уже зарегистрированы, или «Открыть счет», если пользуетесь впервые.\n2. Выберите способ авторизации.\nЧерез E-mail: введите электронную почту, которую указывали при регистрации, и пароль.\nПо номеру телефона: введите мобильный номер, который указывали при регистрации. В течение 30 секунд придет SMS-код для входа в систему. Если код по каким-то причинам не пришел, можно запросить его повторно, но через 30 секунд.\n3. Выберите счёт.\nЕсли у вас несколько брокерских счетов, после входа выберите нужный из списка. Сменить счёт позже можно в разделе «Меню».\n4. Создайте ПИН-код.\nДля безопасности придумайте четырёхзначный ПИН-код — с ним входить в приложение будет быстрее. Также вы можете включить вход по Face ID или Touch ID.\nВы успешно вошли в мобильное приложение Freedom Broker и теперь можете пользоваться всеми его функциями!\nЕсли возникли сложности со входом – например, не приходит SMS-код, пожалуйста, обратитесь в поддержку Freedom Broker.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "36906c25a5bb128196a3",
+        "document_id": "715c7966b963a06a",
+        "title": "Смена Email",
+        "url": "https://fbroker.kz/faq/question/-e-mail-change3817",
+        "text": "Как обновить привязанную почту к брокерскому счету в мобильном приложении платформы Freedom Broker?\n1.\nАвторизуйтесь в\nприложении\nплатформы Freedom Broker.\n2.\nВ правом нижнем углу экрана перейдите в раздел\n«Меню» → «Поручения»\n.\n3.\nВ категории\n«Персональные данные»\nвыберите поручение\n«Смена Email»\n, и откройте сессию безопасности.\n4.\nВведите новый e-mail.\n5.\nПосле этого остается только нажать на\n«Подтвердить»\n.\nГотово!\nВаша электронная почта будет обновлена моментально.",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 57.75,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

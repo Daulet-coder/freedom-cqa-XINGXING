@@ -1,0 +1,173 @@
+{
+  "fingerprint": "ac7505e02b83462c2923f25c93dfab91f9874e55da0ca9e534270c9e8a8cc1d6",
+  "result": {
+    "conversation_id": "p1-ru-027",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          11
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент уже предоставил достаточно информации для ответа.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно закрыл оба вопроса клиента: показал путь к отчёту в приложении и объяснил, где найти тариф (в веб-кабинете), а также подтвердил возможность выбора периода для сверки.",
+        "evidence_turns": [
+          1,
+          5,
+          11,
+          14,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент выразил недовольство сложностью поиска в приложении (turn 5), но оператор Инга сразу предложил четкое решение без выражения сочувствия или признания неудобства, что соответствует критерию вежливости без обязательной эмпатии при отсутствии явного негатива.",
+        "evidence_turns": [
+          5,
+          11
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот эскалировал запрос, оператор дал инструкцию, клиент уточнил детали, оператор предложил альтернативу (веб-кабинет) и подтвердил возможность выбора периода для сверки, завершив разговор.",
+        "evidence_turns": [
+          5,
+          11,
+          14,
+          16,
+          17,
+          20,
+          22,
+          24
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          24
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.",
+        "evidence_turns": [
+          11,
+          13,
+          15,
+          17,
+          20,
+          22,
+          24
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 69.23,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент уже предоставил достаточно информации для ответа.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 24,
+          "closing_reason": "Оператор предлагает помощь и завершает диалог.",
+          "request_quote": "Где взять отчёт брокера? И ещё хочу посмотреть, какой у меня тариф.",
+          "clarification_quote": "",
+          "closing_quote": "Пожалуйста. Хорошего вечера!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент уже предоставил достаточно информации для ответа.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 24,\n  \"closing_reason\": \"Оператор предлагает помощь и завершает диалог.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            24
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Пожалуйста. Хорошего вечера!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент выразил недовольство сложностью поиска в приложении (turn 5), но оператор Инга сразу предложил четкое решение без выражения сочувствия или признания неудобства, что соответствует критерию вежливости без обязательной эмпатии при отсутствии явного негатива.\",\n    \"evidence_turns\": [5, 11],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот эскалировал запрос, оператор дал инструкцию, клиент уточнил детали, оператор предложил альтернативу (веб-кабинет) и подтвердил возможность выбора периода для сверки, завершив разговор.\",\n    \"evidence_turns\": [5, 11, 14, 16, 17, 20, 22, 24],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.\",\n    \"evidence_turns\": [],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [
+          {
+            "criterion": "critical",
+            "field": "evidence_turns",
+            "action": "scope negative finding to all original operator turns"
+          }
+        ],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно закрыл оба вопроса клиента: показал путь к отчёту в приложении и объяснил, где найти тариф (в веб-кабинете), а также подтвердил возможность выбора периода для сверки.\",\n    \"evidence_turns\": [1, 5, 11, 14, 16, 17, 19, 20, 21, 22, 23],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "11": "",
+        "13": "",
+        "15": "",
+        "17": "",
+        "20": "",
+        "22": "",
+        "24": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":11,\"query\":\"\"},{\"turn\":13,\"query\":\"\"},{\"turn\":15,\"query\":\"\"},{\"turn\":17,\"query\":\"\"},{\"turn\":20,\"query\":\"\"},{\"turn\":22,\"query\":\"\"},{\"turn\":24,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 64.84,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

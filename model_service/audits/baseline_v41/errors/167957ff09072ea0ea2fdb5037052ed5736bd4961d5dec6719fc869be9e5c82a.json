@@ -1,0 +1,44 @@
+{
+  "fingerprint": "167957ff09072ea0ea2fdb5037052ed5736bd4961d5dec6719fc869be9e5c82a",
+  "result": {
+    "conversation_id": "p4-ru-003",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 3.32 GiB. GPU 0 has a total capacity of 14.56 GiB of which 2.72 GiB is free. Including non-PyTorch memory, this process has 11.84 GiB memory in use. Of the allocated memory 11.64 GiB is allocated by PyTorch, and 72.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 15,
+          "first_protected_action_turn": 40,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент предоставил номер торгового поручения и данные для идентификации.",
+          "clarified_needed_details": false,
+          "clarification_turn": 22,
+          "closing_kind": "AGREED_NEXT_STEP",
+          "closing_turn": 76,
+          "closing_reason": "Оператор согласился перезвонить клиенту до 00:00 с ответом профильного отдела.",
+          "request_quote": "Да я вот через мобильное приложение Продам торговые по поручения.",
+          "clarification_quote": "",
+          "closing_quote": "Ответа от профильного, отдела я предоставлю вам обратно здесь до 00:00."
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_turn\": 15,\n  \"first_protected_action_turn\": 40,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент предоставил номер торгового поручения и данные для идентификации.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": 22,\n  \"closing_kind\": \"AGREED_NEXT_STEP\",\n  \"closing_turn\": 76,\n  \"closing_reason\": \"Оператор согласился перезвонить клиенту до 00:00 с ответом профильного отдела.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [],
+          "interruption_turns": [],
+          "closing_quote": "Ответа от профильного, отдела я предоставлю вам обратно здесь до 00:00."
+        }
+      }
+    },
+    "rag": {},
+    "elapsed_seconds": 21.78
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

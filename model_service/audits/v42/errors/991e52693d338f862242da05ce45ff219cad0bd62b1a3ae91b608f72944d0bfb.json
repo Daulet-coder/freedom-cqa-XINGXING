@@ -1,0 +1,18 @@
+{
+  "result": {
+    "conversation_id": "p1-ru-007",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "ValueError: Rationale required"
+  },
+  "audit": {
+    "pipeline_version": "42",
+    "stages": {},
+    "rag": {},
+    "elapsed_seconds": 23.25,
+    "peak_gpu0_allocated_gib": 7.548
+  },
+  "signature": "ba93b5def808cf7d15f5e34ca0b35384e42a4f3c0f154657dfaf0f4773ddceb2",
+  "label_provenance": "model_generated_unreviewed"
+}

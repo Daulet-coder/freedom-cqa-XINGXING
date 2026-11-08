@@ -1,0 +1,377 @@
+{
+  "fingerprint": "b4e3c5d78d00bf2a1c52f05de8c8c7595c6ef37f62d960282f4f7fb352d57e2c",
+  "result": {
+    "conversation_id": "p1-en-009",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Достаточно информации для ответа.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор Leo в turn 10 дал точную инструкцию по выключению опции 'Use Margin' в настройках приказа, что полностью закрыло запрос клиента из turn 1, подтвержденный благодарностью клиента в turn 11.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент явно попросил перенаправить его в поддержку, так как не смог решить проблему самостоятельно, но оператор Leo сразу же дал инструкцию и проигнорировал этот запрос на эмпатическую реакцию или объяснение причин неудачи.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот дал инструкцию, клиент уточнил статус заказа и попросил оператора, оператор передал диалог и четко сформулировал решение, которое клиент сразу реализовал.",
+        "evidence_turns": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": null,
+        "rationale": "Разговор прерван до завершения.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода платных услуг или утечка конфиденциальной информации; несоответствие действий оператора запросу на поддержку является недостатком сервиса, но не критической ошибкой.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 75.0,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Достаточно информации для ответа.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 10,
+          "closing_reason": "Оператор объяснил, как выключить опцию, и клиент подтвердил, что нашел настройку.",
+          "request_quote": "There's a Use Margin option on the order screen. How do I switch it off?",
+          "clarification_quote": "",
+          "closing_quote": "Hi, I'm Leo. Open Order Settings and untick Use Margin before you submit the order."
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Достаточно информации для ответа.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 10,\n  \"closing_reason\": \"Оператор объяснил, как выключить опцию, и клиент подтвердил, что нашел настройку.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [],
+          "interruption_turns": [
+            12
+          ],
+          "closing_quote": "Hi, I'm Leo. Open Order Settings and untick Use Margin before you submit the order."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент явно попросил перенаправить его в поддержку, так как не смог решить проблему самостоятельно, но оператор Leo сразу же дал инструкцию и проигнорировал этот запрос на эмпатическую реакцию или объяснение причин неудачи.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот дал инструкцию, клиент уточнил статус заказа и попросил оператора, оператор передал диалог и четко сформулировал решение, которое клиент сразу реализовал.\",\n    \"evidence_turns\": [4, 5, 6, 7, 8, 10, 11],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода платных услуг или утечка конфиденциальной информации; несоответствие действий оператора запросу на поддержку является недостатком сервиса, но не критической ошибкой.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор Leo в turn 10 дал точную инструкцию по выключению опции 'Use Margin' в настройках приказа, что полностью закрыло запрос клиента из turn 1, подтвержденный благодарностью клиента в turn 11.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как открыть настройки заказа и отключить использование маржи перед отправкой"
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"как открыть настройки заказа и отключить использование маржи перед отправкой\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "8a719d2bc9cb5305",
+            "title": "Маржинальные сделки",
+            "url": "https://fbroker.kz/faq/question/what-is-margin-trading-2743",
+            "score": 0.02563842973555456,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 15,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 0.8134190440177917
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 28,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 4.293852689013199
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 75,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 0.7452086210250854
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 6,
+                "chunk_id": "206ba63ebc1394d4f530",
+                "raw_score": 5.018364990373241
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 57,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 0.7710824608802795
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 12.241608359667918
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 0.8212467432022095
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "8d911389276e6181d0b7",
+                "raw_score": 12.241608359667918
+              }
+            ],
+            "chunk_ids": [
+              "206ba63ebc1394d4f530",
+              "8d911389276e6181d0b7"
+            ],
+            "rerank_score": 0.01233673095703125,
+            "best_index": 290
+          },
+          {
+            "document_id": "e3ade24ffc285f20",
+            "title": "Long и short позиция",
+            "url": "https://fbroker.kz/faq/question/long-and-short-position2736",
+            "score": 0.023767690111186013,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 18,
+                "chunk_id": "1ced2efe3d60d1a42af8",
+                "raw_score": 0.8113362789154053
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 37,
+                "chunk_id": "cecbf596e08f3130cfd6",
+                "raw_score": 3.894711266603102
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 15,
+                "chunk_id": "1ced2efe3d60d1a42af8",
+                "raw_score": 0.7628552913665771
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 11,
+                "chunk_id": "1ced2efe3d60d1a42af8",
+                "raw_score": 0.7876801490783691
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "1ced2efe3d60d1a42af8",
+                "raw_score": 8.010110019592569
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 14,
+                "chunk_id": "1ced2efe3d60d1a42af8",
+                "raw_score": 0.8140567541122437
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "1ced2efe3d60d1a42af8",
+                "raw_score": 8.010110019592569
+              }
+            ],
+            "chunk_ids": [
+              "1ced2efe3d60d1a42af8",
+              "cecbf596e08f3130cfd6"
+            ],
+            "rerank_score": 0.008514404296875,
+            "best_index": 482
+          },
+          {
+            "document_id": "e9c429750ae4f41d",
+            "title": "Как выставить торговый приказ?",
+            "url": "https://fbroker.kz/faq/question/how-to-place-a-trade-order-2737",
+            "score": 0.025417549569201947,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 11,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 0.8216914534568787
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 33,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 4.064454945158615
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 18,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 0.7616893649101257
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 0.7986750602722168
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 8.335200921561475
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 0.8587288856506348
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 8.335200921561475
+              }
+            ],
+            "chunk_ids": [
+              "897ac651c8e4719c597f"
+            ],
+            "rerank_score": 0.003780364990234375,
+            "best_index": 491
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "8d911389276e6181d0b7",
+        "document_id": "8a719d2bc9cb5305",
+        "title": "Маржинальные сделки",
+        "url": "https://fbroker.kz/faq/question/what-is-margin-trading-2743",
+        "text": "Заемные деньги (во всех валютах, кроме тенге\nKZT)\n﻿Маржинальные сделки\nможно также назвать торговлей с\n«Кредитным плечом»\n. Это возможность купить ценные бумаги на большую сумму, чем у вас имеется. Вы занимаете деньги у брокера и покупаете акции в долг. Заём происходит под залог стоимости активов на вашем счёте.\nКак работает «кредитное плечо»?\nПерспективная акция (\nпотенциал +25%\n)\n→ Вложить нужно 4 млн тг\n→ «На руках» есть 1 млн тг\n→ Брокер дает взаймы 3 млн тг\n﻿Если акция вырастет на прогнозируемые\n25%\n, то с этой сделки:\n→ вы получите 1 млн тенге прибыли\n→ брокер получит назад З заемных миллиона\n﻿Как воспользоваться «кредитным плечом»?\nПолучить заемные средства -\nпросто\n. Объем акций, доступных к покупке с учетом «кредитного плеча», автоматически отображается в торговом терминале Freedom Broker.\n\nПримечание:\nне забудьте включить опцию\n«использовать маржу»\nво вкладке\n«Приказ - Настройки приказа»\n.\n\n﻿Чтобы получить маржинальный кредит, торговая платформа оценит ваш портфель ценных бумаг. Активы должны быть ликвидны и иметь достаточную стоимость, чтобы стать залогом для кредита от брокера.\nЗа маржинальную торговлю брокер\nвзимает комиссию:",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "1ced2efe3d60d1a42af8",
+        "document_id": "e3ade24ffc285f20",
+        "title": "Long и short позиция",
+        "url": "https://fbroker.kz/faq/question/long-and-short-position2736",
+        "text": "Длинная позиция\n(long)\n– это покупка ценных бумаг для заработка на росте их цены.\nОткрыли long → цена выросла → продали акции дороже → заработали.\nЦена падает → вы теряете деньги.\nКороткие позиции\n(short sales)\nпозволяют делать деньги на снижении стоимости акций.\nЕсли вы считаете, что бумаги определенной компании будут падать в цене, вы можете продать их. Затем откупить дешевле и положить сэкономленную разницу в карман. Это и будет ваша прибыль.\nКак продать акции, которых у вас нет?\nВсё просто\n: вы можете занять их у брокера за определенную комиссию и продать на рынке. Потом купить и вернуть брокеру. В торговой платформе от вас не требуется дополнительных сложных действий.\n1.\nВойдите в раздел\n«Торговать» →\nв разделе выставления приказа в Freedom Broker нажмите\n«Продать»\nвместо\n«Купить»\n.\n2.\nВ\n«Настройках приказа»\nвключите\nмаржу\n.\n3.\nПлатформа сама видит, что у вас нет указанного в приказе количества акций и понимает, что вы хотите открыть по ним короткую позицию. Заём акций у брокера происходит автоматически и очень быстро.\nПРИМЕР:\nвы считаете акции Apple переоцененными и ждете от компании слабого отчёта.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "897ac651c8e4719c597f",
+        "document_id": "e9c429750ae4f41d",
+        "title": "Как выставить торговый приказ?",
+        "url": "https://fbroker.kz/faq/question/how-to-place-a-trade-order-2737",
+        "text": "Чтобы выставить торговый приказ\nв мобильном приложении\nплатформы Freedom Broker:\n1. Нажмите на раздел «\nКотировки\n». Далее нажмите на\nзначок поиска\nи введите наименование компании или тикер бумаги.\nПример тикера:\nAAPL.US\nдля обыкновенных акций Apple, Inc.\n2. Нажмите на выбранную бумагу.\n3. Нажмите на «\nТорговать\n».\n4. Выберите параметры приказа:\n- Выберите действие: «\nКупить\n» или «\nПродать\n».\n-\nЗадайте цену\n. Приказ «\nпо рынку\n» исполнится по текущей цене в моменте. Также Вы можете выбрать другой тип приказа. Например, в «\nлимитном приказе\n» вы задаёте собственную цену и получите акции именно по Вашей или более выгодной цене.\n-\nУкажите количество акций\n. После этого платформа автоматически рассчитает сумму приказа и подскажет, достаточно ли у Вас денег для такой сделки. Вы также можете нажать на кнопку «max», и Freedom Broker автоматически подставит максимально доступное число акций.\n5. При необходимости задайте\nдополнительные настройки\nприказа: стоп-цена, либо маржинальная сделка.\nВажно! Детальнее о видах приказов Вы можете ознакомиться в\nстатье\n.\n6. Нажмите «\nВыставить приказ\n» и подтвердите действие.",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 58.32,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

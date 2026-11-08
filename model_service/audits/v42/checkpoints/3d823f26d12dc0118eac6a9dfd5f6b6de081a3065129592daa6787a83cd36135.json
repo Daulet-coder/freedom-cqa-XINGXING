@@ -1,0 +1,327 @@
+{
+  "result": {
+    "conversation_id": "p4-ru-004",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          15
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": true,
+        "rationale": "Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.",
+        "evidence_turns": [
+          34
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": false,
+        "rationale": "Для запроса по конкретному счету подтверждение личности до защищенного действия не найдено.",
+        "evidence_turns": [
+          19
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор не смог решить проблему клиента с автоматической покупкой облигаций из-за закрытия рынка Казахстана, предложив альтернативу (почта/звонок), но клиент категорически отказался от этого решения, требуя автоматизации, что делает консультацию неудачной.",
+        "evidence_turns": [
+          19,
+          20,
+          30,
+          33,
+          37,
+          85,
+          90,
+          92,
+          94,
+          96,
+          97,
+          101,
+          102,
+          111,
+          112
+        ],
+        "value": 5
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор не отреагировал на явное недовольство клиента (повторяющиеся вопросы о необходимости постоянной переписки, фразу 'Машина едет'), ограничившись вежливым предложением альтернативных каналов связи.",
+        "evidence_turns": [
+          91,
+          92,
+          97,
+          101,
+          102,
+          111
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог содержит явные сбои в логике и понимании: оператор не слышит клиента, клиент переспрашивает о сути предложения (почта vs звонок), происходит путаница в идентификации адреса, разговор затянулся из-за отсутствия четкого плана действий.",
+        "evidence_turns": [
+          29,
+          41,
+          63,
+          65,
+          70,
+          80,
+          85,
+          91,
+          97,
+          101,
+          104,
+          106,
+          111
+        ],
+        "value": 4
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          112
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Критических нарушений (оскорблений, утечек данных, обхода платных услуг) не выявлено.",
+        "evidence_turns": [
+          15,
+          18,
+          23,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          39,
+          47,
+          49,
+          51,
+          54,
+          56,
+          58,
+          61,
+          63,
+          64,
+          67,
+          69,
+          71,
+          73,
+          77,
+          79,
+          81,
+          84,
+          87,
+          90,
+          94,
+          95,
+          98,
+          100,
+          103,
+          107,
+          110,
+          112,
+          115
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 36.0,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "42",
+    "stages": {
+      "boundary_attempt": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 19,
+          "request_quote": "Здравствуйте, я этот насчёт у облигации звоню. Я вот до этого не звонил, 05:00 только в поддержку.",
+          "first_protected_action_turn": 38,
+          "missing_details_required": true,
+          "missing_details_reason": "Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.",
+          "clarified_needed_details": true,
+          "clarification_turn": 34,
+          "clarification_quote": "Тикер можете на дом, пожалуйста.",
+          "closing_kind": "AGREED_NEXT_STEP",
+          "closing_turn": 112,
+          "closing_quote": "Можете писать на эту почту, либо звонить на номер 73 пятерки, и мы соединим с трейдером для выставления приказа.",
+          "closing_reason": "Оператор предложил клиенту написать на почту или позвонить трейдеру для выставления приказа на покупку облигации.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "ACCOUNT_SPECIFIC",
+            "request_ref": "C_0019",
+            "first_protected_action_ref": "O_0038",
+            "missing_details_required": true,
+            "missing_details_reason": "Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.",
+            "clarified_needed_details": true,
+            "clarification_ref": "O_0034",
+            "closing_kind": "AGREED_NEXT_STEP",
+            "closing_ref": "O_0112",
+            "closing_reason": "Оператор предложил клиенту написать на почту или позвонить трейдеру для выставления приказа на покупку облигации."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_ref\": \"C_0019\",\n  \"first_protected_action_ref\": \"O_0038\",\n  \"missing_details_required\": true,\n  \"missing_details_reason\": \"Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.\",\n  \"clarified_needed_details\": true,\n  \"clarification_ref\": \"O_0034\",\n  \"closing_kind\": \"AGREED_NEXT_STEP\",\n  \"closing_ref\": \"O_0112\",\n  \"closing_reason\": \"Оператор предложил клиенту написать на почту или позвонить трейдеру для выставления приказа на покупку облигации.\"\n}\n",
+        "derived": [
+          {
+            "criterion_id": "contact",
+            "value": true,
+            "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+            "evidence_turns": [
+              15
+            ]
+          },
+          {
+            "criterion_id": "discovery",
+            "value": true,
+            "rationale": "Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.",
+            "evidence_turns": [
+              34
+            ]
+          },
+          {
+            "criterion_id": "identification",
+            "value": false,
+            "rationale": "Для запроса по конкретному счету подтверждение личности до защищенного действия не найдено.",
+            "evidence_turns": [
+              19
+            ]
+          },
+          {
+            "criterion_id": "closure",
+            "value": false,
+            "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+            "evidence_turns": [
+              112
+            ]
+          }
+        ]
+      },
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 19,
+          "request_quote": "Здравствуйте, я этот насчёт у облигации звоню. Я вот до этого не звонил, 05:00 только в поддержку.",
+          "first_protected_action_turn": 38,
+          "missing_details_required": true,
+          "missing_details_reason": "Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.",
+          "clarified_needed_details": true,
+          "clarification_turn": 34,
+          "clarification_quote": "Тикер можете на дом, пожалуйста.",
+          "closing_kind": "AGREED_NEXT_STEP",
+          "closing_turn": 112,
+          "closing_quote": "Можете писать на эту почту, либо звонить на номер 73 пятерки, и мы соединим с трейдером для выставления приказа.",
+          "closing_reason": "Оператор предложил клиенту написать на почту или позвонить трейдеру для выставления приказа на покупку облигации.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "ACCOUNT_SPECIFIC",
+            "request_ref": "C_0019",
+            "first_protected_action_ref": "O_0038",
+            "missing_details_required": true,
+            "missing_details_reason": "Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.",
+            "clarified_needed_details": true,
+            "clarification_ref": "O_0034",
+            "closing_kind": "AGREED_NEXT_STEP",
+            "closing_ref": "O_0112",
+            "closing_reason": "Оператор предложил клиенту написать на почту или позвонить трейдеру для выставления приказа на покупку облигации."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_ref\": \"C_0019\",\n  \"first_protected_action_ref\": \"O_0038\",\n  \"missing_details_required\": true,\n  \"missing_details_reason\": \"Оператору необходимо точное название облигации или её тикер для проверки статуса заказа и возможности исполнения.\",\n  \"clarified_needed_details\": true,\n  \"clarification_ref\": \"O_0034\",\n  \"closing_kind\": \"AGREED_NEXT_STEP\",\n  \"closing_ref\": \"O_0112\",\n  \"closing_reason\": \"Оператор предложил клиенту написать на почту или позвонить трейдеру для выставления приказа на покупку облигации.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [],
+          "interruption_turns": [],
+          "closing_quote": "Можете писать на эту почту, либо звонить на номер 73 пятерки, и мы соединим с трейдером для выставления приказа."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор не отреагировал на явное недовольство клиента (повторяющиеся вопросы о необходимости постоянной переписки, фразу 'Машина едет'), ограничившись вежливым предложением альтернативных каналов связи.\",\n    \"evidence_turns\": [91, 92, 97, 101, 102, 111],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог содержит явные сбои в логике и понимании: оператор не слышит клиента, клиент переспрашивает о сути предложения (почта vs звонок), происходит путаница в идентификации адреса, разговор затянулся из-за отсутствия четкого плана действий.\",\n    \"evidence_turns\": [29, 41, 63, 65, 70, 80, 85, 91, 97, 101, 104, 106, 111],\n    \"value\": 4\n  },\n  \"critical\": {\n    \"rationale\": \"Критических нарушений (оскорблений, утечек данных, обхода платных услуг) не выявлено.\",\n    \"evidence_turns\": [],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [
+          {
+            "criterion": "critical",
+            "field": "evidence_turns",
+            "action": "scope negative finding to all original operator turns"
+          }
+        ],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор не смог решить проблему клиента с автоматической покупкой облигаций из-за закрытия рынка Казахстана, предложив альтернативу (почта/звонок), но клиент категорически отказался от этого решения, требуя автоматизации, что делает консультацию неудачной.\",\n    \"evidence_turns\": [19, 20, 30, 33, 37, 85, 90, 92, 94, 96, 97, 101, 102, 111, 112],\n    \"value\": 5\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "15": "",
+        "18": "",
+        "23": "",
+        "26": "",
+        "28": "",
+        "30": "",
+        "32": "",
+        "34": "",
+        "36": "",
+        "38": "",
+        "39": "",
+        "47": "",
+        "49": "",
+        "51": "",
+        "54": "",
+        "56": "",
+        "58": "",
+        "61": "",
+        "63": "",
+        "64": "",
+        "67": "",
+        "69": "",
+        "71": "",
+        "73": "",
+        "77": "",
+        "79": "",
+        "81": "",
+        "84": "",
+        "87": "",
+        "90": "",
+        "94": "",
+        "95": "",
+        "98": "",
+        "100": "",
+        "103": "",
+        "107": "",
+        "110": "",
+        "112": "",
+        "115": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":15,\"query\":\"\"},{\"turn\":18,\"query\":\"\"},{\"turn\":23,\"query\":\"\"},{\"turn\":26,\"query\":\"\"},{\"turn\":28,\"query\":\"\"},{\"turn\":30,\"query\":\"\"},{\"turn\":32,\"query\":\"\"},{\"turn\":34,\"query\":\"\"},{\"turn\":36,\"query\":\"\"},{\"turn\":38,\"query\":\"\"},{\"turn\":39,\"query\":\"\"},{\"turn\":47,\"query\":\"\"},{\"turn\":49,\"query\":\"\"},{\"turn\":51,\"query\":\"\"},{\"turn\":54,\"query\":\"\"},{\"turn\":56,\"query\":\"\"},{\"turn\":58,\"query\":\"\"},{\"turn\":61,\"query\":\"\"},{\"turn\":63,\"query\":\"\"},{\"turn\":64,\"query\":\"\"},{\"turn\":67,\"query\":\"\"},{\"turn\":69,\"query\":\"\"},{\"turn\":71,\"query\":\"\"},{\"turn\":73,\"query\":\"\"},{\"turn\":77,\"query\":\"\"},{\"turn\":79,\"query\":\"\"},{\"turn\":81,\"query\":\"\"},{\"turn\":84,\"query\":\"\"},{\"turn\":87,\"query\":\"\"},{\"turn\":90,\"query\":\"\"},{\"turn\":94,\"query\":\"\"},{\"turn\":95,\"query\":\"\"},{\"turn\":98,\"query\":\"\"},{\"turn\":100,\"query\":\"\"},{\"turn\":103,\"query\":\"\"},{\"turn\":107,\"query\":\"\"},{\"turn\":110,\"query\":\"\"},{\"turn\":112,\"query\":\"\"},{\"turn\":115,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 129.94,
+    "label_provenance": "model_generated_unreviewed",
+    "peak_gpu0_allocated_gib": 9.956
+  },
+  "signature": "43f2b843ab2152cc69adfcd7e66999dd362b38aaf0e296e2a72edab09bfbed0b",
+  "label_provenance": "model_generated_unreviewed"
+}

@@ -1,0 +1,582 @@
+{
+  "fingerprint": "19293a44c669a7494affca5cd7089c14e99df288bf439cb104f75a901e65f726",
+  "result": {
+    "conversation_id": "p1-ru-016",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "клиент уже указал сайт и проблему с отсутствием кнопки входа",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор ошибочно рекомендовал переустановку приложения, игнорируя ключевой факт клиента, что он находится на компьютере, а затем указал на неверный сайт (Freedom Finance Global вместо tradernet.global), не предоставив инструкций по входу на правильный ресурс.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "value": 0
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент явно выражает недовольство отсутствием кнопки входа и ожиданием оператора, но оператор Антон не реагирует на эту проблему, а сразу дает инструкцию по переустановке приложения, игнорируя контекст использования компьютера.",
+        "evidence_turns": [
+          5,
+          10,
+          11
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог содержит явный сбой в логике: оператор предлагает переустановить приложение, хотя клиент с самого начала (turn 1) и после эскалации (turn 11) уточнил, что находится на компьютере, а не в приложении.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11,
+          12
+        ],
+        "value": 4
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          16
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Оператор не допустил оскорблений, утечки данных или предложения платных услуг в обход компании; ошибка заключается в непонимании контекста клиента.",
+        "evidence_turns": [
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 24.62,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "клиент уже указал сайт и проблему с отсутствием кнопки входа",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_reason": "оператор завершил диалог без итоговой фразы",
+          "request_quote": "Не пускает, что делать?",
+          "clarification_quote": "",
+          "closing_quote": ""
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"клиент уже указал сайт и проблему с отсутствием кнопки входа\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_turn\": null,\n  \"closing_reason\": \"оператор завершил диалог без итоговой фразы\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            16
+          ],
+          "interruption_turns": [],
+          "closing_quote": ""
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент явно выражает недовольство отсутствием кнопки входа и ожиданием оператора, но оператор Антон не реагирует на эту проблему, а сразу дает инструкцию по переустановке приложения, игнорируя контекст использования компьютера.\",\n    \"evidence_turns\": [5, 10, 11],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог содержит явный сбой в логике: оператор предлагает переустановить приложение, хотя клиент с самого начала (turn 1) и после эскалации (turn 11) уточнил, что находится на компьютере, а не в приложении.\",\n    \"evidence_turns\": [1, 5, 10, 11, 12],\n    \"value\": 4\n  },\n  \"critical\": {\n    \"rationale\": \"Оператор не допустил оскорблений, утечки данных или предложения платных услуг в обход компании; ошибка заключается в непонимании контекста клиента.\",\n    \"evidence_turns\": [10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор ошибочно рекомендовал переустановку приложения, игнорируя ключевой факт клиента, что он находится на компьютере, а затем указал на неверный сайт (Freedom Finance Global вместо tradernet.global), не предоставив инструкций по входу на правильный ресурс.\",\n    \"evidence_turns\": [1, 5, 10, 11, 12, 13, 14],\n    \"value\": 0\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "переустановить приложение",
+        "12": "как войти в веб-кабинет на сайте",
+        "14": "где находится вход в веб-кабинет на сайте Freedom Finance Global",
+        "16": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"переустановить приложение\"},{\"turn\":12,\"query\":\"как войти в веб-кабинет на сайте\"},{\"turn\":14,\"query\":\"где находится вход в веб-кабинет на сайте Freedom Finance Global\"},{\"turn\":16,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "f86c5d707b5395f4",
+            "title": "Как восстановить/поменять пароль для входа в Freedom Broker?",
+            "url": "https://fbroker.kz/faq/question/how-to-recover-change-tradernet-login-password-3819",
+            "score": 0.02912295118517528,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 7,
+                "chunk_id": "c893664f0dca4c0787d6",
+                "raw_score": 0.8051891922950745
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 6,
+                "chunk_id": "c893664f0dca4c0787d6",
+                "raw_score": 3.5961367117855967
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 11,
+                "chunk_id": "c893664f0dca4c0787d6",
+                "raw_score": 0.7861783504486084
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 11,
+                "chunk_id": "c893664f0dca4c0787d6",
+                "raw_score": 3.5961367117855967
+              }
+            ],
+            "chunk_ids": [
+              "c893664f0dca4c0787d6"
+            ],
+            "rerank_score": 0.0489501953125,
+            "best_index": 519
+          },
+          {
+            "document_id": "8236f9e98eed2f8e",
+            "title": "Выбор счета",
+            "url": "https://fbroker.kz/faq/question/account-selection",
+            "score": 0.027475104635258735,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "ca35f8da95916a55dfbf",
+                "raw_score": 0.8047918081283569
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 14,
+                "chunk_id": "ca35f8da95916a55dfbf",
+                "raw_score": 3.2234963474599003
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 10,
+                "chunk_id": "ca35f8da95916a55dfbf",
+                "raw_score": 0.7862470149993896
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 19,
+                "chunk_id": "ca35f8da95916a55dfbf",
+                "raw_score": 3.2234963474599003
+              }
+            ],
+            "chunk_ids": [
+              "ca35f8da95916a55dfbf"
+            ],
+            "rerank_score": 0.0306243896484375,
+            "best_index": 270
+          },
+          {
+            "document_id": "f52072f61549df76",
+            "title": "Как войти в личный кабинет?",
+            "url": "https://fbroker.kz/faq/question/how-to-log-in-to-the-personal-account-",
+            "score": 0.026298205881529,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 34,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 0.7822515964508057
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 4.523587652468031
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 38,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 0.7732616662979126
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 4.523587652468031
+              }
+            ],
+            "chunk_ids": [
+              "969e49f0480c9637518f"
+            ],
+            "rerank_score": 0.00313568115234375,
+            "best_index": 509
+          }
+        ],
+        "12": [
+          {
+            "document_id": "c6b966bc2d1adb76",
+            "title": "Автоматическое пополнение брокерского счета (регулярные инвестиции)",
+            "url": "https://fbroker.kz/faq/question/automatic-broker-account-funding--recurring-investments-",
+            "score": 0.021296788924727608,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "5b0aa67cbe0ee5ddb8ba",
+                "raw_score": 0.8126851320266724
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "5b0aa67cbe0ee5ddb8ba",
+                "raw_score": 7.949185924757289
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 27,
+                "chunk_id": "5b0aa67cbe0ee5ddb8ba",
+                "raw_score": 0.7634538412094116
+              }
+            ],
+            "chunk_ids": [
+              "5b0aa67cbe0ee5ddb8ba"
+            ],
+            "rerank_score": 0.1781005859375,
+            "best_index": 399
+          },
+          {
+            "document_id": "6111d3d34d78a518",
+            "title": "Как актуализировать свои данные?",
+            "url": "https://fbroker.kz/faq/question/how-can-i-update-my-data-3815",
+            "score": 0.018585652606271163,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 31,
+                "chunk_id": "ebe34b825e81d044fb97",
+                "raw_score": 0.7913839817047119
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "de85be369b2a26cfcd83",
+                "raw_score": 9.107872410877315
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 37,
+                "chunk_id": "cdf145458941da9890bb",
+                "raw_score": 0.7610247731208801
+              }
+            ],
+            "chunk_ids": [
+              "cdf145458941da9890bb",
+              "de85be369b2a26cfcd83",
+              "ebe34b825e81d044fb97"
+            ],
+            "rerank_score": 0.06951904296875,
+            "best_index": 208
+          },
+          {
+            "document_id": "f52072f61549df76",
+            "title": "Как войти в личный кабинет?",
+            "url": "https://fbroker.kz/faq/question/how-to-log-in-to-the-personal-account-",
+            "score": 0.018169634387072555,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 0.8114975094795227
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 12.868857650797871
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 202,
+                "chunk_id": "969e49f0480c9637518f",
+                "raw_score": 0.7366159558296204
+              }
+            ],
+            "chunk_ids": [
+              "969e49f0480c9637518f"
+            ],
+            "rerank_score": 0.0255584716796875,
+            "best_index": 509
+          }
+        ],
+        "14": [
+          {
+            "document_id": "a24cc45ae10dcd6a",
+            "title": "Купоны по облигациям FF SPC",
+            "url": "https://fbroker.kz/faq/question/ff-spc-bond-coupons",
+            "score": 0.02734705313340376,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 8,
+                "chunk_id": "0f9381bc71a9c66d342f",
+                "raw_score": 0.8521451950073242
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "0f9381bc71a9c66d342f",
+                "raw_score": 10.551278186843067
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 58,
+                "chunk_id": "0f9381bc71a9c66d342f",
+                "raw_score": 0.8131614923477173
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "0f9381bc71a9c66d342f",
+                "raw_score": 14.60457375827861
+              }
+            ],
+            "chunk_ids": [
+              "0f9381bc71a9c66d342f"
+            ],
+            "rerank_score": 0.47802734375,
+            "best_index": 342
+          },
+          {
+            "document_id": "c6b966bc2d1adb76",
+            "title": "Автоматическое пополнение брокерского счета (регулярные инвестиции)",
+            "url": "https://fbroker.kz/faq/question/automatic-broker-account-funding--recurring-investments-",
+            "score": 0.0295642793784478,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 7,
+                "chunk_id": "5b0aa67cbe0ee5ddb8ba",
+                "raw_score": 0.854412317276001
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 19,
+                "chunk_id": "5b0aa67cbe0ee5ddb8ba",
+                "raw_score": 8.718958898977611
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 6,
+                "chunk_id": "5b0aa67cbe0ee5ddb8ba",
+                "raw_score": 0.8265571594238281
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "5b0aa67cbe0ee5ddb8ba",
+                "raw_score": 15.673137297101807
+              }
+            ],
+            "chunk_ids": [
+              "5b0aa67cbe0ee5ddb8ba"
+            ],
+            "rerank_score": 0.445556640625,
+            "best_index": 399
+          },
+          {
+            "document_id": "4f789d677f507555",
+            "title": "Как участвовать в программе?",
+            "url": "https://fbroker.kz/faq/question/how-to-participate-in-the-program-",
+            "score": 0.02824338845176989,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "8269c9b6e290b23c1540",
+                "raw_score": 0.8709070682525635
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "8269c9b6e290b23c1540",
+                "raw_score": 14.752181653820092
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 44,
+                "chunk_id": "8269c9b6e290b23c1540",
+                "raw_score": 0.8157695531845093
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 11,
+                "chunk_id": "8269c9b6e290b23c1540",
+                "raw_score": 9.391123963872808
+              }
+            ],
+            "chunk_ids": [
+              "8269c9b6e290b23c1540"
+            ],
+            "rerank_score": 0.4072265625,
+            "best_index": 175
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "c893664f0dca4c0787d6",
+        "document_id": "f86c5d707b5395f4",
+        "title": "Как восстановить/поменять пароль для входа в Freedom Broker?",
+        "url": "https://fbroker.kz/faq/question/how-to-recover-change-tradernet-login-password-3819",
+        "text": "Восстановление пароля\n1.\nВ\nмобильном приложении\nплатформы Freedom Broker вы можете нажать на стартовом экране на «Восстановить доступ».\n2.\nДалее приложение предложит вам варианты восстановления пароля - по номеру телефона, email, коду клиента или вашему логину.\n\n3.\nПосле выберите предпочитаемый способ получения кода подтверждения - по контактному номеру либо email.\n4.\nВведите полученный код и задайте новый пароль.\nСмена пароля\nДля смены пароля просто выйдите из системы, если вы уже авторизованы на платформе, далее следуйте описанной выше процедуре.\nОтметим также, что войти в приложение можно не только по паролю. Есть вход по\nодноразовому SMS-коду\n.\nЕсли войти всё равно не получается, обратитесь к своему персональному менеджеру или по номеру 7555.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "5b0aa67cbe0ee5ddb8ba",
+        "document_id": "c6b966bc2d1adb76",
+        "title": "Автоматическое пополнение брокерского счета (регулярные инвестиции)",
+        "url": "https://fbroker.kz/faq/question/automatic-broker-account-funding--recurring-investments-",
+        "text": "азовым кодом, направленным банком, выпустившим карту.\nПосле успешного подтверждения поручение на автопополнение будет создано.\nПодключение автопополнения в веб-версии\nВ\nвеб-версии\nдоступно два варианта входа в сервис: через кнопку «Пополнить» на главном экране либо через меню «Кабинет» → «Подать поручение».\n1. Авторизуйтесь в веб-версии торговой платформы Freedom Broker.\n2. Выберите один из вариантов входа:\nна главном экране нажмите «Пополнить» и в открывшемся окне выберите «Регулярные инвестиции»;\nлибо перейдите через меню «Кабинет» → «Подать поручение» и выберите «Регулярные инвестиции».\n3. Укажите параметры автопополнения:\nброкерский счет и валюту пополнения;\nсумму регулярного пополнения;\nпериодичность списания денежных средств — один раз в неделю или один раз в месяц;\nбанковскую карту для списания денежных средств.\n4. Ознакомьтесь с условиями поручения на подключение сервиса и подтвердите его подачу.\n5. Нажмите «Подтвердить».\n6. При необходимости подтвердите операцию 3-D Secure паролем или одноразовым кодом банка.\nКогда произойдет списание\nВажно! Первое списание денежных средств выполняется сразу после успешного подключения автопополнения.",
+        "operator_turns": [
+          12,
+          14
+        ]
+      },
+      {
+        "evidence_id": "0f9381bc71a9c66d342f",
+        "document_id": "a24cc45ae10dcd6a",
+        "title": "Купоны по облигациям FF SPC",
+        "url": "https://fbroker.kz/faq/question/ff-spc-bond-coupons",
+        "text": "игациям FF SPC, и доходов от прироста стоимости, полученных при реализации этих облигаций.\nКак заполнить форму\nКлиентам Freedom Broker\nЗаполнить форму можно двумя способами:\nЧерез\nмобильное приложение\nFreedom Broker:\nМеню → Поручения → Персональные данные → форма W-8BEN.\nПодробные инструкции:\nВидеоинструкция\n«Как заполнить форму W-8BEN»\nЧерез\nвеб-версию\nторговой платформы tradernet.global:\nКабинет → Персональные данные → Форма W-8BEN.\nКлиентам других брокерских компаний\nЕсли Вы приобрели облигации через другую брокерскую компанию, Вам в любом случае нужно предоставить форму W-8BEN (для физических лиц) или W-8BEN-E (для юридических лиц) в адрес Freedom Finance SPC. Это поможет Вам получить купонное вознаграждение полностью, без удержания американского подоходного налога.\nЧтобы заполнить необходимую форму, перейдите на сайт, зарегистрируйтесь и следуйте инструкциям:\nhttps://w8ben.freedomholdingcorp.com/\n\nЕсли возникли вопросы, напишите нам:\n[email protected]",
+        "operator_turns": [
+          14
+        ]
+      },
+      {
+        "evidence_id": "ca35f8da95916a55dfbf",
+        "document_id": "8236f9e98eed2f8e",
+        "title": "Выбор счета",
+        "url": "https://fbroker.kz/faq/question/account-selection",
+        "text": "Если у вас несколько счетов во Freedom Broker, вы можете переключаться между ними в платформе Freedom Broker.\n\nНапример, Вы хотите пополнить торговый счет и начать торговать. У Вас есть деньги на INVEST CARD, привязанной к брокерскому счету. Чтобы перевести с неё деньги, в приложении Freedom Broker необходимо переключиться на накопительный счет D7***** и отправить деньги на торговый счет 7*****.\nКак переключиться между счетами?\n1.\nАвторизуйтесь в\nмобильном приложении\nплатформы Freedom Broker.\n2.\nВойдите в «Меню» и нажмите на «Счет 7*****» над Вашим именем.\n3.\nВыберите необходимый счет, на который хотите переключиться.\nЕсли опция «Выбор счета» не отображается в\nмобильном приложении\n, попробуйте следующие шаги:\n1.\nВыйдите из учетной записи в приложении, нажав на «Меню → Настройки → Выйти».\n2.\nЗакройте приложение полностью.\nПримечание:\nубедитесь, что оно не работает в фоновом режиме.\n3.\nОткройте приложение снова.\n4.\nАвторизуйтесь в своей учетной записи.\nЕсли после выполнения этих шагов опция выбора счета по-прежнему не отображается, обратитесь в службу поддержки за помощью.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "de85be369b2a26cfcd83",
+        "document_id": "6111d3d34d78a518",
+        "title": "Как актуализировать свои данные?",
+        "url": "https://fbroker.kz/faq/question/how-can-i-update-my-data-3815",
+        "text": "В платформе\nFreedom Broker\nвы можете актуализировать свои данные, если ваши паспортные или иные личные данные были обновлены, подав соответствующее поручение на изменение сведений.\nВы можете обновить данные, подав поручение\n«Изменение сведений»\nв\nмобильном приложении\nили\nвеб-версии\nплатформы Freedom Broker.\nКак подать поручение на изменение сведений?\nВажно!\nПодать поручение на актуализацию анкетных данных можно только с торгового счета, номер которого начинается на 7*****.\nИнструкция\nкак переходить между счетами.\n1.\nВойдите в платформу Freedom Broker предпочитаемым способом:\n• в\nмобильном приложении\n→ «Меню» → «Поручения» → «Персональные данные» → «Изменение сведений»\n;\n• на\nсайте\nв разделе\n«Кабинет» → «Поручения» → «Изменение сведений»\n.\n2.\nОткройте сессию безопасности.\n3.\nЗаполните в соответствующих полях данные, которые были изменены.\nВажно!\nПаспортные данные необходимо заполнять в точности так, как указано в вашем документе, удостоверяющем личность.\nВ случае, смены адреса регистрации или адреса проживания, необходимо дополнительно прикрепить документ, подтверждающий адрес.",
+        "operator_turns": [
+          12
+        ]
+      },
+      {
+        "evidence_id": "969e49f0480c9637518f",
+        "document_id": "f52072f61549df76",
+        "title": "Как войти в личный кабинет?",
+        "url": "https://fbroker.kz/faq/question/how-to-log-in-to-the-personal-account-",
+        "text": "Как войти в\nмобильное приложение\nFreedom Broker?\nКак войти в мобильное приложение Freedom Broker:\n1. Откройте приложение.\nВыберите «Войти», если уже зарегистрированы, или «Открыть счет», если пользуетесь впервые.\n2. Выберите способ авторизации.\nЧерез E-mail: введите электронную почту, которую указывали при регистрации, и пароль.\nПо номеру телефона: введите мобильный номер, который указывали при регистрации. В течение 30 секунд придет SMS-код для входа в систему. Если код по каким-то причинам не пришел, можно запросить его повторно, но через 30 секунд.\n3. Выберите счёт.\nЕсли у вас несколько брокерских счетов, после входа выберите нужный из списка. Сменить счёт позже можно в разделе «Меню».\n4. Создайте ПИН-код.\nДля безопасности придумайте четырёхзначный ПИН-код — с ним входить в приложение будет быстрее. Также вы можете включить вход по Face ID или Touch ID.\nВы успешно вошли в мобильное приложение Freedom Broker и теперь можете пользоваться всеми его функциями!\nЕсли возникли сложности со входом – например, не приходит SMS-код, пожалуйста, обратитесь в поддержку Freedom Broker.",
+        "operator_turns": [
+          10,
+          12
+        ]
+      },
+      {
+        "evidence_id": "8269c9b6e290b23c1540",
+        "document_id": "4f789d677f507555",
+        "title": "Как участвовать в программе?",
+        "url": "https://fbroker.kz/faq/question/how-to-participate-in-the-program-",
+        "text": "Скопируйте реферальную ссылку в личном кабинете и отправьте её человеку, у которого ещё нет счёта во\nFreedom Finance Global PLC\n.\nГде найти ссылку\n:\n•\nВ мобильном приложении\n: раздел «Меню» → «Пригласить друга».\n•\nВ веб-версии\n: раздел «Профиль» → «Пригласить друзей инвестировать с Freedom Broker».",
+        "operator_turns": [
+          14
+        ]
+      }
+    ],
+    "elapsed_seconds": 67.08,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

@@ -1,0 +1,178 @@
+{
+  "fingerprint": "97ad2a1de23ce2835c8284caee2c4737b3b7bca58416b3f7f71fb62ab71e7d05",
+  "result": {
+    "conversation_id": "p4-ru-001",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          13
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиенту достаточно информации о функциональных ограничениях технической поддержки.",
+        "evidence_turns": [
+          25
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          25
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор признал отсутствие персонального менеджера и объяснил, что клиент должен самостоятельно совершать торги, но не предоставил инструкций по поиску нового менеджера или альтернативных решений для получения консультаций, что является ключевым запросом клиента.",
+        "evidence_turns": [
+          20,
+          23,
+          25,
+          29,
+          30,
+          32,
+          35,
+          43
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор отреагировал на выраженные клиентом трудности и чувство навязчивости, предложив версию о неправильной информации и подтвердив понимание ситуации.",
+        "evidence_turns": [
+          41,
+          42,
+          43
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог содержит явные сбои: оператор называет клиента «Пирас» вместо «Перрас», затем «Перрас» вместо «Тирас», что вызывает переспросы и путаницу в идентификации.",
+        "evidence_turns": [
+          13,
+          14,
+          15,
+          17,
+          18
+        ],
+        "value": 4
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          43
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Критических нарушений (оскорблений, утечек данных или предложений платных услуг в обход) не выявлено.",
+        "evidence_turns": [
+          13,
+          15,
+          17,
+          24,
+          26,
+          27,
+          28,
+          30,
+          31,
+          36,
+          38,
+          40,
+          43
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 63.08,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 25,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиенту достаточно информации о функциональных ограничениях технической поддержки.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_reason": "Клиент завершил разговор без итоговой фразы оператора.",
+          "request_quote": "Мне как как вы вообще вот помогаете? Точно также, как тот брокер, который вот раньше был со мной, тоже заходите всё вот как то вот рекомендуете покупку или скажите, как это у вас происходит?",
+          "clarification_quote": "",
+          "closing_quote": ""
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 25,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиенту достаточно информации о функциональных ограничениях технической поддержки.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_turn\": null,\n  \"closing_reason\": \"Клиент завершил разговор без итоговой фразы оператора.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [],
+          "interruption_turns": [],
+          "closing_quote": ""
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор отреагировал на выраженные клиентом трудности и чувство навязчивости, предложив версию о неправильной информации и подтвердив понимание ситуации.\",\n    \"evidence_turns\": [41, 42, 43],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог содержит явные сбои: оператор называет клиента «Пирас» вместо «Перрас», затем «Перрас» вместо «Тирас», что вызывает переспросы и путаницу в идентификации.\",\n    \"evidence_turns\": [13, 14, 15, 17, 18],\n    \"value\": 4\n  },\n  \"critical\": {\n    \"rationale\": \"Критических нарушений (оскорблений, утечек данных или предложений платных услуг в обход) не выявлено.\",\n    \"evidence_turns\": [],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [
+          {
+            "criterion": "critical",
+            "field": "evidence_turns",
+            "action": "scope negative finding to all original operator turns"
+          }
+        ],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\"consultation\": {\"rationale\": \"Оператор признал отсутствие персонального менеджера и объяснил, что клиент должен самостоятельно совершать торги, но не предоставил инструкций по поиску нового менеджера или альтернативных решений для получения консультаций, что является ключевым запросом клиента.\", \"evidence_turns\": [20, 23, 25, 29, 30, 32, 35, 43], \"value\": 10}}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "13": "",
+        "15": "",
+        "17": "",
+        "24": "",
+        "26": "",
+        "27": "",
+        "28": "",
+        "30": "",
+        "31": "",
+        "36": "",
+        "38": "",
+        "40": "",
+        "43": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":13,\"query\":\"\"},{\"turn\":15,\"query\":\"\"},{\"turn\":17,\"query\":\"\"},{\"turn\":24,\"query\":\"\"},{\"turn\":26,\"query\":\"\"},{\"turn\":27,\"query\":\"\"},{\"turn\":28,\"query\":\"\"},{\"turn\":30,\"query\":\"\"},{\"turn\":31,\"query\":\"\"},{\"turn\":36,\"query\":\"\"},{\"turn\":38,\"query\":\"\"},{\"turn\":40,\"query\":\"\"},{\"turn\":43,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 76.26,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

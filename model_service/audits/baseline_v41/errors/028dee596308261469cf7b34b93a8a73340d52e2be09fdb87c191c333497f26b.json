@@ -1,0 +1,17 @@
+{
+  "fingerprint": "028dee596308261469cf7b34b93a8a73340d52e2be09fdb87c191c333497f26b",
+  "result": {
+    "conversation_id": "p4-ru-002",
+    "status": "error",
+    "criteria": [],
+    "score": null,
+    "error": "ValueError: Fact references wrong speaker or turn: 6 expected client"
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {},
+    "rag": {},
+    "elapsed_seconds": 34.63
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

@@ -1,0 +1,457 @@
+{
+  "fingerprint": "ff9df42de0f24771ff096c8c9f08d2ed6df352ee8a1bea7ded5984dc02a2dc37",
+  "result": {
+    "conversation_id": "p1-ru-024",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент указал оба типа счетов, информация для ответа присутствовала.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно разъяснил, что средства на D-счете не используются для покупки акций напрямую, а для операций нужно ориентироваться на торговый счет, что полностью закрывает вопрос клиента о том, откуда брать деньги для покупки.",
+        "evidence_turns": [
+          5,
+          10,
+          11,
+          12
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент проявил легкое недоумение в 5-м туре, но оператор в 10-м туре ответил только фактом без выражения эмпатии или понимания его затруднения.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот и оператор четко объяснили разницу между счетами и дали прямой ответ на вопрос клиента.",
+        "evidence_turns": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          12,
+          14
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В ходе диалога не зафиксировано оскорблений, попыток обхода компании или утечки конфиденциальной информации.",
+        "evidence_turns": [
+          10,
+          12
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 76.92,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент указал оба типа счетов, информация для ответа присутствовала.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 12,
+          "closing_reason": "Оператор подтвердил, что для торговой операции нужно ориентироваться на торговый счёт.",
+          "request_quote": "Вижу D-счёт и торговый. С какого покупать акции?",
+          "clarification_quote": "",
+          "closing_quote": "Да, для торговой операции ориентируйтесь на торговый счёт."
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент указал оба типа счетов, информация для ответа присутствовала.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор подтвердил, что для торговой операции нужно ориентироваться на торговый счёт.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            14
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Да, для торговой операции ориентируйтесь на торговый счёт."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент проявил легкое недоумение в 5-м туре, но оператор в 10-м туре ответил только фактом без выражения эмпатии или понимания его затруднения.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот и оператор четко объяснили разницу между счетами и дали прямой ответ на вопрос клиента.\",\n    \"evidence_turns\": [4, 5, 6, 7, 8, 10, 11, 12],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В ходе диалога не зафиксировано оскорблений, попыток обхода компании или утечки конфиденциальной информации.\",\n    \"evidence_turns\": [10, 12],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно разъяснил, что средства на D-счете не используются для покупки акций напрямую, а для операций нужно ориентироваться на торговый счет, что полностью закрывает вопрос клиента о том, откуда брать деньги для покупки.\",\n    \"evidence_turns\": [5, 10, 11, 12],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "используются ли средства на D-счёте для покупки бумаг",
+        "12": "какой счёт использовать для торговой операции",
+        "14": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"используются ли средства на D-счёте для покупки бумаг\"},{\"turn\":12,\"query\":\"какой счёт использовать для торговой операции\"},{\"turn\":14,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "d90548813f72bbdf",
+            "title": "Специальный накопительный субсчет (D-счет)",
+            "url": "https://fbroker.kz/faq/question/savings-d-account2727",
+            "score": 0.03189825031525852,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "d831a6415a963164cb54",
+                "raw_score": 0.8480643033981323
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "d831a6415a963164cb54",
+                "raw_score": 11.248526146063027
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 0.8369330167770386
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "d831a6415a963164cb54",
+                "raw_score": 11.248526146063027
+              }
+            ],
+            "chunk_ids": [
+              "151d2fa7ad1b87d8c062",
+              "d831a6415a963164cb54"
+            ],
+            "rerank_score": 0.98974609375,
+            "best_index": 451
+          },
+          {
+            "document_id": "17b9f8d7b7586158",
+            "title": "Что такое Invest Card?",
+            "url": "https://fbroker.kz/faq/question/what-is-invest-card-",
+            "score": 0.029815833028917403,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "5d26e13db7e75ed43db5",
+                "raw_score": 0.8302556276321411
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 7,
+                "chunk_id": "5d26e13db7e75ed43db5",
+                "raw_score": 9.948622932512356
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 11,
+                "chunk_id": "5d26e13db7e75ed43db5",
+                "raw_score": 0.8174022436141968
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 9,
+                "chunk_id": "5d26e13db7e75ed43db5",
+                "raw_score": 9.948622932512356
+              }
+            ],
+            "chunk_ids": [
+              "5d26e13db7e75ed43db5"
+            ],
+            "rerank_score": 0.82958984375,
+            "best_index": 43
+          },
+          {
+            "document_id": "dec504ac4515570a",
+            "title": "7 шагов, чтобы начать инвестировать",
+            "url": "https://fbroker.kz/faq/question/7-simple-steps-to-investing",
+            "score": 0.024046288123958027,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 0.8249109387397766
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 43,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 4.921723559855361
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 17,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 0.8110939264297485
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 45,
+                "chunk_id": "fee728de5e973bedebc0",
+                "raw_score": 5.829755821325663
+              }
+            ],
+            "chunk_ids": [
+              "fee728de5e973bedebc0"
+            ],
+            "rerank_score": 0.5712890625,
+            "best_index": 465
+          }
+        ],
+        "12": [
+          {
+            "document_id": "d90548813f72bbdf",
+            "title": "Специальный накопительный субсчет (D-счет)",
+            "url": "https://fbroker.kz/faq/question/savings-d-account2727",
+            "score": 0.02940678761647842,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 0.8540655374526978
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 12,
+                "chunk_id": "d831a6415a963164cb54",
+                "raw_score": 6.141058026070134
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "151d2fa7ad1b87d8c062",
+                "raw_score": 0.8186563849449158
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 19,
+                "chunk_id": "d831a6415a963164cb54",
+                "raw_score": 6.434845088669743
+              }
+            ],
+            "chunk_ids": [
+              "151d2fa7ad1b87d8c062",
+              "d831a6415a963164cb54"
+            ],
+            "rerank_score": 0.93603515625,
+            "best_index": 451
+          },
+          {
+            "document_id": "7355630bf3278e8d",
+            "title": "Для чего нужен брокерский счет?",
+            "url": "https://fbroker.kz/faq/question/why-do-you-need-a-brokerage-account-1905",
+            "score": 0.02545319264069264,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 17,
+                "chunk_id": "d262f3a3e488c9f23ecf",
+                "raw_score": 0.8378326892852783
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "d262f3a3e488c9f23ecf",
+                "raw_score": 7.25305281253843
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 80,
+                "chunk_id": "d262f3a3e488c9f23ecf",
+                "raw_score": 0.7855637669563293
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 6,
+                "chunk_id": "d262f3a3e488c9f23ecf",
+                "raw_score": 7.680127375958859
+              }
+            ],
+            "chunk_ids": [
+              "d262f3a3e488c9f23ecf"
+            ],
+            "rerank_score": 0.83740234375,
+            "best_index": 246
+          },
+          {
+            "document_id": "db649b8a0576e78a",
+            "title": "Режимы торгов Т+1 и Т+2",
+            "url": "https://fbroker.kz/faq/question/t-trading-mode2747",
+            "score": 0.029251287315803447,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "1f4409034efc7babc589",
+                "raw_score": 0.8554729223251343
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 14,
+                "chunk_id": "1f4409034efc7babc589",
+                "raw_score": 6.056898512290349
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "1f4409034efc7babc589",
+                "raw_score": 0.8118401169776917
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 17,
+                "chunk_id": "1f4409034efc7babc589",
+                "raw_score": 6.473853235873015
+              }
+            ],
+            "chunk_ids": [
+              "1f4409034efc7babc589"
+            ],
+            "rerank_score": 0.66748046875,
+            "best_index": 463
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "d831a6415a963164cb54",
+        "document_id": "d90548813f72bbdf",
+        "title": "Специальный накопительный субсчет (D-счет)",
+        "url": "https://fbroker.kz/faq/question/savings-d-account2727",
+        "text": "При открытии брокерского (торгового) счета в компании Freedom Finance Global PLC Вам автоматически открывается\nспециальный накопительный субсчет (D-счет)\n.\nЧерез торговый счет вы можете совершать сделки на фондовых биржах — покупать и продавать ценные бумаги.\nD-счет - специальный накопительный субсчет, который можно использовать для пополнения торгового счета, хранения и вывода денег. Перевод между торговым и специальным накопительным D-счетом происходит почти моментально и без комиссий.\nТакже вы сможете получать ежедневный доход на остаток по D-счету в USD, KZT и EUR. Посмотреть актуальные ставки и рассчитать потенциальный доход можно\nв специальном калькуляторе\nна сайте Freedom Finance Global PLC.\nРазмещая денежные средства на D-счете в валютах USD, EUR, KZT клиент поручает брокеру совершить с ними сделки овернайт РЕПО в интересах клиента на условиях Приложения 6 к Регламенту и с применением актуальных ставок доходности.\nДоходность привязана к межбанковским ставкам SOFR* и EURIBOR**.\nПримечание!\n*SOFR (Secured Overnight Financing Rate)",
+        "operator_turns": [
+          10,
+          12
+        ]
+      },
+      {
+        "evidence_id": "5d26e13db7e75ed43db5",
+        "document_id": "17b9f8d7b7586158",
+        "title": "Что такое Invest Card?",
+        "url": "https://fbroker.kz/faq/question/what-is-invest-card-",
+        "text": "Invest card\n— это специальная карта, связанная с неторговым D-счетом в компании Freedom Finance Global PLC. В свою очередь, D-счет связан с торговым брокерским счетом.\nВажно*\nInvest Card\n— необязательный инструмент. Вы можете открыть карту по желанию и использовать её для пополнения и вывода средств, а также для повседневных платежей. Подробнее об условиях и возможностях карты можно также узнать на\nсайте банка\n.\nБлагодаря этому Вы можете пополнить Invest card, а затем перевести деньги на торговый счет для покупки ценных бумаг. После можно вывести деньги обратно на неторговый счет и расплачиваться картой, переводить или снимать деньги.\nПреимущества карты:\nПополнение брокерского счета без комиссий;\nБесконтактные платежи через Apple Pay, Samsung Pay, Google Pay, Garmin Pay;\nКарта является мультивалютной –\n₸\n(тенге),\n$\n(доллар США),\n€\n(евро),\n₽\n(рубль);\nГодовое вознаграждение на остаток D-счета: в тенге, долларах США по ставке\nSOFR*\nи евро по ставке\nEuribor*\n.\nПримечание:\n*SOFR (Secured Overnight Financing Rate)",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "d262f3a3e488c9f23ecf",
+        "document_id": "7355630bf3278e8d",
+        "title": "Для чего нужен брокерский счет?",
+        "url": "https://fbroker.kz/faq/question/why-do-you-need-a-brokerage-account-1905",
+        "text": "Брокерский счет\n— это специальный счет для торговли ценными бумагами на бирже.\nБрокер выступает посредником между частным инвестором и биржей. По закону обычный человек не может совершать операции на бирже напрямую, поэтому он дает поручения брокеру, и уже тот от имени клиента покупает или продает финансовые активы. Для учета этих активов и нужен брокерский счет.\nБрокерский счет необходим для:\n1.\nИсполнения приказов на покупку и продажу ценных бумаг;\n2.\nОформления приобретенных акций в собственность;\n3.\nПолучения дивидендов по акциям.\nТо есть все действия на рынке невозможны без брокерского счета. На него будут зачисляться купленные акции, дивиденды, а также реализованная прибыль.",
+        "operator_turns": [
+          12
+        ]
+      },
+      {
+        "evidence_id": "fee728de5e973bedebc0",
+        "document_id": "dec504ac4515570a",
+        "title": "7 шагов, чтобы начать инвестировать",
+        "url": "https://fbroker.kz/faq/question/7-simple-steps-to-investing",
+        "text": "Узнайте, как начать инвестировать, не совершая типичных ошибок. В этой статье вы найдете информацию, пошаговые инструкции и советы от наших экспертов о том, как правильно купить свою первую ценную бумагу!\nШаг 1.\nОткрытие брокерского счета\nПройдите регистрацию онлайн за 10 минут в приложении Freedom Broker.\nШаг 2.\nДоступ ко всем финансовым инструментам\nДля этого нужно заполнить экономический профиль в Freedom Broker. После заполнения вам станут доступны все финансовые инструменты для розничных инвесторов (акции, облигации, ETF, некоторые опционы).\nШаг 3.\nПополнение брокерского счета\nОзнакомьтесь со всеми способами пополнения брокерского счета и выберите удобный для вас.\nШаг 4.\nНакопительный D-счет с пассивным доходом\nПри открытии основного брокерского счета клиенту автоматически открывается специальный накопительный субсчёт – D-счёт. Клиент может перевести на него свободные деньги, не вложенные в ценные бумаги, и получать пассивный доход в USD по ставке SOFR.\nШаг 5.\nПервая сделка\nОзнакомьтесь с подробной инструкцией как можно выставить торговый приказ в платформе в Freedom Broker.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "1f4409034efc7babc589",
+        "document_id": "db649b8a0576e78a",
+        "title": "Режимы торгов Т+1 и Т+2",
+        "url": "https://fbroker.kz/faq/question/t-trading-mode2747",
+        "text": "Режим расчетов Т+1\nТ+1\n– это режим торговых операций, при котором вы заключаете сделку сегодня, а расчеты по ней проходят на\nследующий рабочий день\n.\nДопустим, вы купили бумаги в понедельник. Тогда они зачислятся на счет во вторник после закрытия торговой сессии. То же относится к продаже акций. После сделки продажи деньги поступают на ваш счет и становятся доступны для вывода только на второй рабочий день.\nРежим расчетов Т+2\n\nТ+2\n– это режим торговых операций, при котором Вы заключаете сделку сегодня, а расчеты по ней проходят\nчерез два рабочих дня\n.\nАналогично, предположим, вы купили ценные бумаги в понедельник. При режиме торгов Т+2 фактическим владельцем данных акций вы станете в среду, после закрытия торговой сессии, то есть на третий рабочий день.\nРежим расчетов необходимо учитывать при неторговых операциях на брокерском счете, такие как конвертация и вывод средств, а также при необходимости получения дивидендов.",
+        "operator_turns": [
+          12
+        ]
+      }
+    ],
+    "elapsed_seconds": 61.7,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

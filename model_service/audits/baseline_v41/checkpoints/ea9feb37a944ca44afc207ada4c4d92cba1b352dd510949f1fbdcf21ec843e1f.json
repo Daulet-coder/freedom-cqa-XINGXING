@@ -1,0 +1,316 @@
+{
+  "fingerprint": "ea9feb37a944ca44afc207ada4c4d92cba1b352dd510949f1fbdcf21ec843e1f",
+  "result": {
+    "conversation_id": "p1-ru-001",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "клиент уже предоставил достаточно информации для ответа",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно передал клиенту инструкцию по поиску тарифа в веб-версии (вкладка «Кабинет»), что полностью закрыло запрос клиента, который отказался качать отчёт в приложении.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент выразил нежелание скачивать отчет (turn 5), оператор сразу предложил альтернативу — просмотр в веб-версии (turn 10), что соответствует требованию реагировать на конкретную проблему.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен: бот четко описал возможности, клиент сформулировал запрос, оператор передал его и дал инструкцию, клиент подтвердил получение информации.",
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.",
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 92.31,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "клиент уже предоставил достаточно информации для ответа",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 12,
+          "closing_reason": "оператор подтвердил, что клиент нашла информацию, и завершил разговор",
+          "request_quote": "Где посмотреть мой тариф? В приложении не нахожу.",
+          "clarification_quote": "",
+          "closing_quote": "Пожалуйста. Хорошего вечера!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"клиент уже предоставил достаточно информации для ответа\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"оператор подтвердил, что клиент нашла информацию, и завершил разговор\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Пожалуйста. Хорошего вечера!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент выразил нежелание скачивать отчет (turn 5), оператор сразу предложил альтернативу — просмотр в веб-версии (turn 10), что соответствует требованию реагировать на конкретную проблему.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен: бот четко описал возможности, клиент сформулировал запрос, оператор передал его и дал инструкцию, клиент подтвердил получение информации.\",\n    \"evidence_turns\": [1, 2, 4, 5, 6, 7, 8, 10, 11],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.\",\n    \"evidence_turns\": [1, 2, 4, 5, 6, 7, 8, 10, 11],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно передал клиенту инструкцию по поиску тарифа в веб-версии (вкладка «Кабинет»), что полностью закрыло запрос клиента, который отказался качать отчёт в приложении.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как посмотреть название тарифа в веб-версии",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\": [{\"turn\": 10, \"query\": \"как посмотреть название тарифа в веб-версии\"}, {\"turn\": 12, \"query\": \"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "21eb5233780662ab",
+            "title": "Как узнать свой тариф?",
+            "url": "https://fbroker.kz/faq/question/how-to-find-out-your-tariff-2709",
+            "score": 0.0314728077023159,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 0.856124758720398
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 10.63630092633189
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 10,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 0.8045655488967896
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 15.001159295426218
+              }
+            ],
+            "chunk_ids": [
+              "5bc916b36d0d5a2a1d83"
+            ],
+            "rerank_score": 0.48486328125,
+            "best_index": 65
+          },
+          {
+            "document_id": "16e44c6f28f625e6",
+            "title": "Тариф «Студенческий»",
+            "url": "https://fbroker.kz/faq/question/student-tariff",
+            "score": 0.029782202736166934,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "1f07e2e0c43943ac3c64",
+                "raw_score": 0.8247718214988708
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 9,
+                "chunk_id": "386e6e424962c0d9ddff",
+                "raw_score": 8.641365429364543
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "1f07e2e0c43943ac3c64",
+                "raw_score": 0.8051339387893677
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "386e6e424962c0d9ddff",
+                "raw_score": 11.159893523854791
+              }
+            ],
+            "chunk_ids": [
+              "1f07e2e0c43943ac3c64",
+              "386e6e424962c0d9ddff"
+            ],
+            "rerank_score": 0.03662109375,
+            "best_index": 40
+          },
+          {
+            "document_id": "10da72eab8d484dc",
+            "title": "Где найти свой портфель акций?",
+            "url": "https://fbroker.kz/faq/question/where-can-i-find-my-stock-portfolio-2723",
+            "score": 0.022690887901278628,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 8,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 0.8189541101455688
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 10,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 8.57378446760502
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 77,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 0.7827732563018799
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 50,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 4.49818460746216
+              }
+            ],
+            "chunk_ids": [
+              "0ef1089ce5961d30ffc0"
+            ],
+            "rerank_score": 0.004329681396484375,
+            "best_index": 29
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "5bc916b36d0d5a2a1d83",
+        "document_id": "21eb5233780662ab",
+        "title": "Как узнать свой тариф?",
+        "url": "https://fbroker.kz/faq/question/how-to-find-out-your-tariff-2709",
+        "text": "Узнать, какой тарифный план подключён к вашему брокерскому счёту, можно в мобильном приложении или веб-версии торговой платформы Freedom Broker.\nВ мобильном приложении\nАвторизуйтесь в\nмобильном приложении Freedom Broker\n.\nПерейдите в раздел «Меню» → Отчеты и документы» → «Отчеты брокера».\nНажмите «Получить отчёт», чтобы сформировать документ.\nВ веб-версии\nАвторизуйтесь в\nвеб-версии торговой платформы\n.\nПерейдите в раздел «Кабинет» → «Отчеты брокера».\nНажмите «Получить отчёт», чтобы сформировать документ.\nВ сформированном отчёте найдите раздел «Информация о счёте». В нём будет указан ваш действующий тарифный план.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "386e6e424962c0d9ddff",
+        "document_id": "16e44c6f28f625e6",
+        "title": "Тариф «Студенческий»",
+        "url": "https://fbroker.kz/faq/question/student-tariff",
+        "text": "угой стране. Главное условие — предоставить Документ, подтверждающий зачисление и/или обучение в соответствующей образовательной организации.\nГде проверить, какой Тариф подключён?\nПроверить действующий Тариф можно в платформе Freedom Broker:\nВ мобильном приложении: Меню → Поручения → Настройки счёта → Смена тарифного плана.\nВ веб-платформе: Кабинет → Тариф.\nЧто даёт Тариф кроме сниженной комиссии?\nВладельцы Тарифа также получают доступ к бесплатному обучению от Freedom Academy.\nВ программе можно изучить:\nакции;\nоблигации;\nETF;\nкриптовалюту;\nторговые платформы;\nопционы и другие темы.\nВ программу также входят курсы которые будут доступны в рамках тарифа:\nФинансовый check-up\nПуть инвестора\nОсновы финансов\nТехнический анализ Basic\nФундаментальный анализ Basic\nАзы опционной торговли\nОсновы понимания криптовалют и цифровых активов.\nМатериалы Freedom Academy носят образовательный характер и не являются инвестиционной рекомендацией.\nГде ознакомиться с полными условиями тарифа?\nПолные условия тарифа определяются Согласием на подключение Тарифного плана «Студенческий» и Программой маркетинговой Акции «Тарифный план «Студенческий»».",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "0ef1089ce5961d30ffc0",
+        "document_id": "10da72eab8d484dc",
+        "title": "Где найти свой портфель акций?",
+        "url": "https://fbroker.kz/faq/question/where-can-i-find-my-stock-portfolio-2723",
+        "text": "В портфеле отражена информация о ваших акциях или других ценных бумагах, которые вы приобрели (то есть открыли позицию). Также здесь вы можете видеть сумму свободных средств для новых сделок.\nВ\nвеб-версии\nплатформы Freedom Broker ваш портфель находится в разделе\n«Профиль»\n.\nВ\nмобильном приложении\nв разделе\n«Портфель»\n.\nЧто доступно в разделе «Портфель»?\n1. Информация о позициях\nВы можете посмотреть изменение позиций по своим ценным бумагам, общую сумму сделки, размер текущей прибыли и убытка по каждой ценной бумаге. При необходимости можно открыть карточку определенной акции и посмотреть детальную информацию: цену входа в сделку или долю, которую бумага занимает в вашем портфеле.\n2. Продажа или покупка акций\nПри желании вы можете докупить акции, по которым у вас уже открыта позиция, либо продать эти акции прямо из портфеля. Для этого нажмите на ценную бумагу в портфеле и нажмите на \"Купить\" или \"Продать\".\n3. ﻿Выставление защитного стоп-приказа Stop Loss и приказа Take Profit\nВыставляйте защитные приказы Stop Loss для автоматического закрытия сделок, чтобы ограничить возможные потери.",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 59.09,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

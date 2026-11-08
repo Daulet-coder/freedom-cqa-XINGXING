@@ -1,0 +1,149 @@
+{
+  "fingerprint": "91b65065f535d1e1164d06e8f174c423a3b9a30c0c0eb02e999be0c3ad203caf",
+  "result": {
+    "conversation_id": "p1-kz-004",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент не запрашивает проверку конкретных данных или изменение защищенной информации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно ответил на оба вопроса клиента: указал путь к меню для обновления данных и объяснил, что доступ к выдаче средств откроется только после завершения этой процедуры.",
+        "evidence_turns": [
+          5,
+          11,
+          10,
+          12
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент не выражал недовольства или дискомфорта, поэтому вежливость оператора без дополнительных сочувственных фраз является достаточным ответом.",
+        "evidence_turns": [
+          13
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор четко указал путь в меню, клиент подтвердил выполнение действия и получил ответ на уточняющий вопрос о возможности вывода средств.",
+        "evidence_turns": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          12,
+          14
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальной информации.",
+        "evidence_turns": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 100.0,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент не запрашивает проверку конкретных данных или изменение защищенной информации.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 12,
+          "closing_reason": "Оператор объяснил, что после обновления данных можно снова подать заявку на вывод средств.",
+          "request_quote": "Ақша шығарайын десем, анкетаны жаңарту керек дейді.",
+          "clarification_quote": "",
+          "closing_quote": "Деректер жаңарып, тапсырма орындалғаннан кейін ақша шығаруға қайта өтінім бере аласыз."
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент не запрашивает проверку конкретных данных или изменение защищенной информации.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор объяснил, что после обновления данных можно снова подать заявку на вывод средств.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            14
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Деректер жаңарып, тапсырма орындалғаннан кейін ақша шығаруға қайта өтінім бере аласыз."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент не выражал недовольства или дискомфорта, поэтому вежливость оператора без дополнительных сочувственных фраз является достаточным ответом.\",\n    \"evidence_turns\": [13],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор четко указал путь в меню, клиент подтвердил выполнение действия и получил ответ на уточняющий вопрос о возможности вывода средств.\",\n    \"evidence_turns\": [10, 11, 12, 13],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальной информации.\",\n    \"evidence_turns\": [10, 11, 12, 13],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно ответил на оба вопроса клиента: указал путь к меню для обновления данных и объяснил, что доступ к выдаче средств откроется только после завершения этой процедуры.\",\n    \"evidence_turns\": [5, 11, 10, 12],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "",
+        "12": "",
+        "14": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\": [{\"turn\": 10, \"query\": \"\"}, {\"turn\": 12, \"query\": \"\"}, {\"turn\": 14, \"query\": \"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 53.86,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

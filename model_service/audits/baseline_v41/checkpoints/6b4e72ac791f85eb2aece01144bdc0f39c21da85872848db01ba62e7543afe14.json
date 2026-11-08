@@ -1,0 +1,462 @@
+{
+  "fingerprint": "6b4e72ac791f85eb2aece01144bdc0f39c21da85872848db01ba62e7543afe14",
+  "result": {
+    "conversation_id": "p1-ru-004",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент получил инструкцию по выбору валюты в приложении.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно ответил на оба вопроса клиента: подтвердил возможность выбора валюты (евро) при скачивании реквизитов и указал путь к этой функции в приложении, что полностью закрывает запрос клиента о пополнении и выборе валюты.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11,
+          12,
+          13
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент выразил недовольство сложностью интерфейса в 5-м туре, но оператор в 10-м туре ответил только инструкцией без реакции на эмоцию или предложения альтернативы.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот дал инструкцию, клиент уточнил детали, оператор ответил на уточнение и завершил разговор, хотя и пропустил момент явного подтверждения понимания клиента.",
+        "evidence_turns": [
+          4,
+          5,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "value": 7
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          14
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.",
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          11,
+          12,
+          13
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 62.31,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент получил инструкцию по выбору валюты в приложении.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 14,
+          "closing_reason": "Оператор подтвердил, что клиент понял инструкцию, и завершил разговор.",
+          "request_quote": "Как пополнить брокерский счёт переводом через отделение банка?",
+          "clarification_quote": "",
+          "closing_quote": "Отлично. Хорошего дня!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент получил инструкцию по выбору валюты в приложении.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 14,\n  \"closing_reason\": \"Оператор подтвердил, что клиент понял инструкцию, и завершил разговор.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            14
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Отлично. Хорошего дня!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент выразил недовольство сложностью интерфейса в 5-м туре, но оператор в 10-м туре ответил только инструкцией без реакции на эмоцию или предложения альтернативы.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот дал инструкцию, клиент уточнил детали, оператор ответил на уточнение и завершил разговор, хотя и пропустил момент явного подтверждения понимания клиента.\",\n    \"evidence_turns\": [4, 5, 10, 11, 12, 13, 14],\n    \"value\": 7\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.\",\n    \"evidence_turns\": [1, 2, 4, 5, 10, 11, 12, 13],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\"consultation\": {\"rationale\": \"Оператор корректно ответил на оба вопроса клиента: подтвердил возможность выбора валюты (евро) при скачивании реквизитов и указал путь к этой функции в приложении, что полностью закрывает запрос клиента о пополнении и выборе валюты.\", \"evidence_turns\": [1, 5, 10, 11, 12, 13], \"value\": 20}}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как получить реквизиты для пополнения в приложении",
+        "12": "как выбрать валюту при скачивании реквизитов для перевода",
+        "14": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"как получить реквизиты для пополнения в приложении\"},{\"turn\":12,\"query\":\"как выбрать валюту при скачивании реквизитов для перевода\"},{\"turn\":14,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "4e007f4d27c160fe",
+            "title": "Пополнение счета по реквизитам через банк",
+            "url": "https://fbroker.kz/faq/question/top-up-an-account-by-bank-transfer-using-details",
+            "score": 0.032402663934426236,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 0.8520494699478149
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 9.93340817557427
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 0.8436387777328491
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 27.44684079362613
+              }
+            ],
+            "chunk_ids": [
+              "6855092e64f61c3d1e13"
+            ],
+            "rerank_score": 0.93359375,
+            "best_index": 169
+          },
+          {
+            "document_id": "90d8582e02473920",
+            "title": "Пополнение картой в торговой платформе Freedom Broker",
+            "url": "https://fbroker.kz/faq/question/by-bank-card-in-the-tradernet-mobile-app",
+            "score": 0.03138928164129777,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "ffbd5a86d0ea4709a626",
+                "raw_score": 0.832622766494751
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "ffbd5a86d0ea4709a626",
+                "raw_score": 10.875050041051011
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 6,
+                "chunk_id": "ffbd5a86d0ea4709a626",
+                "raw_score": 0.8166490793228149
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "ffbd5a86d0ea4709a626",
+                "raw_score": 19.198708316457413
+              }
+            ],
+            "chunk_ids": [
+              "ffbd5a86d0ea4709a626"
+            ],
+            "rerank_score": 0.70654296875,
+            "best_index": 302
+          },
+          {
+            "document_id": "e0438a6cdbbf0168",
+            "title": "Минимальная сумма для пополнения",
+            "url": "https://fbroker.kz/faq/question/minimum-top-up-amount2718",
+            "score": 0.026000959824489238,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 18,
+                "chunk_id": "de97f95c4e3abdecaf11",
+                "raw_score": 0.8218429088592529
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "de97f95c4e3abdecaf11",
+                "raw_score": 8.628510209576007
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 50,
+                "chunk_id": "de97f95c4e3abdecaf11",
+                "raw_score": 0.7958441972732544
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "de97f95c4e3abdecaf11",
+                "raw_score": 14.385988810729039
+              }
+            ],
+            "chunk_ids": [
+              "de97f95c4e3abdecaf11"
+            ],
+            "rerank_score": 0.1676025390625,
+            "best_index": 470
+          }
+        ],
+        "12": [
+          {
+            "document_id": "4e007f4d27c160fe",
+            "title": "Пополнение счета по реквизитам через банк",
+            "url": "https://fbroker.kz/faq/question/top-up-an-account-by-bank-transfer-using-details",
+            "score": 0.02691060907232066,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 0.8482915163040161
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 117,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 1.7930626203492057
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 0.8271130323410034
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "6855092e64f61c3d1e13",
+                "raw_score": 20.215405924191657
+              }
+            ],
+            "chunk_ids": [
+              "6855092e64f61c3d1e13"
+            ],
+            "rerank_score": 0.6708984375,
+            "best_index": 169
+          },
+          {
+            "document_id": "f3e904fd88c785ea",
+            "title": "Способы перевода средств с брокерского счета",
+            "url": "https://fbroker.kz/faq/question/methods-for-withdrawing-funds-from-a-brokerage-account",
+            "score": 0.030572451564974717,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 8,
+                "chunk_id": "7038d8dc9f5429f034db",
+                "raw_score": 0.8449432253837585
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 7,
+                "chunk_id": "7038d8dc9f5429f034db",
+                "raw_score": 7.015263237218286
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "7038d8dc9f5429f034db",
+                "raw_score": 0.8147006034851074
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "7b59c1fc3ce9e57e5b43",
+                "raw_score": 16.32045041647937
+              }
+            ],
+            "chunk_ids": [
+              "7038d8dc9f5429f034db",
+              "7b59c1fc3ce9e57e5b43"
+            ],
+            "rerank_score": 0.19482421875,
+            "best_index": 505
+          },
+          {
+            "document_id": "7a0905fd6fd8d128",
+            "title": "Перевод между счетами",
+            "url": "https://fbroker.kz/faq/question/transfer-between-accounts3812",
+            "score": 0.022134626196478064,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 7,
+                "chunk_id": "a78285803188d024560f",
+                "raw_score": 0.8457076549530029
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 25,
+                "chunk_id": "a78285803188d024560f",
+                "raw_score": 3.8845124809470906
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "a78285803188d024560f",
+                "raw_score": 0.8094748258590698
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 264,
+                "chunk_id": "a78285803188d024560f",
+                "raw_score": 0.4300854904658982
+              }
+            ],
+            "chunk_ids": [
+              "a78285803188d024560f"
+            ],
+            "rerank_score": 0.1263427734375,
+            "best_index": 258
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "6855092e64f61c3d1e13",
+        "document_id": "4e007f4d27c160fe",
+        "title": "Пополнение счета по реквизитам через банк",
+        "url": "https://fbroker.kz/faq/question/top-up-an-account-by-bank-transfer-using-details",
+        "text": "Пополните брокерский счет через банк по реквизитам.\n\nАвторизуйтесь в\nмобильном приложении\nFreedom Broker;\nПерейдите в раздел «Меню», вкладка «Пополнить»;\nВыберите «Перевод по реквизитам»;\nСкачайте, выгрузите или распечатайте реквизиты для пополнения в нужной валюте;\nОбратитесь в любой банк*, где у вас открыт счет, и запросите перевод на брокерский счет.\nВажно!\nВ назначении платежа обязательно нужно указать номер брокерского счета.\nВажно* Переводы принимаются только из банков, не находящихся под санкциями\nБрокер не удерживает комиссию за зачисление, а комиссию банка можно уточнить при совершении операции.\nВажно!\nПополнение вашего брокерского счета третьими лицами не предоставляется возможным.",
+        "operator_turns": [
+          10,
+          12
+        ]
+      },
+      {
+        "evidence_id": "ffbd5a86d0ea4709a626",
+        "document_id": "90d8582e02473920",
+        "title": "Пополнение картой в торговой платформе Freedom Broker",
+        "url": "https://fbroker.kz/faq/question/by-bank-card-in-the-tradernet-mobile-app",
+        "text": "Пополнение картой в торговой платформе Freedom Broker\nПополнить счёт в торговой платформе Freedom Broker можно двумя способами: в мобильном приложении или в веб-версии.\n\nПополнение счета в мобильном приложении\nАвторизуйтесь в\nмобильном приложении Freedom Broker\n;\nПерейдите в раздел «Меню», вкладка «Пополнить»;\nВыберите «Новая карта»;\nВведите сумму пополнения;\nУкажите реквизиты вашей банковской карты* и нажмите «Пополнить».\nПополнение счета в веб-версии платформы\nАвторизуйтесь в\nвеб-версии\nторговой платформе Freedom Broker;\nВ верхнем правом углу нажмите кнопку «Пополнить»;\nВ открывшемся окне заполните данные банковской карты и сумму пополнения;\nНажмите «Пополнить».\n*Переводы принимаются с несанкционных банков.\n*Пополнение вашего брокерского счета третьими лицами не предоставляется возможным.\nПри этом способе минимальная сумма пополнения – 500 тенге или $1.\nПримерное время зачисления средств составляет до 5 рабочих дней. Если по истечении этого периода средства не будут зачислены, пожалуйста,\nобратитесь в службу поддержки\n, приложив платёжное поручение.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "7038d8dc9f5429f034db",
+        "document_id": "f3e904fd88c785ea",
+        "title": "Способы перевода средств с брокерского счета",
+        "url": "https://fbroker.kz/faq/question/methods-for-withdrawing-funds-from-a-brokerage-account",
+        "text": "комиссии согласно\nтарифам Банка\n).\nПодробнее об\nInvest Card\nможно ознакомиться в следующей\nстатье\n.\nСпособ 2.\nПо реквизитам на банковский счет\nАвторизуйтесь в\nмобильном приложении\nплатформы Freedom Broker.\nПерейдите в раздел\n«Меню»\n→\n«Поручения» → «Денежные средства»\n.\nВыберите\n«Перевод средств» → «На банковский счет»\n.\nУкажите реквизиты вашего банковского счета и сумму списания.\nПроверьте введенные данные и нажмите\n«Подтвердить»\n.\nДля вывода сумм свыше $10 000.\nСпособ 3.\nНа банковскую карту\nАвторизуйтесь в\nмобильном приложении\nплатформы Freedom Broker.\nПерейдите в раздел\n«Меню» → «Поручения» → «Денежные средства»\n.\nВыберите\n«Перевод средств»\n→ «\nНа банковскую карту»\n.\nВыберите карту для зачисления средств, валюту и сумму списания.\nПроверьте введенные данные и нажмите\n«Подтвердить»\n.\nДля вывода средств на сохраненную карту её необходимо\nоднократно верифицировать\n.\nДля верификации отправьте в поддержку лицевую сторону карты\nс номером карты и ФИО\n. (Остальные данные необходимо скрыть (\nCVV и срок действия\n)):\nВ мобильном приложении платформы Freedom Broker войдите в «Меню» → «Поддержка» → «Написать в поддержку».\nЕсли карта цифровая, предоставьте\nсправку из банка",
+        "operator_turns": [
+          12
+        ]
+      },
+      {
+        "evidence_id": "de97f95c4e3abdecaf11",
+        "document_id": "e0438a6cdbbf0168",
+        "title": "Минимальная сумма для пополнения",
+        "url": "https://fbroker.kz/faq/question/minimum-top-up-amount2718",
+        "text": "При пополнении брокерского счета:\n• через карту в\nприложении\nFreedom Broker минимальная сумма пополнения – 500 тенге или 1 доллар США\n;\n• через приложение Freedom SuperApp – от 100 тенге;\n• Банковским переводом по реквизитам брокерского счета\nминимальной суммы нет\n(пожалуйста, уточните дополнительно у банка-отправителя).",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "a78285803188d024560f",
+        "document_id": "7a0905fd6fd8d128",
+        "title": "Перевод между счетами",
+        "url": "https://fbroker.kz/faq/question/transfer-between-accounts3812",
+        "text": "Чтобы перевести деньги на торговый счёт или обратно в\nмобильном приложении\nплатформы Freedom Broker:\n1.\nАвторизуйтесь в\nмобильном приложении\nплатформы Freedom Broker.\n2.\nВойдите в раздел «Меню» выберите «Поручения» → «Денежные средства» → «Перевод между счетами», либо нажмите «Меню» → «Пополнить» → «Между счетами».\n3.\nВыберите счет отправителя в поле «Номер счета отправителя». Далее укажите ваш счет зачисления в поле «Номер счета получателя». Затем введите сумму и выберите валюту.\n4.\nДалее нажмите «Подтвердить». Ваше поручение будет исполнено в течение нескольких минут.\nГотово!\nПереведенные деньги будут отражены на остатке необходимого вам счета.",
+        "operator_turns": [
+          12
+        ]
+      }
+    ],
+    "elapsed_seconds": 63.2,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

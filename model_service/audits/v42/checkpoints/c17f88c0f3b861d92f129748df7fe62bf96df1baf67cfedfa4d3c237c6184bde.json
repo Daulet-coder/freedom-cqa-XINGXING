@@ -1,0 +1,254 @@
+{
+  "result": {
+    "conversation_id": "p4-ru-003",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          13
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+        "evidence_turns": [
+          15
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": false,
+        "rationale": "Для запроса по конкретному счету подтверждение личности до защищенного действия не найдено.",
+        "evidence_turns": [
+          15
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно идентифицировал суть проблемы (поручение в обработке), провел идентификацию клиента и дал четкий план действий с обещанием обратного звона, что соответствует критерию 20.",
+        "evidence_turns": [
+          13,
+          15,
+          17,
+          27,
+          40,
+          66,
+          71,
+          73
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор вежливо извинился за перебивание в моменте 22, но не отреагировал на явное недовольство клиента (тур 69), когда тот выразил раздражение из-за долгой обработки.",
+        "evidence_turns": [
+          22,
+          69
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор уточнил детали, провел идентификацию и согласовал дальнейшие шаги, несмотря на небольшую путаницу в терминах от клиента.",
+        "evidence_turns": [
+          13,
+          19,
+          20,
+          22,
+          40,
+          71,
+          73
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          73
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Клиент произносит номер счета, но оператор корректно реагирует на запрос 'Как?' и не раскрывает конфиденциальные данные в ответе, что не является грубой ошибкой.",
+        "evidence_turns": [
+          36,
+          38,
+          49
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 52.94,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "42",
+    "stages": {
+      "boundary_attempt": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 15,
+          "request_quote": "Да я вот через мобильное приложение Продам торговые по поручения.",
+          "first_protected_action_turn": 40,
+          "missing_details_required": false,
+          "missing_details_reason": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "clarification_quote": "",
+          "closing_kind": "AGREED_NEXT_STEP",
+          "closing_turn": 73,
+          "closing_quote": "Да я сам вам поз перезвоню вам док доку часов времени будет удобно получить обратную связь.",
+          "closing_reason": "Оператор согласился перезвонить клиенту в течение дня для предоставления обратной связи.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "ACCOUNT_SPECIFIC",
+            "request_ref": "C_0015",
+            "first_protected_action_ref": "O_0040",
+            "missing_details_required": false,
+            "missing_details_reason": null,
+            "clarified_needed_details": false,
+            "clarification_ref": null,
+            "closing_kind": "AGREED_NEXT_STEP",
+            "closing_ref": "O_0073",
+            "closing_reason": "Оператор согласился перезвонить клиенту в течение дня для предоставления обратной связи."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_ref\": \"C_0015\",\n  \"first_protected_action_ref\": \"O_0040\",\n  \"missing_details_required\": false,\n  \"missing_details_reason\": null,\n  \"clarified_needed_details\": false,\n  \"clarification_ref\": null,\n  \"closing_kind\": \"AGREED_NEXT_STEP\",\n  \"closing_ref\": \"O_0073\",\n  \"closing_reason\": \"Оператор согласился перезвонить клиенту в течение дня для предоставления обратной связи.\"\n}\n",
+        "derived": [
+          {
+            "criterion_id": "contact",
+            "value": true,
+            "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+            "evidence_turns": [
+              13
+            ]
+          },
+          {
+            "criterion_id": "discovery",
+            "value": null,
+            "rationale": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+            "evidence_turns": [
+              15
+            ]
+          },
+          {
+            "criterion_id": "identification",
+            "value": false,
+            "rationale": "Для запроса по конкретному счету подтверждение личности до защищенного действия не найдено.",
+            "evidence_turns": [
+              15
+            ]
+          },
+          {
+            "criterion_id": "closure",
+            "value": false,
+            "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+            "evidence_turns": [
+              73
+            ]
+          }
+        ]
+      },
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 15,
+          "request_quote": "Да я вот через мобильное приложение Продам торговые по поручения.",
+          "first_protected_action_turn": 40,
+          "missing_details_required": false,
+          "missing_details_reason": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "clarification_quote": "",
+          "closing_kind": "AGREED_NEXT_STEP",
+          "closing_turn": 73,
+          "closing_quote": "Да я сам вам поз перезвоню вам док доку часов времени будет удобно получить обратную связь.",
+          "closing_reason": "Оператор согласился перезвонить клиенту в течение дня для предоставления обратной связи.",
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "ACCOUNT_SPECIFIC",
+            "request_ref": "C_0015",
+            "first_protected_action_ref": "O_0040",
+            "missing_details_required": false,
+            "missing_details_reason": null,
+            "clarified_needed_details": false,
+            "clarification_ref": null,
+            "closing_kind": "AGREED_NEXT_STEP",
+            "closing_ref": "O_0073",
+            "closing_reason": "Оператор согласился перезвонить клиенту в течение дня для предоставления обратной связи."
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_ref\": \"C_0015\",\n  \"first_protected_action_ref\": \"O_0040\",\n  \"missing_details_required\": false,\n  \"missing_details_reason\": null,\n  \"clarified_needed_details\": false,\n  \"clarification_ref\": null,\n  \"closing_kind\": \"AGREED_NEXT_STEP\",\n  \"closing_ref\": \"O_0073\",\n  \"closing_reason\": \"Оператор согласился перезвонить клиенту в течение дня для предоставления обратной связи.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [],
+          "interruption_turns": [],
+          "closing_quote": "Да я сам вам поз перезвоню вам док доку часов времени будет удобно получить обратную связь."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор вежливо извинился за перебивание в моменте 22, но не отреагировал на явное недовольство клиента (тур 69), когда тот выразил раздражение из-за долгой обработки.\",\n    \"evidence_turns\": [22, 69],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор уточнил детали, провел идентификацию и согласовал дальнейшие шаги, несмотря на небольшую путаницу в терминах от клиента.\",\n    \"evidence_turns\": [13, 19, 20, 22, 40, 71, 73],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"Клиент произносит номер счета, но оператор корректно реагирует на запрос 'Как?' и не раскрывает конфиденциальные данные в ответе, что не является грубой ошибкой.\",\n    \"evidence_turns\": [36, 38, 49],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно идентифицировал суть проблемы (поручение в обработке), провел идентификацию клиента и дал четкий план действий с обещанием обратного звона, что соответствует критерию 20.\",\n    \"evidence_turns\": [13, 15, 17, 27, 40, 66, 71, 73],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "13": "",
+        "19": "",
+        "20": "",
+        "22": "",
+        "27": "",
+        "31": "",
+        "32": "",
+        "38": "",
+        "39": "",
+        "40": "",
+        "42": "",
+        "45": "",
+        "48": "",
+        "49": "",
+        "54": "",
+        "59": "",
+        "61": "",
+        "65": "",
+        "66": "",
+        "68": "",
+        "70": "",
+        "71": "",
+        "73": "",
+        "75": "",
+        "76": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":13,\"query\":\"\"},{\"turn\":19,\"query\":\"\"},{\"turn\":20,\"query\":\"\"},{\"turn\":22,\"query\":\"\"},{\"turn\":27,\"query\":\"\"},{\"turn\":31,\"query\":\"\"},{\"turn\":32,\"query\":\"\"},{\"turn\":38,\"query\":\"\"},{\"turn\":39,\"query\":\"\"},{\"turn\":40,\"query\":\"\"},{\"turn\":42,\"query\":\"\"},{\"turn\":45,\"query\":\"\"},{\"turn\":48,\"query\":\"\"},{\"turn\":49,\"query\":\"\"},{\"turn\":54,\"query\":\"\"},{\"turn\":59,\"query\":\"\"},{\"turn\":61,\"query\":\"\"},{\"turn\":65,\"query\":\"\"},{\"turn\":66,\"query\":\"\"},{\"turn\":68,\"query\":\"\"},{\"turn\":70,\"query\":\"\"},{\"turn\":71,\"query\":\"\"},{\"turn\":73,\"query\":\"\"},{\"turn\":75,\"query\":\"\"},{\"turn\":76,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 94.08,
+    "label_provenance": "model_generated_unreviewed",
+    "peak_gpu0_allocated_gib": 9.166
+  },
+  "signature": "43f2b843ab2152cc69adfcd7e66999dd362b38aaf0e296e2a72edab09bfbed0b",
+  "label_provenance": "model_generated_unreviewed"
+}

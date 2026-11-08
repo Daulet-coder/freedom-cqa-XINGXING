@@ -1,0 +1,308 @@
+{
+  "fingerprint": "5e8898cc3333df06ea5e06adc7305152dea231b14d6e4b5ff99e1bfe4549bff4",
+  "result": {
+    "conversation_id": "p1-ru-023",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент получил инструкцию по поиску облигаций без необходимости дополнительных данных.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно передал клиенту инструкцию по поиску облигаций через раздел «Котировки» и поиск по названию/тикеру, что полностью закрыло исходный запрос клиента.",
+        "evidence_turns": [
+          1,
+          4,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор предложил платную услугу в обход компании, что является грубым нарушением, но не проявил эмпатии к отказу клиента, просто завершив разговор.",
+        "evidence_turns": [
+          12
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот дал инструкцию, клиент попросил оператора, оператор повторил инструкцию и завершил разговор после отказа от платной услуги.",
+        "evidence_turns": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          14
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Оператор в turn 12 предложил клиенту за плату объяснить бумаги в личной консультации, что является предложением платной услуги в обход компании.",
+        "evidence_turns": [
+          12
+        ],
+        "value": true
+      }
+    ],
+    "score": {
+      "final_score": 69.23,
+      "critical_flag": true
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент получил инструкцию по поиску облигаций без необходимости дополнительных данных.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_reason": "Диалог завершился вежливым прощанием оператора без подведения итогов или предложения дальнейшей помощи.",
+          "request_quote": "Как найти облигации в приложении? Хочу посмотреть, что есть.",
+          "clarification_quote": "",
+          "closing_quote": ""
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент получил инструкцию по поиску облигаций без необходимости дополнительных данных.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_turn\": null,\n  \"closing_reason\": \"Диалог завершился вежливым прощанием оператора без подведения итогов или предложения дальнейшей помощи.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            14
+          ],
+          "interruption_turns": [],
+          "closing_quote": ""
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор предложил платную услугу в обход компании, что является грубым нарушением, но не проявил эмпатии к отказу клиента, просто завершив разговор.\",\n    \"evidence_turns\": [12],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот дал инструкцию, клиент попросил оператора, оператор повторил инструкцию и завершил разговор после отказа от платной услуги.\",\n    \"evidence_turns\": [4, 5, 6, 7, 8, 10, 11, 12, 13, 14],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"Оператор в turn 12 предложил клиенту за плату объяснить бумаги в личной консультации, что является предложением платной услуги в обход компании.\",\n    \"evidence_turns\": [12],\n    \"value\": true\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно передал клиенту инструкцию по поиску облигаций через раздел «Котировки» и поиск по названию/тикеру, что полностью закрыло исходный запрос клиента.\",\n    \"evidence_turns\": [1, 4, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "открыть котировки",
+        "12": "",
+        "14": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"открыть котировки\"},{\"turn\":12,\"query\":\"\"},{\"turn\":14,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "bda66b86ad2796b2",
+            "title": "Как можно торговать опционами во Freedom Finance Global PLC?",
+            "url": "https://fbroker.kz/faq/question/how-can-i-trade-options-with-freedom-finance-global-plc",
+            "score": 0.028231997198393415,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 7,
+                "chunk_id": "5ff78314143d7f19273b",
+                "raw_score": 0.8312685489654541
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 10,
+                "chunk_id": "5ff78314143d7f19273b",
+                "raw_score": 3.581035715869427
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 26,
+                "chunk_id": "5ff78314143d7f19273b",
+                "raw_score": 0.7978212833404541
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "5ff78314143d7f19273b",
+                "raw_score": 12.352266301856261
+              }
+            ],
+            "chunk_ids": [
+              "5ff78314143d7f19273b"
+            ],
+            "rerank_score": 0.318359375,
+            "best_index": 378
+          },
+          {
+            "document_id": "3e609fa13b0f345f",
+            "title": "API и FIX-подключение в платформе Freedom Broker",
+            "url": "https://fbroker.kz/faq/question/api-and-fix-connection-in-the-freedom-broker-platform",
+            "score": 0.028353965242010785,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "3a83c1cdab0905f05f6e",
+                "raw_score": 0.8363014459609985
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "3a83c1cdab0905f05f6e",
+                "raw_score": 3.9256153591775464
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "3a83c1cdab0905f05f6e",
+                "raw_score": 0.8268659114837646
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 40,
+                "chunk_id": "3a83c1cdab0905f05f6e",
+                "raw_score": 4.832089981575072
+              }
+            ],
+            "chunk_ids": [
+              "3a83c1cdab0905f05f6e"
+            ],
+            "rerank_score": 0.267333984375,
+            "best_index": 141
+          },
+          {
+            "document_id": "e9c429750ae4f41d",
+            "title": "Как выставить торговый приказ?",
+            "url": "https://fbroker.kz/faq/question/how-to-place-a-trade-order-2737",
+            "score": 0.02963391937910826,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 0.830755352973938
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 9,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 3.713846944864497
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 12,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 0.803391695022583
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "897ac651c8e4719c597f",
+                "raw_score": 15.020296743434395
+              }
+            ],
+            "chunk_ids": [
+              "897ac651c8e4719c597f"
+            ],
+            "rerank_score": 0.2322998046875,
+            "best_index": 491
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "5ff78314143d7f19273b",
+        "document_id": "bda66b86ad2796b2",
+        "title": "Как можно торговать опционами во Freedom Finance Global PLC?",
+        "url": "https://fbroker.kz/faq/question/how-can-i-trade-options-with-freedom-finance-global-plc",
+        "text": "Как торговать опционами через\nмобильное приложение\nFreedom Broker?\n1. В разделе\n«Котировки»\nнайдите интересующий вас базовый актив — акцию или ETF.\nНапример, введите в поиск тикер FRHC.US (не инвестиционная рекомендация).\n2. В карточке инструмента откроется вкладка\n«Инфо»\n. Вы увидите график цены выбранных акций. Под графиком будет раздел\n«Опционы на FRHC.US»\n(или другой тикер акций).\nВыберите направление:\n«Вырастет» — для покупки Call-опциона\n«Упадет» — для покупки Put-опциона\n3. В открывшемся окне настройте:\nСтрайк цену\nДату экспирации опциона.\n4. Нажмите\n«Купить»\nв нижней части экрана.\n5. В настройке приказа:\nУкажите цену покупки, если выбираете лимитную заявку.\nДля рыночной заявки оставьте поле цены пустым.\nУкажите количество контрактов.\n6. Нажмите\n«Выставить приказ»\n. Готово — ваш приказ на покупку опциона отправлен на биржу.\nОбратите внимание!\nЦена опциона указывается за одну акцию, однако опционы торгуются лотами.\nОдин лот = 100 акций.\nФактическая стоимость опциона = цена опциона × 100.\nПеред началом торговли опционами обязательно ознакомьтесь с\nF.A.Q\n. а также с дисклеймером о рисках, связанных с производными финансовыми инструментами.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "3a83c1cdab0905f05f6e",
+        "document_id": "3e609fa13b0f345f",
+        "title": "API и FIX-подключение в платформе Freedom Broker",
+        "url": "https://fbroker.kz/faq/question/api-and-fix-connection-in-the-freedom-broker-platform",
+        "text": "Платформа\nFreedom Broker\nпредлагает продвинутым пользователям и разработчикам расширенные возможности автоматизации, работы с данными и торговыми системами.\nЕсть две основные опции:\nОткрытые коды Application Programming Interface (API)\nПодключение по FIX-протоколу.\nУзнать больше и подключиться\nAPI Freedom Broker\nВ секции API вы найдете подробную документацию, описывающую множество функций для интеграции и взаимодействия с торговой системой Freedom Broker. Основные разделы:\nАвторизация:\nметоды входа в систему с использованием логина и пароля или API-ключа, получение начальных данных пользователя и информации о текущей сессии.\nСессии безопасности:\nуправление сессиями безопасности, включая получение списка открытых сессий и их открытие с помощью SMS, веб-токена или электронной цифровой подписи.\nКотировки и тикеры:\nработа с ценными бумагами – получение списков, добавление и удаление тикеров, подписка на обновления котировок и получение исторических данных.\nПортфель:\nполучение информации о портфеле пользователя и подписка на изменения.\nПриказы:",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "897ac651c8e4719c597f",
+        "document_id": "e9c429750ae4f41d",
+        "title": "Как выставить торговый приказ?",
+        "url": "https://fbroker.kz/faq/question/how-to-place-a-trade-order-2737",
+        "text": "Чтобы выставить торговый приказ\nв мобильном приложении\nплатформы Freedom Broker:\n1. Нажмите на раздел «\nКотировки\n». Далее нажмите на\nзначок поиска\nи введите наименование компании или тикер бумаги.\nПример тикера:\nAAPL.US\nдля обыкновенных акций Apple, Inc.\n2. Нажмите на выбранную бумагу.\n3. Нажмите на «\nТорговать\n».\n4. Выберите параметры приказа:\n- Выберите действие: «\nКупить\n» или «\nПродать\n».\n-\nЗадайте цену\n. Приказ «\nпо рынку\n» исполнится по текущей цене в моменте. Также Вы можете выбрать другой тип приказа. Например, в «\nлимитном приказе\n» вы задаёте собственную цену и получите акции именно по Вашей или более выгодной цене.\n-\nУкажите количество акций\n. После этого платформа автоматически рассчитает сумму приказа и подскажет, достаточно ли у Вас денег для такой сделки. Вы также можете нажать на кнопку «max», и Freedom Broker автоматически подставит максимально доступное число акций.\n5. При необходимости задайте\nдополнительные настройки\nприказа: стоп-цена, либо маржинальная сделка.\nВажно! Детальнее о видах приказов Вы можете ознакомиться в\nстатье\n.\n6. Нажмите «\nВыставить приказ\n» и подтвердите действие.",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 57.34,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

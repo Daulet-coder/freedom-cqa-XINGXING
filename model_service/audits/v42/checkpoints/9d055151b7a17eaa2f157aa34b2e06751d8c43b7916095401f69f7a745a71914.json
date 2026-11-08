@@ -1,0 +1,384 @@
+{
+  "result": {
+    "conversation_id": "p1-kz-001",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор Аружан в turn 10 точно ответила на вопрос клиента о том, где найти тариф в веб-версии («Кабинет» → под названием тарифа), что полностью закрыло запрос клиента, подтверждённый его реакцией «Көрдім, рақмет» в turn 11.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент не выразил недовольства или неудобства, поэтому вежливое прощание оператора без дополнительных сочувственных фраз является достаточным.",
+        "evidence_turns": [
+          11,
+          12
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Оператор четко и последовательно ответил на вопрос клиента, указав конкретное место в веб-интерфейсе («Кабинет» -> под тарифом), что позволило клиенту сразу решить задачу.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "Взаимодействие прошло корректно: оператор вежливо передал клиента, дал инструкцию и прощался, грубых ошибок, оскорблений или утечек данных не зафиксировано.",
+        "evidence_turns": [
+          5,
+          10,
+          12
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 92.31,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "42",
+    "stages": {
+      "boundary_attempt": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "request_quote": "Қазір қай тарифте тұрғанымды қайдан көремін?",
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "clarification_quote": "",
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_quote": "",
+          "closing_reason": null,
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "GENERAL_INFORMATION",
+            "request_ref": "C_0001",
+            "first_protected_action_ref": null,
+            "missing_details_required": false,
+            "missing_details_reason": null,
+            "clarified_needed_details": false,
+            "clarification_ref": null,
+            "closing_kind": "NONE",
+            "closing_ref": null,
+            "closing_reason": null
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_ref\": \"C_0001\",\n  \"first_protected_action_ref\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": null,\n  \"clarified_needed_details\": false,\n  \"clarification_ref\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_ref\": null,\n  \"closing_reason\": null\n}\n",
+        "derived": [
+          {
+            "criterion_id": "contact",
+            "value": true,
+            "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+            "evidence_turns": [
+              10
+            ]
+          },
+          {
+            "criterion_id": "discovery",
+            "value": null,
+            "rationale": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+            "evidence_turns": [
+              1
+            ]
+          },
+          {
+            "criterion_id": "identification",
+            "value": null,
+            "rationale": "Общая инструкция не требует идентификации.",
+            "evidence_turns": [
+              1
+            ]
+          },
+          {
+            "criterion_id": "closure",
+            "value": false,
+            "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+            "evidence_turns": [
+              12
+            ]
+          }
+        ]
+      },
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "request_quote": "Қазір қай тарифте тұрғанымды қайдан көремін?",
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Исходных сведений достаточно; обязательные уточнения не требуются.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "clarification_quote": "",
+          "closing_kind": "NONE",
+          "closing_turn": null,
+          "closing_quote": "",
+          "closing_reason": null,
+          "source_reference_errors": [],
+          "source_refs": {
+            "request_kind": "GENERAL_INFORMATION",
+            "request_ref": "C_0001",
+            "first_protected_action_ref": null,
+            "missing_details_required": false,
+            "missing_details_reason": null,
+            "clarified_needed_details": false,
+            "clarification_ref": null,
+            "closing_kind": "NONE",
+            "closing_ref": null,
+            "closing_reason": null
+          }
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_ref\": \"C_0001\",\n  \"first_protected_action_ref\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": null,\n  \"clarified_needed_details\": false,\n  \"clarification_ref\": null,\n  \"closing_kind\": \"NONE\",\n  \"closing_ref\": null,\n  \"closing_reason\": null\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": ""
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент не выразил недовольства или неудобства, поэтому вежливое прощание оператора без дополнительных сочувственных фраз является достаточным.\",\n    \"evidence_turns\": [11, 12],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Оператор четко и последовательно ответил на вопрос клиента, указав конкретное место в веб-интерфейсе («Кабинет» -> под тарифом), что позволило клиенту сразу решить задачу.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"Взаимодействие прошло корректно: оператор вежливо передал клиента, дал инструкцию и прощался, грубых ошибок, оскорблений или утечек данных не зафиксировано.\",\n    \"evidence_turns\": [5, 10, 12],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор Аружан в turn 10 точно ответила на вопрос клиента о том, где найти тариф в веб-версии («Кабинет» → под названием тарифа), что полностью закрыло запрос клиента, подтверждённый его реакцией «Көрдім, рақмет» в turn 11.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "где посмотреть тариф в веб-версии",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\": [{\"turn\": 10, \"query\": \"где посмотреть тариф в веб-версии\"}, {\"turn\": 12, \"query\": \"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "21eb5233780662ab",
+            "title": "Как узнать свой тариф?",
+            "url": "https://fbroker.kz/faq/question/how-to-find-out-your-tariff-2709",
+            "score": 0.028436317780580075,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 0.850998044013977
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 12.56514082945617
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 70,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 0.7861632108688354
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 10.65720982220769
+              }
+            ],
+            "chunk_ids": [
+              "5bc916b36d0d5a2a1d83"
+            ],
+            "rerank_score": 0.9345703125,
+            "best_index": 65
+          },
+          {
+            "document_id": "16e44c6f28f625e6",
+            "title": "Тариф «Студенческий»",
+            "url": "https://fbroker.kz/faq/question/student-tariff",
+            "score": 0.02885689143459215,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 8,
+                "chunk_id": "386e6e424962c0d9ddff",
+                "raw_score": 0.8236986994743347
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 5,
+                "chunk_id": "386e6e424962c0d9ddff",
+                "raw_score": 11.120518679563439
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 27,
+                "chunk_id": "1f07e2e0c43943ac3c64",
+                "raw_score": 0.7993072271347046
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "386e6e424962c0d9ddff",
+                "raw_score": 9.719205447166367
+              }
+            ],
+            "chunk_ids": [
+              "1f07e2e0c43943ac3c64",
+              "386e6e424962c0d9ddff"
+            ],
+            "rerank_score": 0.2254638671875,
+            "best_index": 40
+          },
+          {
+            "document_id": "10da72eab8d484dc",
+            "title": "Где найти свой портфель акций?",
+            "url": "https://fbroker.kz/faq/question/where-can-i-find-my-stock-portfolio-2723",
+            "score": 0.023405983488442264,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 0.8232593536376953
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 6,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 10.886279020647379
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 57,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 0.788669764995575
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 56,
+                "chunk_id": "0ef1089ce5961d30ffc0",
+                "raw_score": 2.0482569234642036
+              }
+            ],
+            "chunk_ids": [
+              "0ef1089ce5961d30ffc0"
+            ],
+            "rerank_score": 0.019683837890625,
+            "best_index": 29
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "5bc916b36d0d5a2a1d83",
+        "document_id": "21eb5233780662ab",
+        "title": "Как узнать свой тариф?",
+        "url": "https://fbroker.kz/faq/question/how-to-find-out-your-tariff-2709",
+        "text": "Узнать, какой тарифный план подключён к вашему брокерскому счёту, можно в мобильном приложении или веб-версии торговой платформы Freedom Broker.\nВ мобильном приложении\nАвторизуйтесь в\nмобильном приложении Freedom Broker\n.\nПерейдите в раздел «Меню» → Отчеты и документы» → «Отчеты брокера».\nНажмите «Получить отчёт», чтобы сформировать документ.\nВ веб-версии\nАвторизуйтесь в\nвеб-версии торговой платформы\n.\nПерейдите в раздел «Кабинет» → «Отчеты брокера».\nНажмите «Получить отчёт», чтобы сформировать документ.\nВ сформированном отчёте найдите раздел «Информация о счёте». В нём будет указан ваш действующий тарифный план.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "386e6e424962c0d9ddff",
+        "document_id": "16e44c6f28f625e6",
+        "title": "Тариф «Студенческий»",
+        "url": "https://fbroker.kz/faq/question/student-tariff",
+        "text": "угой стране. Главное условие — предоставить Документ, подтверждающий зачисление и/или обучение в соответствующей образовательной организации.\nГде проверить, какой Тариф подключён?\nПроверить действующий Тариф можно в платформе Freedom Broker:\nВ мобильном приложении: Меню → Поручения → Настройки счёта → Смена тарифного плана.\nВ веб-платформе: Кабинет → Тариф.\nЧто даёт Тариф кроме сниженной комиссии?\nВладельцы Тарифа также получают доступ к бесплатному обучению от Freedom Academy.\nВ программе можно изучить:\nакции;\nоблигации;\nETF;\nкриптовалюту;\nторговые платформы;\nопционы и другие темы.\nВ программу также входят курсы которые будут доступны в рамках тарифа:\nФинансовый check-up\nПуть инвестора\nОсновы финансов\nТехнический анализ Basic\nФундаментальный анализ Basic\nАзы опционной торговли\nОсновы понимания криптовалют и цифровых активов.\nМатериалы Freedom Academy носят образовательный характер и не являются инвестиционной рекомендацией.\nГде ознакомиться с полными условиями тарифа?\nПолные условия тарифа определяются Согласием на подключение Тарифного плана «Студенческий» и Программой маркетинговой Акции «Тарифный план «Студенческий»».",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "0ef1089ce5961d30ffc0",
+        "document_id": "10da72eab8d484dc",
+        "title": "Где найти свой портфель акций?",
+        "url": "https://fbroker.kz/faq/question/where-can-i-find-my-stock-portfolio-2723",
+        "text": "В портфеле отражена информация о ваших акциях или других ценных бумагах, которые вы приобрели (то есть открыли позицию). Также здесь вы можете видеть сумму свободных средств для новых сделок.\nВ\nвеб-версии\nплатформы Freedom Broker ваш портфель находится в разделе\n«Профиль»\n.\nВ\nмобильном приложении\nв разделе\n«Портфель»\n.\nЧто доступно в разделе «Портфель»?\n1. Информация о позициях\nВы можете посмотреть изменение позиций по своим ценным бумагам, общую сумму сделки, размер текущей прибыли и убытка по каждой ценной бумаге. При необходимости можно открыть карточку определенной акции и посмотреть детальную информацию: цену входа в сделку или долю, которую бумага занимает в вашем портфеле.\n2. Продажа или покупка акций\nПри желании вы можете докупить акции, по которым у вас уже открыта позиция, либо продать эти акции прямо из портфеля. Для этого нажмите на ценную бумагу в портфеле и нажмите на \"Купить\" или \"Продать\".\n3. ﻿Выставление защитного стоп-приказа Stop Loss и приказа Take Profit\nВыставляйте защитные приказы Stop Loss для автоматического закрытия сделок, чтобы ограничить возможные потери.",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 54.39,
+    "label_provenance": "model_generated_unreviewed",
+    "peak_gpu0_allocated_gib": 7.88
+  },
+  "signature": "43f2b843ab2152cc69adfcd7e66999dd362b38aaf0e296e2a72edab09bfbed0b",
+  "label_provenance": "model_generated_unreviewed"
+}

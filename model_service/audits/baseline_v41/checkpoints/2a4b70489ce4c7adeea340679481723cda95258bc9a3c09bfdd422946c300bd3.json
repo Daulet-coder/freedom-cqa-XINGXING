@@ -1,0 +1,147 @@
+{
+  "fingerprint": "2a4b70489ce4c7adeea340679481723cda95258bc9a3c09bfdd422946c300bd3",
+  "result": {
+    "conversation_id": "p1-en-012",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент предоставил достаточно информации для ответа.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно передал запрос клиента и дал точный инструктаж по навигации на сайте (Investors -> Financial Information), что полностью закрыло проблему поиска финансовой отчетности.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент выразил явное недовольство в 5-м туре, требуя связи с человеком, и оператор в 10-м туре вежливо согласился с просьбой и передал диалог, что является адекватной реакцией на проблему.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот объяснил возможности, клиент попросил оператора, оператор четко указал путь на сайте и вежливо завершил разговор после подтверждения решения клиентом.",
+        "evidence_turns": [
+          4,
+          5,
+          10,
+          11
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В диалоге отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.",
+        "evidence_turns": [
+          4,
+          5,
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 92.31,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент предоставил достаточно информации для ответа.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 12,
+          "closing_reason": "Оператор предложил клиенту хорошего дня.",
+          "request_quote": "Where do I find the company's financial statements? I keep getting sent to my account reports.",
+          "clarification_quote": "",
+          "closing_quote": "You're welcome. Have a good day!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент предоставил достаточно информации для ответа.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор предложил клиенту хорошего дня.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "You're welcome. Have a good day!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент выразил явное недовольство в 5-м туре, требуя связи с человеком, и оператор в 10-м туре вежливо согласился с просьбой и передал диалог, что является адекватной реакцией на проблему.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот объяснил возможности, клиент попросил оператора, оператор четко указал путь на сайте и вежливо завершил разговор после подтверждения решения клиентом.\",\n    \"evidence_turns\": [4, 5, 10, 11],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В диалоге отсутствуют оскорбления, предложения платных услуг в обход компании или утечки конфиденциальной информации.\",\n    \"evidence_turns\": [4, 5, 10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно передал запрос клиента и дал точный инструктаж по навигации на сайте (Investors -> Financial Information), что полностью закрыло проблему поиска финансовой отчетности.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":10,\"query\":\"\"},{\"turn\":12,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 50.96,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

@@ -1,0 +1,1012 @@
+{
+  "fingerprint": "c0e50577613d3603e988629fe75787aaa385471c4d720d9bfeec108be6ec1e98",
+  "result": {
+    "conversation_id": "p1-en-006",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          11
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": true,
+        "rationale": "Оператор уточнил отсутствующую валюту уже отправленного перевода до продолжения проверки.",
+        "evidence_turns": [
+          14
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": true,
+        "rationale": "Подтверждение личности клиента найдено до защищенного действия.",
+        "evidence_turns": [
+          1,
+          13
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно ответил на все ключевые вопросы клиента: подтвердил отправку перевода, объяснил необходимость проверки, уточнил валюту и время транзакции, заверил в сохранности данных при повторном обращении, а также подробно ответил на вопрос о скачивании отчета брокера и выборе периода.",
+        "evidence_turns": [
+          5,
+          10,
+          14,
+          15,
+          18,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          27,
+          28
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор вежливо подтвердил понимание потребности клиента в проверке перевода, но не отреагировал на его выражение тревоги ('it's making me nervous'), так как клиент сразу согласился с необходимостью верификации.",
+        "evidence_turns": [
+          1,
+          5,
+          11
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор четко структурировал процесс (верификация -> уточнение валюты и времени -> создание кейса -> ответ на вопрос о повторном обращении -> инструкция по отчету), клиент не переспрашивал и не проявлял непонимания.",
+        "evidence_turns": [
+          11,
+          14,
+          16,
+          19,
+          23,
+          26,
+          28
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          30
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В ходе диалога оператор не допустил оскорблений, не предлагал платных услуг в обход компании и не раскрывал конфиденциальную информацию.",
+        "evidence_turns": [
+          11,
+          14,
+          16,
+          19,
+          23,
+          26,
+          28
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 85.0,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент уже предоставил достаточно информации о проблеме с переводом.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 30,
+          "closing_reason": "Оператор подтверждает дальнейшие действия по отслеживанию перевода и предлагает помощь.",
+          "request_quote": "I sent money to my brokerage account and it hasn't shown up. It's making me nervous.",
+          "clarification_quote": "",
+          "closing_quote": "You're welcome. We'll follow up here about the transfer. Goodbye!"
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент уже предоставил достаточно информации о проблеме с переводом.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 30,\n  \"closing_reason\": \"Оператор подтверждает дальнейшие действия по отслеживанию перевода и предлагает помощь.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [
+            14
+          ],
+          "identity_confirmations": [
+            13
+          ],
+          "farewell_turns": [
+            30
+          ],
+          "interruption_turns": [],
+          "closing_quote": "You're welcome. We'll follow up here about the transfer. Goodbye!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор вежливо подтвердил понимание потребности клиента в проверке перевода, но не отреагировал на его выражение тревоги ('it's making me nervous'), так как клиент сразу согласился с необходимостью верификации.\",\n    \"evidence_turns\": [1, 5, 11],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор четко структурировал процесс (верификация -> уточнение валюты и времени -> создание кейса -> ответ на вопрос о повторном обращении -> инструкция по отчету), клиент не переспрашивал и не проявлял непонимания.\",\n    \"evidence_turns\": [11, 14, 16, 19, 23, 26, 28],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В ходе диалога оператор не допустил оскорблений, не предлагал платных услуг в обход компании и не раскрывал конфиденциальную информацию.\",\n    \"evidence_turns\": [11, 14, 16, 19, 23, 26, 28],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно ответил на все ключевые вопросы клиента: подтвердил отправку перевода, объяснил необходимость проверки, уточнил валюту и время транзакции, заверил в сохранности данных при повторном обращении, а также подробно ответил на вопрос о скачивании отчета брокера и выборе периода.\",\n    \"evidence_turns\": [5, 10, 14, 15, 18, 19, 20, 22, 23, 25, 26, 27, 28],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "11": "",
+        "14": "как проверить перевод",
+        "16": "",
+        "19": "когда был отправлен перевод",
+        "21": "",
+        "23": "нужно ли объяснять детали снова при повторном обращении",
+        "26": "где скачать отчет брокера",
+        "28": "как выбрать даты для скачивания отчета",
+        "30": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":11,\"query\":\"\"},{\"turn\":14,\"query\":\"как проверить перевод\"},{\"turn\":16,\"query\":\"\"},{\"turn\":19,\"query\":\"когда был отправлен перевод\"},{\"turn\":21,\"query\":\"\"},{\"turn\":23,\"query\":\"нужно ли объяснять детали снова при повторном обращении\"},{\"turn\":26,\"query\":\"где скачать отчет брокера\"},{\"turn\":28,\"query\":\"как выбрать даты для скачивания отчета\"},{\"turn\":30,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "14": [
+          {
+            "document_id": "0df367aea723678d",
+            "title": "Что делать, если криптовалюта была отправлена по ошибочному адресу или через неверную сеть?",
+            "url": "https://fbroker.kz/faq/question/what-should-i-do-if-cryptocurrency-was-sent-to-the-wrong-address-or-via-the-wrong-network-",
+            "score": 0.014274075979761599,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "fd5d7fc27ab7726c2d51",
+                "raw_score": 0.8301124572753906
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 109,
+                "chunk_id": "fd5d7fc27ab7726c2d51",
+                "raw_score": 1.0592181410492871
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 78,
+                "chunk_id": "fd5d7fc27ab7726c2d51",
+                "raw_score": 0.7625887989997864
+              }
+            ],
+            "chunk_ids": [
+              "fd5d7fc27ab7726c2d51"
+            ],
+            "rerank_score": 0.462646484375,
+            "best_index": 26
+          },
+          {
+            "document_id": "72a54c7ba5746283",
+            "title": "Перевод средств на криптокошелек",
+            "url": "https://fbroker.kz/faq/question/withdrawal-to-a-crypto-wallet",
+            "score": 0.024457958751983082,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "3f05af407dcd406b7b7d",
+                "raw_score": 0.8420316576957703
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "979fd8834a103a92b2fd",
+                "raw_score": 5.996259593594108
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "55a9c343328bbb827db4",
+                "raw_score": 0.805400550365448
+              }
+            ],
+            "chunk_ids": [
+              "3f05af407dcd406b7b7d",
+              "55a9c343328bbb827db4",
+              "979fd8834a103a92b2fd"
+            ],
+            "rerank_score": 0.269775390625,
+            "best_index": 244
+          },
+          {
+            "document_id": "93eaeb67e92ac9b9",
+            "title": "Перевод средств на криптокошелек",
+            "url": "https://fbroker.kz/faq/question/transfer-of-funds-to-a-crypto-wallet",
+            "score": 0.023941532258064516,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "b231a443e905a62d74fb",
+                "raw_score": 0.8392738103866577
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "b231a443e905a62d74fb",
+                "raw_score": 5.605337464276794
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "74644342b2f40eadadb3",
+                "raw_score": 0.8028566837310791
+              }
+            ],
+            "chunk_ids": [
+              "74644342b2f40eadadb3",
+              "b231a443e905a62d74fb"
+            ],
+            "rerank_score": 0.2218017578125,
+            "best_index": 309
+          }
+        ],
+        "19": [
+          {
+            "document_id": "010e5139b6d12f55",
+            "title": "Сроки обработки перевода средств",
+            "url": "https://fbroker.kz/faq/question/withdrawal-processing-time",
+            "score": 0.02459016393442623,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "62a6e4a75533ab46c0b5",
+                "raw_score": 0.8155118227005005
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "62a6e4a75533ab46c0b5",
+                "raw_score": 7.23767235390606
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "62a6e4a75533ab46c0b5",
+                "raw_score": 0.7885524034500122
+              }
+            ],
+            "chunk_ids": [
+              "62a6e4a75533ab46c0b5"
+            ],
+            "rerank_score": 0.308837890625,
+            "best_index": 0
+          },
+          {
+            "document_id": "16e44c6f28f625e6",
+            "title": "Тариф «Студенческий»",
+            "url": "https://fbroker.kz/faq/question/student-tariff",
+            "score": 0.018825324180015257,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 40,
+                "chunk_id": "c942f0d3ad8fab115f20",
+                "raw_score": 0.7694690227508545
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 9,
+                "chunk_id": "302321c090398c8f00d2",
+                "raw_score": 4.604237763207088
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 16,
+                "chunk_id": "8e8bd18044a6fab03160",
+                "raw_score": 0.7771090865135193
+              }
+            ],
+            "chunk_ids": [
+              "302321c090398c8f00d2",
+              "8e8bd18044a6fab03160",
+              "c942f0d3ad8fab115f20"
+            ],
+            "rerank_score": 0.026611328125,
+            "best_index": 37
+          },
+          {
+            "document_id": "72a54c7ba5746283",
+            "title": "Перевод средств на криптокошелек",
+            "url": "https://fbroker.kz/faq/question/withdrawal-to-a-crypto-wallet",
+            "score": 0.02212301587301587,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "55a9c343328bbb827db4",
+                "raw_score": 0.7965724468231201
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "979fd8834a103a92b2fd",
+                "raw_score": 5.202188592461002
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 20,
+                "chunk_id": "3f05af407dcd406b7b7d",
+                "raw_score": 0.7759138345718384
+              }
+            ],
+            "chunk_ids": [
+              "3f05af407dcd406b7b7d",
+              "55a9c343328bbb827db4",
+              "979fd8834a103a92b2fd"
+            ],
+            "rerank_score": 0.0083160400390625,
+            "best_index": 244
+          }
+        ],
+        "23": [
+          {
+            "document_id": "28dbbb80e40f0057",
+            "title": "Какие приказы попадают в Реестр сделок?",
+            "url": "https://fbroker.kz/faq/question/which-orders-are-included-in-the-trade-register",
+            "score": 0.01849929873772791,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "51c5078d42e92119b396",
+                "raw_score": 0.8215946555137634
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 32,
+                "chunk_id": "51c5078d42e92119b396",
+                "raw_score": 3.30518217378677
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 40,
+                "chunk_id": "51c5078d42e92119b396",
+                "raw_score": 0.7471948862075806
+              }
+            ],
+            "chunk_ids": [
+              "51c5078d42e92119b396"
+            ],
+            "rerank_score": 0.0020198822021484375,
+            "best_index": 85
+          },
+          {
+            "document_id": "16e44c6f28f625e6",
+            "title": "Тариф «Студенческий»",
+            "url": "https://fbroker.kz/faq/question/student-tariff",
+            "score": 0.018465049771764837,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 16,
+                "chunk_id": "302321c090398c8f00d2",
+                "raw_score": 0.7974551916122437
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 6,
+                "chunk_id": "f29016b49e818f1c69a4",
+                "raw_score": 6.415001598300065
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 56,
+                "chunk_id": "8e8bd18044a6fab03160",
+                "raw_score": 0.7427691221237183
+              }
+            ],
+            "chunk_ids": [
+              "302321c090398c8f00d2",
+              "8e8bd18044a6fab03160",
+              "f29016b49e818f1c69a4"
+            ],
+            "rerank_score": 0.0006642341613769531,
+            "best_index": 37
+          },
+          {
+            "document_id": "d98118beb46a6686",
+            "title": "Сплит и изменение количества акций",
+            "url": "https://fbroker.kz/faq/question/splits-and-changes-in-the-number-of-shares",
+            "score": 0.01795389791220643,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 14,
+                "chunk_id": "a5fa11c66ba06c4031c3",
+                "raw_score": 0.7979783415794373
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 13,
+                "chunk_id": "50d99434025a357e2efd",
+                "raw_score": 4.771568198061381
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 55,
+                "chunk_id": "50d99434025a357e2efd",
+                "raw_score": 0.7433274388313293
+              }
+            ],
+            "chunk_ids": [
+              "50d99434025a357e2efd",
+              "a5fa11c66ba06c4031c3"
+            ],
+            "rerank_score": 0.0006461143493652344,
+            "best_index": 457
+          }
+        ],
+        "26": [
+          {
+            "document_id": "52e6b96fe68aebdc",
+            "title": "Как получить отчет брокера?",
+            "url": "https://fbroker.kz/faq/question/how-to-obtain-a-broker-s-report-3814",
+            "score": 0.030198880495740942,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 0.8941910266876221
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 8.595238741882884
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "ce2e3cdf6194deb81dea",
+                "raw_score": 0.8144433498382568
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 32,
+                "chunk_id": "ce2e3cdf6194deb81dea",
+                "raw_score": 2.2884235220240683
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 0.8458858132362366
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 10,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 8.892535182119474
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 0.8861862421035767
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 8.892535182119474
+              }
+            ],
+            "chunk_ids": [
+              "360570c25aae0262f64e",
+              "ce2e3cdf6194deb81dea"
+            ],
+            "rerank_score": 0.9951171875,
+            "best_index": 181
+          },
+          {
+            "document_id": "caa81ea38d4a6af3",
+            "title": "Где просмотреть свои документы?",
+            "url": "https://fbroker.kz/faq/question/where-can-i-view-my-documents-2722",
+            "score": 0.029312174715072026,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 0.8754285573959351
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 16.11543630433967
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 0.8089371919631958
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 104,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 1.4363673890145914
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 0.841906726360321
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 14.977805516928758
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 0.8554762601852417
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 14.977805516928758
+              }
+            ],
+            "chunk_ids": [
+              "c0205c2d367c9c9eb749"
+            ],
+            "rerank_score": 0.986328125,
+            "best_index": 411
+          },
+          {
+            "document_id": "283315a2266f7fd3",
+            "title": "Формирование Отчета брокера и Отчета депозитария",
+            "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+            "score": 0.029528793620411095,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 3,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8710789680480957
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 9.042657215893096
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8092482089996338
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 124,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 1.0598961517331615
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8553358912467957
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 16.265656403407842
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.86906498670578
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 16.265656403407842
+              }
+            ],
+            "chunk_ids": [
+              "c9bb4045c63d192a9d31"
+            ],
+            "rerank_score": 0.9833984375,
+            "best_index": 81
+          }
+        ],
+        "28": [
+          {
+            "document_id": "485ce46be7e29c48",
+            "title": "Что такое форма 1042-S, как ее получить и чем она полезна",
+            "url": "https://fbroker.kz/faq/question/what-is-1042-s-form",
+            "score": 0.022523556956892225,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.8368514776229858
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 55,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 2.0710390875991656
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 8,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.7602808475494385
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 17,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.7707048654556274
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 23,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 3.534498327346833
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 22,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 0.7719147801399231
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 15,
+                "chunk_id": "480735807a1575e46f9d",
+                "raw_score": 3.534498327346833
+              }
+            ],
+            "chunk_ids": [
+              "480735807a1575e46f9d"
+            ],
+            "rerank_score": 0.2147216796875,
+            "best_index": 151
+          },
+          {
+            "document_id": "283315a2266f7fd3",
+            "title": "Формирование Отчета брокера и Отчета депозитария",
+            "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+            "score": 0.02649618941945729,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8495619297027588
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 3,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 9.440459306845831
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.7791734933853149
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.7952781915664673
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 21,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 3.775321860643227
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 6,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.7814595699310303
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 13,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 3.775321860643227
+              }
+            ],
+            "chunk_ids": [
+              "c9bb4045c63d192a9d31"
+            ],
+            "rerank_score": 0.036773681640625,
+            "best_index": 81
+          },
+          {
+            "document_id": "b7f8e3bb588d5255",
+            "title": "Как читать Отчет депозитария?",
+            "url": "https://fbroker.kz/faq/question/how-to-read-the-custody-report",
+            "score": 0.027355381513647643,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.8306199908256531
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 4,
+                "chunk_id": "fdfa06f441f65f18e024",
+                "raw_score": 8.878633877080242
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.762851357460022
+              },
+              {
+                "query_index": 2,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.7831992506980896
+              },
+              {
+                "query_index": 2,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 15.912947618645696
+              },
+              {
+                "query_index": 3,
+                "channel": "dense",
+                "rank": 5,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 0.7832450866699219
+              },
+              {
+                "query_index": 3,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "53e8b1274a5e9e8022ee",
+                "raw_score": 15.912947618645696
+              }
+            ],
+            "chunk_ids": [
+              "53e8b1274a5e9e8022ee",
+              "fdfa06f441f65f18e024"
+            ],
+            "rerank_score": 0.0089874267578125,
+            "best_index": 370
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "fd5d7fc27ab7726c2d51",
+        "document_id": "0df367aea723678d",
+        "title": "Что делать, если криптовалюта была отправлена по ошибочному адресу или через неверную сеть?",
+        "url": "https://fbroker.kz/faq/question/what-should-i-do-if-cryptocurrency-was-sent-to-the-wrong-address-or-via-the-wrong-network-",
+        "text": "Перед подтверждением перевода обязательно проверьте адрес кошелька, выбранную сеть и цифровой актив. Пополнение и вывод средств возможны только с собственных кошельков клиента.\nОбратите внимание, что ответственность за корректность указанных данных несёт клиент.\nПосле подтверждения транзакции в блокчейне её невозможно отменить или отозвать из-за особенностей технологии. Поэтому возврат ошибочно отправленных цифровых активов не гарантируется и во многих случаях невозможен.\nЕсли ошибка уже произошла, как можно скорее обратитесь в службу поддержки.\nСпециалисты проверят информацию о транзакции и сообщат, возможны ли какое-либо дальнейшие действия.",
+        "operator_turns": [
+          14
+        ]
+      },
+      {
+        "evidence_id": "62a6e4a75533ab46c0b5",
+        "document_id": "010e5139b6d12f55",
+        "title": "Сроки обработки перевода средств",
+        "url": "https://fbroker.kz/faq/question/withdrawal-processing-time",
+        "text": "1. Перевод денег по реквизитам на банковский счет.\nДеньги будут направлены в безналичной форме на банковский счет, указанный в вашем личном кабинете торговой платформы Freedom Broker.\nСрок отправки:\nпять рабочих дней\nпосле подачи поручения на перевод денег.\nПоручение считается верно исполненным с момента, когда брокер подал банку инструкцию на списание денег. Сроки выполнения банками платежных инструкций по переводу и зачислению денег на ваш банковский счет зависят от сроков и порядка обработки платежных поручений на стороне финансовых организаций, участвующих в переводе, в том числе банков-корреспондентов.\n2. Перевод денег на банковскую карту.\nСрок исполнения поручения перевода денежных средств на банковскую карту -\nмоментально\n. В случае, если поручение на перевод осталось в статусе\n«В обработке»\n, для проведения дополнительной проверки потребуется до 3 рабочих дней.\nОбратите внимание!\nНеобходимо корректно указать реквизиты банковского счета. Пожалуйста, уточните реквизиты у вашего банка-получателя.\nПеревод на банковскую карту доступен только на сохраненные карты клиента в приложении Freedom Broker, с которых клиент ранее пополнял брокерский счет.",
+        "operator_turns": [
+          19
+        ]
+      },
+      {
+        "evidence_id": "51c5078d42e92119b396",
+        "document_id": "28dbbb80e40f0057",
+        "title": "Какие приказы попадают в Реестр сделок?",
+        "url": "https://fbroker.kz/faq/question/which-orders-are-included-in-the-trade-register",
+        "text": "В Реестре отображаются только те торговые приказы, которые были переданы брокеру способом, требующим последующего подтверждения.\nЕсли приказ подтвержден предусмотренным способом, повторно подтверждать его через Реестр не нужно.\nПочему приказ может не отображаться в Реестре?\nПриказ может не отображаться в доступном для подписания Реестре, если:\nон уже был подтвержден ранее;\nон был отменен;\nон не соответствует условиям включения в Реестр.\nПосле подписания Реестра включенные в него приказы считаются подтвержденными. В следующие Реестры для повторного подтверждения они не включаются.\nВ Реестр попадают только исполненные приказы?\nНет. В Реестр могут включаться как исполненные, так и неисполненные приказы, если они требуют подтверждения.\nИсполнение или неисполнение приказа не является критерием включения в Реестр. Реестр подтверждает передачу приказа брокеру, а информацию об исполнении нужно смотреть в «Отчете брокера» или истории операций.",
+        "operator_turns": [
+          23
+        ]
+      },
+      {
+        "evidence_id": "360570c25aae0262f64e",
+        "document_id": "52e6b96fe68aebdc",
+        "title": "Как получить отчет брокера?",
+        "url": "https://fbroker.kz/faq/question/how-to-obtain-a-broker-s-report-3814",
+        "text": "Брокерский отчет\n– это детализация всех ваших операций по брокерскому счету. А ещё это документальное подтверждение того, что вы владеете ценными бумагами. Например, брокерский отчёт компании Freedom Broker – достаточное основание для доступа к собраниям акционеров тех компаний, акции которых вы покупали.\n⠀\nДля чего нужен брокерский отчет?\nБрокерский отчет может понадобиться, если вы хотите посмотреть детальную информацию по сделкам, портфелю, комиссиям и другим показателям. Это может помочь при заполнении налоговой декларации. Период отчета вы можете задать самостоятельно.\nКакие данные входят в отчет брокера?\n• информация об открытых позициях в вашем портфеле;\n• пополнения и выводы денег;\n• сделки;\n• остатки по валюте;\n• комиссии;\n• движение денег и ценных бумаг (например, дивиденды или переводы между счетами внутри Freedom Broker).\nКак получить отчет брокера?\n\nВы можете получить отчет брокера несколькими способами: \n1.\nВыгрузить самостоятельно в платформе Freedom Broker в\nмобильном приложении\nили\nвеб-версии\n.\n2.\nЗапросить у компании, обратившись к менеджеру либо в поддержку («Поддержка» → «Написать в поддержку» в Freedom Broker);\n3.",
+        "operator_turns": [
+          26
+        ]
+      },
+      {
+        "evidence_id": "480735807a1575e46f9d",
+        "document_id": "485ce46be7e29c48",
+        "title": "Что такое форма 1042-S, как ее получить и чем она полезна",
+        "url": "https://fbroker.kz/faq/question/what-is-1042-s-form",
+        "text": "когда у клиента в компании-брокере была в наличии действующая форма W-8BEN или W-8BEN-E. Для каждого вида дохода и/или применимой ставки налога заполняется отдельная форма 1042-S. Каждая из форм 1042-S составляется в пяти экземплярах.\nОстальные доходы, дата среза которых не выпадала на период, когда у клиентов были действующие формы W-8BEN или W-8BEN-E, отражаются в единых формах 1042-S, где указывается совокупная сумма таких доходов без указания индивидуальных получателей.\nКак использовать форму 1042-S\nФорма помогает гражданам некоторых стран засчитать американский подоходный налог в счет налогов в их стране.\n\nВАЖНО:\nпо действующему налоговому законодательству, форма 1042-S не дает такого права налоговым резидентам Казахстана.\nКак скачать форму 1042-S\nЧтобы получить форму 1042-S, войдите в веб-версию торговой платформы Freedom Broker. Откройте на компьютере сайт платформы\nFreedom Broker\nи авторизуйтесь.\nДалее перейдите в раздел «Кабинет – Форма 1042-S».\nВыберите год, за который хотите посмотреть форму и нажмите «Показать». Либо скачайте PDF-файл.\nСроки предоставления формы 1042-S\nОтчетность по форме 1042-S, как правило, предоставляется клиентам не позднее 15 июня каждого года.",
+        "operator_turns": [
+          28
+        ]
+      },
+      {
+        "evidence_id": "55a9c343328bbb827db4",
+        "document_id": "72a54c7ba5746283",
+        "title": "Перевод средств на криптокошелек",
+        "url": "https://fbroker.kz/faq/question/withdrawal-to-a-crypto-wallet",
+        "text": "быть списаны с брокерского счёта в валютах\nUSD, KZT, RUB, EUR, CNY, AED\n, после чего автоматически конвертируются и отправляются в одной из следующих криптовалют:\nUSDC (Ethereum)\nUSDC (BNB Smart Chain)\nUSDT (BNB Smart Chain)\nUSDT (Tron)\nUSDT (Ethereum)\nBTC (Bitcoin)\nETH (Ethereum)\nBNB (BNB Smart Chain)\nSOL (Solana)\nAVAX (Avalanche C-Chain)\nTON (TON)\nTRX (Tron)\nРегулирование\nВсе операции проходят проверки в рамках требований финансового мониторинга, включая AML, KYT и Travel Rule. Если средства не поступили на кошелёк после оформления перевода, рекомендуем обратиться в службу поддержки брокера.",
+        "operator_turns": [
+          14,
+          19
+        ]
+      },
+      {
+        "evidence_id": "302321c090398c8f00d2",
+        "document_id": "16e44c6f28f625e6",
+        "title": "Тариф «Студенческий»",
+        "url": "https://fbroker.kz/faq/question/student-tariff",
+        "text": "план, повторное участие в акции невозможно.\nЧто произойдёт после окончания срока действия Тарифа?\nПосле завершения 365 календарных дней тариф автоматически сменится на «Инвестор».\nПеревод на тариф «Инвестор» осуществляется в течение 3 рабочих дней с даты прекращения действия тарифа.\nЧто делать, если я перестал быть студентом?\nВы обязаны уведомить компанию об утрате статуса студента в течение 15 календарных дней с момента, когда узнали или должны были узнать об этом.\nДля этого отправьте обращение через личный кабинет торговой платформы. Если личный кабинет технически недоступен, уведомление можно направить на электронную почту компании, указанную на её официальном сайте.\nЧто произойдёт после утраты статуса студента?\nКомпания вправе прекратить применение тарифа и перевести вас на тариф «Инвестор».\nКомпания вправе в любое время проверять статус клиента как студента.\nПроверяет ли компания документ, подтверждающий обучение?\nДа. Компания вправе проверять предоставленный документ, подтверждающий обучение, и соответствие клиента условиям тарифа как до его присвоения, так и после.",
+        "operator_turns": [
+          19,
+          23
+        ]
+      },
+      {
+        "evidence_id": "c0205c2d367c9c9eb749",
+        "document_id": "caa81ea38d4a6af3",
+        "title": "Где просмотреть свои документы?",
+        "url": "https://fbroker.kz/faq/question/where-can-i-view-my-documents-2722",
+        "text": "Вы можете скачать ваши документы в\nвеб версии\nплатформы\nFreedom Broker\nв\n«Кабинете»\nв следующих подразделах:\n•\nДокументы\n- документы, удостоверяющие личность и адреса,\nПриложение 1\nк брокерскому договору, а также\nУведомление об открытии счета\n;\n•\nОтчеты брокера\n(также доступно для скачивания в\nмобильном приложении\n) - вы можете скачать отчет брокера с печатью Компании;\n•\nФорма 1042-s\n- справка о доходах - дивидендах и купонах - по американским ценным бумагам, подлежащих налогообложению в США;\n• Остальные необходимые вам документы вы можете запросить, подав поручение\n«\nЗаказ документов\n»\n.",
+        "operator_turns": [
+          26
+        ]
+      },
+      {
+        "evidence_id": "c9bb4045c63d192a9d31",
+        "document_id": "283315a2266f7fd3",
+        "title": "Формирование Отчета брокера и Отчета депозитария",
+        "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+        "text": "1.\nВ\nмобильном приложении\nFreedom Broker перейдите:\nМеню → Отчеты и документы → Отчеты брокера.\nВыберите тип документа - «Отчет брокера» или «Отчет депозитария» - и укажите отчетный период.\nДля Отчета брокера при необходимости можно включить функцию\n«Сальдировать сделки и комиссии»\n. Сальдирование изменяет только способ представления информации и не изменяет итоговые суммы, остатки или финансовый результат.\nЧтобы сформировать Отчет брокера с печатью Компании, дата окончания отчетного периода должна быть не позднее даты, предшествующей текущей не менее чем на два рабочих дня. После выбора параметров нажмите\n«Получить отчет»\n.\nПри необходимости включите отправку на e-mail и выберите формат файла: PDF, Excel, JSON или XML. Также можно настроить регулярную отправку отчетов на электронную почту. Рассылка приходит со вторника по субботу и содержит отчет за предыдущий торговый день. Отключить регулярную рассылку можно в web-версии.\n2.\nВ\nweb-версии\nперейдите: Кабинет → Отчеты брокера и выберите «Отчет брокера» или «Отчет депозитария».\nПараметры формирования отчета аналогичны мобильному приложению.\nКак отключить регулярную рассылку отчетов?",
+        "operator_turns": [
+          28,
+          26
+        ]
+      },
+      {
+        "evidence_id": "74644342b2f40eadadb3",
+        "document_id": "93eaeb67e92ac9b9",
+        "title": "Перевод средств на криптокошелек",
+        "url": "https://fbroker.kz/faq/question/transfer-of-funds-to-a-crypto-wallet",
+        "text": "криптовалюты:\n10 USDC\n10 USDT\n0.00001 BTC\n0.001 ETH\n0.01 BNB\n10 TRX\n0.01 SOL\n1.01 TON\n0.01 AVAX\nВ какой криптовалюте можно перевести деньги\nUSDC (Ethereum)\nUSDC (BNB Smart Chain)\nUSDT (BNB Smart Chain)\nUSDT (Tron)\nUSDT (Ethereum)\nBTC (Bitcoin)\nETH (Ethereum)\nBNB (BNB Smart Chain)\nSOL (Solana)\nAVAX (Avalanche C-Chain)\nTON (TON)\nTRX (Tron)\nРегулирование\nВсе операции проходят проверки в соответствии с требованиями финансового мониторинга, включая\nAML, KYT и Travel Rule.\nЕсли средства не поступили на кошелёк после оформления перевода, пожалуйста, обратитесь в службу поддержки.",
+        "operator_turns": [
+          14
+        ]
+      },
+      {
+        "evidence_id": "a5fa11c66ba06c4031c3",
+        "document_id": "d98118beb46a6686",
+        "title": "Сплит и изменение количества акций",
+        "url": "https://fbroker.kz/faq/question/splits-and-changes-in-the-number-of-shares",
+        "text": "— это запрос эмитента или третьей стороны получить согласие акционеров без проведения очного собрания. Вы можете проголосовать дистанционно (поддержать или отклонить предложение).\nУчастие добровольное, но итоговое решение большинства влияет на дальнейшие условия обращения бумаг. В уведомлении всегда указываются сроки и порядок голосования.\nЧто важно знать\nБольшинство корпоративных действий происходит автоматически — никаких действий не требуется, если событие относится к обязательным (MAND).\nПри добровольных событиях (VOLU) решение остаётся за Вами — важно внимательно изучать условия и сроки.\nКоличество акций, их номинальная стоимость и даже структура Вашего портфеля могут измениться, при этом общая стоимость позиции часто сохраняется.\nВсе события инициируются эмитентом и отображаются в Вашем брокерском отчёте.\nВажно!\nПримеры, предоставленные Публичной компанией «Freedom Finance PLC» (далее – Компания), приведённые в настоящем разделе, являются гипотетическими, приведены исключительно в иллюстративных целях и предназначены для общего разъяснения соответствующих положений.",
+        "operator_turns": [
+          23
+        ]
+      }
+    ],
+    "elapsed_seconds": 88.4,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

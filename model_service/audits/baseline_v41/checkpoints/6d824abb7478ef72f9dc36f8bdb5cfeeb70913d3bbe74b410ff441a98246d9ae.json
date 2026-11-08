@@ -1,0 +1,316 @@
+{
+  "fingerprint": "6d824abb7478ef72f9dc36f8bdb5cfeeb70913d3bbe74b410ff441a98246d9ae",
+  "result": {
+    "conversation_id": "p1-kz-006",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент указал период «прошлый год», что достаточно для выполнения запроса.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно передал запрос клиента и дал четкую инструкцию по выбору периода и типу отчета, что соответствует критериям полного закрытия вопроса.",
+        "evidence_turns": [
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент выразил недовольство автоматическим ботом и попросил оператора, оператор вежливо согласился и передал диалог, но не отреагировал на саму проблему (неудобство работы с ботом) сочувствием или предложением альтернативы.",
+        "evidence_turns": [
+          5,
+          6,
+          7,
+          10
+        ],
+        "value": false
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: бот объяснил возможности, клиент попросил оператора, оператор дал четкую инструкцию по выполнению задачи, клиент подтвердил выполнение.",
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.",
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 69.23,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент указал период «прошлый год», что достаточно для выполнения запроса.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "RESOLVED_OUTCOME",
+          "closing_turn": 12,
+          "closing_reason": "Оператор подтвердил успешное выполнение задачи и завершил диалог.",
+          "request_quote": "Өткен жылға брокер есебі керек болып тұр.",
+          "clarification_quote": "",
+          "closing_quote": "Көмегім тигеніне қуаныштымын. Сау болыңыз!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент указал период «прошлый год», что достаточно для выполнения запроса.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"RESOLVED_OUTCOME\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор подтвердил успешное выполнение задачи и завершил диалог.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Көмегім тигеніне қуаныштымын. Сау болыңыз!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент выразил недовольство автоматическим ботом и попросил оператора, оператор вежливо согласился и передал диалог, но не отреагировал на саму проблему (неудобство работы с ботом) сочувствием или предложением альтернативы.\",\n    \"evidence_turns\": [5, 6, 7, 10],\n    \"value\": false\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: бот объяснил возможности, клиент попросил оператора, оператор дал четкую инструкцию по выполнению задачи, клиент подтвердил выполнение.\",\n    \"evidence_turns\": [1, 2, 4, 5, 6, 7, 8, 10, 11],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода компании или утечка конфиденциальных данных.\",\n    \"evidence_turns\": [1, 2, 4, 5, 6, 7, 8, 10, 11],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно передал запрос клиента и дал четкую инструкцию по выбору периода и типу отчета, что соответствует критериям полного закрытия вопроса.\",\n    \"evidence_turns\": [5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "как загрузить отчет брокера",
+        "12": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\": [{\"turn\": 10, \"query\": \"как загрузить отчет брокера\"}, {\"turn\": 12, \"query\": \"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "52e6b96fe68aebdc",
+            "title": "Как получить отчет брокера?",
+            "url": "https://fbroker.kz/faq/question/how-to-obtain-a-broker-s-report-3814",
+            "score": 0.03127019801398437,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 0.8858665227890015
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 9.8491051231845
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 12,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 0.8210746645927429
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 2,
+                "chunk_id": "360570c25aae0262f64e",
+                "raw_score": 8.595238741882884
+              }
+            ],
+            "chunk_ids": [
+              "360570c25aae0262f64e"
+            ],
+            "rerank_score": 0.99365234375,
+            "best_index": 181
+          },
+          {
+            "document_id": "283315a2266f7fd3",
+            "title": "Формирование Отчета брокера и Отчета депозитария",
+            "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+            "score": 0.03252247488101534,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8733710050582886
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 9.874084102399863
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 0.8357539176940918
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 1,
+                "chunk_id": "c9bb4045c63d192a9d31",
+                "raw_score": 9.042657215893096
+              }
+            ],
+            "chunk_ids": [
+              "c9bb4045c63d192a9d31"
+            ],
+            "rerank_score": 0.88818359375,
+            "best_index": 81
+          },
+          {
+            "document_id": "caa81ea38d4a6af3",
+            "title": "Где просмотреть свои документы?",
+            "url": "https://fbroker.kz/faq/question/where-can-i-view-my-documents-2722",
+            "score": 0.028701201191103844,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 0.8598873019218445
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 11,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 6.229656476916678
+              },
+              {
+                "query_index": 1,
+                "channel": "dense",
+                "rank": 17,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 0.8189343214035034
+              },
+              {
+                "query_index": 1,
+                "channel": "bm25",
+                "rank": 8,
+                "chunk_id": "c0205c2d367c9c9eb749",
+                "raw_score": 6.229656476916678
+              }
+            ],
+            "chunk_ids": [
+              "c0205c2d367c9c9eb749"
+            ],
+            "rerank_score": 0.85302734375,
+            "best_index": 411
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "360570c25aae0262f64e",
+        "document_id": "52e6b96fe68aebdc",
+        "title": "Как получить отчет брокера?",
+        "url": "https://fbroker.kz/faq/question/how-to-obtain-a-broker-s-report-3814",
+        "text": "Брокерский отчет\n– это детализация всех ваших операций по брокерскому счету. А ещё это документальное подтверждение того, что вы владеете ценными бумагами. Например, брокерский отчёт компании Freedom Broker – достаточное основание для доступа к собраниям акционеров тех компаний, акции которых вы покупали.\n⠀\nДля чего нужен брокерский отчет?\nБрокерский отчет может понадобиться, если вы хотите посмотреть детальную информацию по сделкам, портфелю, комиссиям и другим показателям. Это может помочь при заполнении налоговой декларации. Период отчета вы можете задать самостоятельно.\nКакие данные входят в отчет брокера?\n• информация об открытых позициях в вашем портфеле;\n• пополнения и выводы денег;\n• сделки;\n• остатки по валюте;\n• комиссии;\n• движение денег и ценных бумаг (например, дивиденды или переводы между счетами внутри Freedom Broker).\nКак получить отчет брокера?\n\nВы можете получить отчет брокера несколькими способами: \n1.\nВыгрузить самостоятельно в платформе Freedom Broker в\nмобильном приложении\nили\nвеб-версии\n.\n2.\nЗапросить у компании, обратившись к менеджеру либо в поддержку («Поддержка» → «Написать в поддержку» в Freedom Broker);\n3.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "c9bb4045c63d192a9d31",
+        "document_id": "283315a2266f7fd3",
+        "title": "Формирование Отчета брокера и Отчета депозитария",
+        "url": "https://fbroker.kz/faq/question/generating-the-broker-report-and-the-depositary-report",
+        "text": "1.\nВ\nмобильном приложении\nFreedom Broker перейдите:\nМеню → Отчеты и документы → Отчеты брокера.\nВыберите тип документа - «Отчет брокера» или «Отчет депозитария» - и укажите отчетный период.\nДля Отчета брокера при необходимости можно включить функцию\n«Сальдировать сделки и комиссии»\n. Сальдирование изменяет только способ представления информации и не изменяет итоговые суммы, остатки или финансовый результат.\nЧтобы сформировать Отчет брокера с печатью Компании, дата окончания отчетного периода должна быть не позднее даты, предшествующей текущей не менее чем на два рабочих дня. После выбора параметров нажмите\n«Получить отчет»\n.\nПри необходимости включите отправку на e-mail и выберите формат файла: PDF, Excel, JSON или XML. Также можно настроить регулярную отправку отчетов на электронную почту. Рассылка приходит со вторника по субботу и содержит отчет за предыдущий торговый день. Отключить регулярную рассылку можно в web-версии.\n2.\nВ\nweb-версии\nперейдите: Кабинет → Отчеты брокера и выберите «Отчет брокера» или «Отчет депозитария».\nПараметры формирования отчета аналогичны мобильному приложению.\nКак отключить регулярную рассылку отчетов?",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "c0205c2d367c9c9eb749",
+        "document_id": "caa81ea38d4a6af3",
+        "title": "Где просмотреть свои документы?",
+        "url": "https://fbroker.kz/faq/question/where-can-i-view-my-documents-2722",
+        "text": "Вы можете скачать ваши документы в\nвеб версии\nплатформы\nFreedom Broker\nв\n«Кабинете»\nв следующих подразделах:\n•\nДокументы\n- документы, удостоверяющие личность и адреса,\nПриложение 1\nк брокерскому договору, а также\nУведомление об открытии счета\n;\n•\nОтчеты брокера\n(также доступно для скачивания в\nмобильном приложении\n) - вы можете скачать отчет брокера с печатью Компании;\n•\nФорма 1042-s\n- справка о доходах - дивидендах и купонах - по американским ценным бумагам, подлежащих налогообложению в США;\n• Остальные необходимые вам документы вы можете запросить, подав поручение\n«\nЗаказ документов\n»\n.",
+        "operator_turns": [
+          10
+        ]
+      }
+    ],
+    "elapsed_seconds": 60.61,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

@@ -1,0 +1,34 @@
+{
+  "item": {
+    "criterion_id": "empathy",
+    "value": true,
+    "rationale": "Оператор отреагировал на выраженное клиентом неудобство.",
+    "evidence_turns": [
+      1,
+      10,
+      13,
+      15
+    ]
+  },
+  "audit": {
+    "facts": {
+      "client_negative_affect": true,
+      "affect_turns": [
+        1
+      ],
+      "operator_impolite": false,
+      "impolite_turns": [],
+      "responded_to_specific_inconvenience": true,
+      "response_turns": [
+        10,
+        13,
+        15
+      ]
+    },
+    "raw": "{\n  \"client_negative_affect\": true,\n  \"affect_turns\": [\n    \"C_0001\"\n  ],\n  \"operator_impolite\": false,\n  \"impolite_turns\": [],\n  \"responded_to_specific_inconvenience\": true,\n  \"response_turns\": [\n    \"O_0010\",\n    \"O_0013\",\n    \"O_0015\"\n  ]\n}\n",
+    "validation_errors": [],
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "code_signature": "be4152ab531b7075ba36c6b1efbfb0b30dd5f6f2294552d623a400e7e82bfa77",
+  "checkpoint_signature": "3ef6c92ab69ac604f231f51eb17aadf1d6242b5ae7ddee88160a1da9f1ad081f"
+}

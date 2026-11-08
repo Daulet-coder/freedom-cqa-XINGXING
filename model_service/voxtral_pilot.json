@@ -1,0 +1,11 @@
+{
+  "conversation_id": "p4-ru-001",
+  "model": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+  "duration_seconds": 30.0,
+  "text": " Salim et Tibia, Freedom Broker Gokushkeldinges. Здравствуйте. Добро пожаловать во Freedom Broker. Тазахталин тандаушин бердебасынгэс. Для выбора русского языка нажмите 2. По услугам Freedom Bank, кредиты, цифровая ипотека, обслуживание карт, нажмите 1. Чтобы получить ссылку на раздел часто задаваемой вопросы и информацию о курсах Академии в WhatsApp, нажмите 2.",
+  "audio_sha256": "7fb1091a64b9275b0f76414b0937396adadb9d22cec390dc3fe3936a92565fa4",
+  "affects_score": false,
+  "review_required": true,
+  "provenance": "Recovered verbatim from observed Kaggle inference output",
+  "review_note": "IVR segment; does not evaluate the human operator or establish CQA improvement"
+}

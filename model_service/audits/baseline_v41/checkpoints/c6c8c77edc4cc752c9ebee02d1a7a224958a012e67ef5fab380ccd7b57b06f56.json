@@ -1,0 +1,177 @@
+{
+  "fingerprint": "c6c8c77edc4cc752c9ebee02d1a7a224958a012e67ef5fab380ccd7b57b06f56",
+  "result": {
+    "conversation_id": "p1-ru-010",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          11
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент уже предоставил достаточно информации о проблеме с отображением позиции в портфеле.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": true,
+        "rationale": "Подтверждение личности клиента найдено до защищенного действия.",
+        "evidence_turns": [
+          1,
+          15
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно идентифицировал канал (приложение), объяснил разницу между поиском и портфелем, дал инструкцию по скачиванию отчета и уточнил период сверки, но не ответил на вопрос клиента о том, что делать, если бумага появится снова (хотя клиент сам предложил решение и согласился с ним, оператор не подтвердил этот план явно как следующий шаг, ограничившись добавлением к вопросу).",
+        "evidence_turns": [
+          11,
+          12,
+          16,
+          20,
+          21,
+          25,
+          26,
+          29
+        ],
+        "value": 15
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Оператор явно выразил понимание проблемы клиента в первом же обращении после эскалации, отметив, что пропавшая строка беспокоит, что соответствует требованию реагировать на конкретную трудность.",
+        "evidence_turns": [
+          11
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор четко структурировал действия (идентификация, уточнение контекста, инструкция по отчету, план проверки), клиент последовательно выполнял шаги и задавал уточняющие вопросы, на которые получали исчерпывающие ответы.",
+        "evidence_turns": [
+          11,
+          13,
+          16,
+          21,
+          28,
+          30
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": true,
+        "rationale": "Найдены итог/дальнейшая помощь и прощание оператора.",
+        "evidence_turns": [
+          30,
+          32
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В ходе диалога не зафиксировано оскорблений, попыток продажи платных услуг в обход компании или утечки конфиденциальной информации.",
+        "evidence_turns": [
+          11,
+          13,
+          16,
+          19,
+          21,
+          23,
+          26,
+          28,
+          30,
+          32
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 94.12,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "ACCOUNT_SPECIFIC",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент уже предоставил достаточно информации о проблеме с отображением позиции в портфеле.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 30,
+          "closing_reason": "Оператор предлагает сообщить в чат, если бумага снова появится, и подтверждает передачу вопроса специалистам.",
+          "request_quote": "В портфеле не вижу бумагу, которую раньше там видел. Сделок не делал.",
+          "clarification_quote": "",
+          "closing_quote": "Сообщите в этом чате, что строка снова появилась. Я добавлю это к вопросу о её отображении."
+        },
+        "raw": "{\n  \"request_kind\": \"ACCOUNT_SPECIFIC\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент уже предоставил достаточно информации о проблеме с отображением позиции в портфеле.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 30,\n  \"closing_reason\": \"Оператор предлагает сообщить в чат, если бумага снова появится, и подтверждает передачу вопроса специалистам.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [
+            15
+          ],
+          "farewell_turns": [
+            32
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Сообщите в этом чате, что строка снова появилась. Я добавлю это к вопросу о её отображении."
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Оператор явно выразил понимание проблемы клиента в первом же обращении после эскалации, отметив, что пропавшая строка беспокоит, что соответствует требованию реагировать на конкретную трудность.\",\n    \"evidence_turns\": [11],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор четко структурировал действия (идентификация, уточнение контекста, инструкция по отчету, план проверки), клиент последовательно выполнял шаги и задавал уточняющие вопросы, на которые получали исчерпывающие ответы.\",\n    \"evidence_turns\": [11, 13, 16, 21, 28, 30],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В ходе диалога не зафиксировано оскорблений, попыток продажи платных услуг в обход компании или утечки конфиденциальной информации.\",\n    \"evidence_turns\": [],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [
+          {
+            "criterion": "critical",
+            "field": "evidence_turns",
+            "action": "scope negative finding to all original operator turns"
+          }
+        ],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно идентифицировал канал (приложение), объяснил разницу между поиском и портфелем, дал инструкцию по скачиванию отчета и уточнил период сверки, но не ответил на вопрос клиента о том, что делать, если бумага появится снова (хотя клиент сам предложил решение и согласился с ним, оператор не подтвердил этот план явно как следующий шаг, ограничившись добавлением к вопросу).\",\n    \"evidence_turns\": [11, 12, 16, 20, 21, 25, 26, 29],\n    \"value\": 15\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "11": "",
+        "13": "",
+        "16": "",
+        "19": "",
+        "21": "",
+        "23": "",
+        "26": "",
+        "28": "",
+        "30": "",
+        "32": ""
+      },
+      "planning": {
+        "status": "ok",
+        "raw": "{\"queries\":[{\"turn\":11,\"query\":\"\"},{\"turn\":13,\"query\":\"\"},{\"turn\":16,\"query\":\"\"},{\"turn\":19,\"query\":\"\"},{\"turn\":21,\"query\":\"\"},{\"turn\":23,\"query\":\"\"},{\"turn\":26,\"query\":\"\"},{\"turn\":28,\"query\":\"\"},{\"turn\":30,\"query\":\"\"},{\"turn\":32,\"query\":\"\"}]}\n",
+        "errors": []
+      },
+      "ranked_by_turn": {},
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [],
+    "elapsed_seconds": 73.95,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}

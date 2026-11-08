@@ -1,0 +1,363 @@
+{
+  "fingerprint": "aa06696d1f577d461fae99085bbde6aed216598e6cd8e3409e7ca20df9ae48b2",
+  "result": {
+    "conversation_id": "p1-en-003",
+    "status": "ok",
+    "criteria": [
+      {
+        "criterion_id": "contact",
+        "value": true,
+        "rationale": "В первой реплике оператора проверены приветствие на языке клиента и представление.",
+        "evidence_turns": [
+          10
+        ]
+      },
+      {
+        "criterion_id": "discovery",
+        "value": null,
+        "rationale": "Клиент указал, что использует веб-сайт, что достаточно для ответа.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "identification",
+        "value": null,
+        "rationale": "Общая инструкция не требует идентификации.",
+        "evidence_turns": [
+          1
+        ]
+      },
+      {
+        "criterion_id": "consultation",
+        "rationale": "Оператор корректно передал запрос клиента на поиск текущего тарифа, указав конкретное место в интерфейсе («Кабинет» → под именем), что полностью закрыло потребность клиента без необходимости скачивания отчета.",
+        "evidence_turns": [
+          1,
+          5,
+          10,
+          11
+        ],
+        "value": 20
+      },
+      {
+        "criterion_id": "empathy",
+        "rationale": "Клиент явно выразил недовольство необходимостью скачивания отчета (turn 5), и оператор сразу предложил альтернативу — открыть раздел в интерфейсе, что является реакцией на неудобство.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": true
+      },
+      {
+        "criterion_id": "dialogue",
+        "rationale": "Диалог логичен и последователен: оператор четко инструктирует клиента, где найти информацию, клиент подтверждает успех, оператор завершает разговор.",
+        "evidence_turns": [
+          10,
+          11,
+          12
+        ],
+        "value": 10
+      },
+      {
+        "criterion_id": "closure",
+        "value": false,
+        "rationale": "Не найдены оба обязательных компонента: итог/дальнейшая помощь и прощание.",
+        "evidence_turns": [
+          12
+        ]
+      },
+      {
+        "criterion_id": "critical",
+        "rationale": "В разговоре отсутствуют оскорбления, попытки обхода платных услуг или утечка конфиденциальных данных.",
+        "evidence_turns": [
+          5,
+          10
+        ],
+        "value": false
+      }
+    ],
+    "score": {
+      "final_score": 92.31,
+      "critical_flag": false
+    }
+  },
+  "audit": {
+    "pipeline_version": "41",
+    "stages": {
+      "boundary_facts": {
+        "facts": {
+          "request_kind": "GENERAL_INFORMATION",
+          "request_turn": 1,
+          "first_protected_action_turn": null,
+          "missing_details_required": false,
+          "missing_details_reason": "Клиент указал, что использует веб-сайт, что достаточно для ответа.",
+          "clarified_needed_details": false,
+          "clarification_turn": null,
+          "closing_kind": "OFFER_FURTHER_HELP",
+          "closing_turn": 12,
+          "closing_reason": "Оператор предлагает помощь в будущем.",
+          "request_quote": "Where can I see my current pricing plan? I'm using the website.",
+          "clarification_quote": "",
+          "closing_quote": "Great. Thanks for reaching out, and goodbye!"
+        },
+        "raw": "{\n  \"request_kind\": \"GENERAL_INFORMATION\",\n  \"request_turn\": 1,\n  \"first_protected_action_turn\": null,\n  \"missing_details_required\": false,\n  \"missing_details_reason\": \"Клиент указал, что использует веб-сайт, что достаточно для ответа.\",\n  \"clarified_needed_details\": false,\n  \"clarification_turn\": null,\n  \"closing_kind\": \"OFFER_FURTHER_HELP\",\n  \"closing_turn\": 12,\n  \"closing_reason\": \"Оператор предлагает помощь в будущем.\"\n}\n",
+        "validation_errors": [],
+        "derived": {
+          "observed_necessary_clarifications": [],
+          "identity_confirmations": [],
+          "farewell_turns": [
+            12
+          ],
+          "interruption_turns": [],
+          "closing_quote": "Great. Thanks for reaching out, and goodbye!"
+        }
+      },
+      "communication": {
+        "raw": "{\n  \"empathy\": {\n    \"rationale\": \"Клиент явно выразил недовольство необходимостью скачивания отчета (turn 5), и оператор сразу предложил альтернативу — открыть раздел в интерфейсе, что является реакцией на неудобство.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": true\n  },\n  \"dialogue\": {\n    \"rationale\": \"Диалог логичен и последователен: оператор четко инструктирует клиента, где найти информацию, клиент подтверждает успех, оператор завершает разговор.\",\n    \"evidence_turns\": [10, 11, 12],\n    \"value\": 10\n  },\n  \"critical\": {\n    \"rationale\": \"В разговоре отсутствуют оскорбления, попытки обхода платных услуг или утечка конфиденциальных данных.\",\n    \"evidence_turns\": [5, 10],\n    \"value\": false\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      },
+      "consultation": {
+        "raw": "{\n  \"consultation\": {\n    \"rationale\": \"Оператор корректно передал запрос клиента на поиск текущего тарифа, указав конкретное место в интерфейсе («Кабинет» → под именем), что полностью закрыло потребность клиента без необходимости скачивания отчета.\",\n    \"evidence_turns\": [1, 5, 10, 11],\n    \"value\": 20\n  }\n}\n",
+        "normalizations": [],
+        "validation_errors": []
+      }
+    },
+    "rag": {
+      "plans": {
+        "10": "Hi, I'm Eva. Open the account area, labelled «Кабинет» in the Russian interface. You'll see your plan under your name.",
+        "12": "Great. Thanks for reaching out, and goodbye!"
+      },
+      "planning": {
+        "status": "grounded_fallback",
+        "errors": [
+          "Query count mismatch",
+          "Query count mismatch"
+        ]
+      },
+      "ranked_by_turn": {
+        "10": [
+          {
+            "document_id": "21eb5233780662ab",
+            "title": "Как узнать свой тариф?",
+            "url": "https://fbroker.kz/faq/question/how-to-find-out-your-tariff-2709",
+            "score": 0.026838432635534086,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 9,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 0.7797698974609375
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 21,
+                "chunk_id": "5bc916b36d0d5a2a1d83",
+                "raw_score": 3.1747576232202777
+              }
+            ],
+            "chunk_ids": [
+              "5bc916b36d0d5a2a1d83"
+            ],
+            "rerank_score": 0.0313720703125,
+            "best_index": 65
+          },
+          {
+            "document_id": "16e44c6f28f625e6",
+            "title": "Тариф «Студенческий»",
+            "url": "https://fbroker.kz/faq/question/student-tariff",
+            "score": 0.02684684684684685,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 15,
+                "chunk_id": "386e6e424962c0d9ddff",
+                "raw_score": 0.7740383148193359
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 14,
+                "chunk_id": "302321c090398c8f00d2",
+                "raw_score": 3.6552926583682512
+              }
+            ],
+            "chunk_ids": [
+              "302321c090398c8f00d2",
+              "386e6e424962c0d9ddff"
+            ],
+            "rerank_score": 0.0026531219482421875,
+            "best_index": 40
+          },
+          {
+            "document_id": "27ccb13408e91260",
+            "title": "Как изменить тариф?",
+            "url": "https://fbroker.kz/faq/question/how-to-change-the-tariff-",
+            "score": 0.02878726010616578,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 2,
+                "chunk_id": "3767585b16f1af8c34f8",
+                "raw_score": 0.7908995151519775
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 19,
+                "chunk_id": "3767585b16f1af8c34f8",
+                "raw_score": 3.3716682545069436
+              }
+            ],
+            "chunk_ids": [
+              "3767585b16f1af8c34f8"
+            ],
+            "rerank_score": 0.001438140869140625,
+            "best_index": 79
+          }
+        ],
+        "12": [
+          {
+            "document_id": "6ac56ed2e652a5b0",
+            "title": "Обращение (Жалоба, Претензия, Предложение)?",
+            "url": "https://fbroker.kz/faq/question/how-to-send-an-online-request--complaint--claim--suggestion--",
+            "score": 0.01639344262295082,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 1,
+                "chunk_id": "64faeb5a43b6fd0396b8",
+                "raw_score": 0.7535576820373535
+              }
+            ],
+            "chunk_ids": [
+              "64faeb5a43b6fd0396b8"
+            ],
+            "rerank_score": 0.0006165504455566406,
+            "best_index": 225
+          },
+          {
+            "document_id": "34f02b088de94067",
+            "title": "Информационный отчет для налоговой декларации",
+            "url": "https://fbroker.kz/faq/question/tax-declaration-report",
+            "score": 0.02813852813852814,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 17,
+                "chunk_id": "cabd6a9fdd52eb34fe35",
+                "raw_score": 0.733661949634552
+              },
+              {
+                "query_index": 0,
+                "channel": "bm25",
+                "rank": 6,
+                "chunk_id": "e18fb2f1483f903e5789",
+                "raw_score": 3.74123046287195
+              }
+            ],
+            "chunk_ids": [
+              "cabd6a9fdd52eb34fe35",
+              "e18fb2f1483f903e5789"
+            ],
+            "rerank_score": 0.00014317035675048828,
+            "best_index": 115
+          },
+          {
+            "document_id": "cfd749643d4e65be",
+            "title": "Программа лояльности Freedom Broker: уровни, Nomad баллы и привилегии",
+            "url": "https://fbroker.kz/faq/question/freedom-broker-priority-loyalty-program",
+            "score": 0.015625,
+            "query_hits": [
+              {
+                "query_index": 0,
+                "channel": "dense",
+                "rank": 4,
+                "chunk_id": "77620da1ce3fe5241a11",
+                "raw_score": 0.7419347763061523
+              }
+            ],
+            "chunk_ids": [
+              "77620da1ce3fe5241a11"
+            ],
+            "rerank_score": 0.00012636184692382812,
+            "best_index": 427
+          }
+        ]
+      },
+      "retrieval_errors": [],
+      "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639"
+    },
+    "kb_candidates": [
+      {
+        "evidence_id": "5bc916b36d0d5a2a1d83",
+        "document_id": "21eb5233780662ab",
+        "title": "Как узнать свой тариф?",
+        "url": "https://fbroker.kz/faq/question/how-to-find-out-your-tariff-2709",
+        "text": "Узнать, какой тарифный план подключён к вашему брокерскому счёту, можно в мобильном приложении или веб-версии торговой платформы Freedom Broker.\nВ мобильном приложении\nАвторизуйтесь в\nмобильном приложении Freedom Broker\n.\nПерейдите в раздел «Меню» → Отчеты и документы» → «Отчеты брокера».\nНажмите «Получить отчёт», чтобы сформировать документ.\nВ веб-версии\nАвторизуйтесь в\nвеб-версии торговой платформы\n.\nПерейдите в раздел «Кабинет» → «Отчеты брокера».\nНажмите «Получить отчёт», чтобы сформировать документ.\nВ сформированном отчёте найдите раздел «Информация о счёте». В нём будет указан ваш действующий тарифный план.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "dd45d4a7458caa7819f1",
+        "document_id": "6ac56ed2e652a5b0",
+        "title": "Обращение (Жалоба, Претензия, Предложение)?",
+        "url": "https://fbroker.kz/faq/question/how-to-send-an-online-request--complaint--claim--suggestion--",
+        "text": "Как отправить обращение (жалобу, претензию или предложение)?\n\nI. Устно:\nПо короткому номеру телефона 7555\n*бесплатно с мобильных операторов Казахстана.\nПо номеру телефона +7 717 267 77 55\n*бесплатно с городских номеров Казахстана, с международных и мобильных – звонок платный.\nПри непосредственном посещении офисов Компании.\nСпециалисты поддержки постараются помочь с ситуацией сразу. Если ситуация требует проверки, мы зарегистрируем обращение, проработаем решение и сообщим вам результат позже.\n\nII. Письменно по одному из следующих каналов:\nНа сайте\nfbroker.kz\nв следующем разделе: «Ещё» → «Компания» → «Напишите нам» → Заполните специальную форму обращения;\nЧерез мобильную версию\nторговой платформы в разделах: «Меню» → «Поддержка» → «Написать в поддержку»;\n\nЧерез торговую платформу\n«Freedom Broker» в разделе: «Кабинет» → «Общение с поддержкой» → «Поддержка»;\nНа корпоративные электронные почты Компании размещенные на официальном сайте Компании. Например:\n[email protected]\n,\n[email protected]\n;\n\nНа бумажном носителе с Вашей подписью;\n\nЧерез официальные социальные сети Компании;\nInstagram:\n@fbroker.kz\n\nThreads:\n@fbroker.kz\nОбразец обращения на бумажном носителе можно скачать по ссылке:",
+        "operator_turns": [
+          12
+        ]
+      },
+      {
+        "evidence_id": "386e6e424962c0d9ddff",
+        "document_id": "16e44c6f28f625e6",
+        "title": "Тариф «Студенческий»",
+        "url": "https://fbroker.kz/faq/question/student-tariff",
+        "text": "угой стране. Главное условие — предоставить Документ, подтверждающий зачисление и/или обучение в соответствующей образовательной организации.\nГде проверить, какой Тариф подключён?\nПроверить действующий Тариф можно в платформе Freedom Broker:\nВ мобильном приложении: Меню → Поручения → Настройки счёта → Смена тарифного плана.\nВ веб-платформе: Кабинет → Тариф.\nЧто даёт Тариф кроме сниженной комиссии?\nВладельцы Тарифа также получают доступ к бесплатному обучению от Freedom Academy.\nВ программе можно изучить:\nакции;\nоблигации;\nETF;\nкриптовалюту;\nторговые платформы;\nопционы и другие темы.\nВ программу также входят курсы которые будут доступны в рамках тарифа:\nФинансовый check-up\nПуть инвестора\nОсновы финансов\nТехнический анализ Basic\nФундаментальный анализ Basic\nАзы опционной торговли\nОсновы понимания криптовалют и цифровых активов.\nМатериалы Freedom Academy носят образовательный характер и не являются инвестиционной рекомендацией.\nГде ознакомиться с полными условиями тарифа?\nПолные условия тарифа определяются Согласием на подключение Тарифного плана «Студенческий» и Программой маркетинговой Акции «Тарифный план «Студенческий»».",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "47568895e727037f9082",
+        "document_id": "34f02b088de94067",
+        "title": "Информационный отчет для налоговой декларации",
+        "url": "https://fbroker.kz/faq/question/tax-declaration-report",
+        "text": "орректировка в соответствии с пунктом 7 статьи 6 закона о МФЦА\n37936\n25\nОблагаемая сумма дохода\n42392\nСумма\n1 строка равна сумме строк 2 и 9\n2 строка равна сумме строк 3, 6, 7 и 8\n3 строка равна сумме строк 4 и 5\n9 строка равна сумме строк 10 и 13\n10 строка равна сумме 11 и 12\n14 строка равна строке 15\n15 строка равна сумме строке 16, 17 и 18\n19 строка равна сумме строк 1 и 14\n21 строка равна сумме строк 22, 23, 24\n25 строка равна разнице между строками 19 и 21\nДоход от реализации имущества, находящегося на территории Республики Казахстан, в том числе:Доход от прироста стоимости льготируемых ЦБ\nЗначение берётся из колонки\n\"Доход/Убыток в декларацию KZT\"\nлиста\n\"Купля-продажа ЦБ\"\nпо типу льготируемости 1.\nДоход от прироста стоимости нельготируемых ЦБ\nЗначение берётся из колонки\n\"Доход/Убыток в декларацию KZT\"\nлиста\n\"Купля-продажа ЦБ\"\nпо типу льготируемости 3.\nДоход от реализации имущества, находящегося за пределами Республики Казахстан:Доход от прироста стоимости льготируемых ЦБ\nЗначение берётся из колонки\n\"Доход/Убыток в декларацию KZT\"\nлиста\n\"Купля-продажа ЦБ\"\nпо типу льготируемости 2.\nДоход от прироста стоимости нельготируемых ЦБ\nЗначение берётся из колонки",
+        "operator_turns": [
+          12
+        ]
+      },
+      {
+        "evidence_id": "3767585b16f1af8c34f8",
+        "document_id": "27ccb13408e91260",
+        "title": "Как изменить тариф?",
+        "url": "https://fbroker.kz/faq/question/how-to-change-the-tariff-",
+        "text": "Важно! Подача поручения на изменение тарифного плана осуществляется исключительно через торговый счёт. Инструкцию по выбору счёта вы найдёте в\nстатье\n.\nВы можете подать поручение на смену тарифного плана самостоятельно.\nна сайте платформы\nFreedom Broker\nв разделе «Кабинет - Поручения - Настройки счета - Смена тарифного плана»;\nв мобильном приложении\nFreedom Broker\nв разделе «Меню - Поручения - Настройки счета - Смена тарифного плана».\nПосле исполнения поручения новый тарифный план начнет действовать со следующего рабочего дня.",
+        "operator_turns": [
+          10
+        ]
+      },
+      {
+        "evidence_id": "77620da1ce3fe5241a11",
+        "document_id": "cfd749643d4e65be",
+        "title": "Программа лояльности Freedom Broker: уровни, Nomad баллы и привилегии",
+        "url": "https://fbroker.kz/faq/question/freedom-broker-priority-loyalty-program",
+        "text": "на сайте Freedom Broker.\nУказать:\n• номер телефона\n• брокерский счет\n• рейс и дату\nПодтвердить заявку по SMS.\nДождаться подтверждения.\nБез подтвержденной заявки доступ невозможен.\nКомпенсация в Яндекс Go\nДоступно только для уровня Priority (портфель от $300 000).\nЛимит:\nдо 20 000 KZT в месяц.\nЧто оплачивается:\nпоездки на такси в Казахстане;\nтолько через бизнес-аккаунт Freedom Broker.\nКак подключить:\nОткрыть Яндекс Go.\nПерейти в «Способы оплаты».\nВыбрать Freedom Broker.\nНомер телефона должен быть привязан к брокерскому счету.\nПрограмма Priority\nКлиенты с активами от $300 000 получают:\nперсонального менеджера;\nмаксимальное начисление Nomad баллов;\nVIP Lounge и Meet & Assist;\nкомпенсацию Яндекс Go;\nприглашения на закрытые мероприятия.\nПосле подключения менеджер связывается с клиентом и помогает активировать услуги.\nСрок действия привилегий\nПривилегии пересматриваются ежемесячно и зависят от актуального уровня.\nЕсли активы снижаются или повышаются, уровень участия может быть изменен.\nГде узнать подробнее?\nПодробнее о программе по ссылке:\nfbroker.kz/products/loyalty\nПодробнее о Nomad баллах по ссылке:\nfbroker.kz/products/nomadclub",
+        "operator_turns": [
+          12
+        ]
+      }
+    ],
+    "elapsed_seconds": 59.49,
+    "label_provenance": "model_generated_unreviewed"
+  },
+  "label_provenance": "model_generated_unreviewed"
+}
