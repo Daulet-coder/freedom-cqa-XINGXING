@@ -28,6 +28,17 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Freedom: модель 43.1 на Mac",
+      "type": "shell",
+      "command": "./start_model_mac431.command",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }

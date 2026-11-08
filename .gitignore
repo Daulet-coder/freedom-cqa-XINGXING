@@ -16,3 +16,5 @@ results/**/results.backup-*.json
 *.log
 .env
 .DS_Store
+
+.venv-model-mac/

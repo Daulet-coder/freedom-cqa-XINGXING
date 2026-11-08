@@ -9,7 +9,8 @@
     "cqa_engine.py": "95d87f05b129785b9d329cb6bd1e198838c42bb616ac5a7556c5ca6c32e9b41f",
     "ollama_service.py": "427ba0167362bc9f38cfc46a2848d33ac26e9db8f74d3874d9e74136a67dae9d",
     "attention_t4.py": "9e9f35db46a94b698c381683d9a80c8bd2984a0b2308a430ad6ba38fa5179c4f",
-    "audio.py": "70ce149cc598b94785ee117a202f5a8efead4e8da29c704572de4e232931383c"
+    "audio.py": "70ce149cc598b94785ee117a202f5a8efead4e8da29c704572de4e232931383c",
+    "ollama431_service.py": "3155db176699892ee83eb2f383f0795473f96aa552fe5f665dde961feae5777d"
   },
   "checkpoint": {
     "base_model": "Qwen/Qwen3.5-9B",
