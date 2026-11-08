@@ -20,3 +20,6 @@ results/**/results.backup-*.json
 .venv-model-mac/
 
 data/private_control/
+
+# Personal presentation guide stays local
+docs/Freedom_CQA_Presentation_Handbook.pdf

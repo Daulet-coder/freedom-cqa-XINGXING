@@ -4,7 +4,7 @@
 
 **Диалог → обоснованная оценка → проверка → апелляция → результат.**
 
-[PDF-гайд: архитектура и презентация](docs/Freedom_CQA_Presentation_Handbook.pdf) · [Сценарий презентации](docs/PRESENTATION.md) · [Интеграция модели](MODEL_INTEGRATION.md) · [Пример импорта](docs/presentation-practice.json)
+[Сценарий презентации](docs/PRESENTATION.md) · [Интеграция модели](MODEL_INTEGRATION.md) · [Пример импорта](docs/presentation-practice.json)
 
 Локальное приложение для анализа качества разговоров: React 18, FastAPI, SQLite. Интерфейс в символике Freedom, без регистрации. Оригинальные транскрипты RU/KZ/EN и номера реплик сохраняются.
 
