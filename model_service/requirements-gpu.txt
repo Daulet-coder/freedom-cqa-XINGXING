@@ -1,0 +1,11 @@
+# Install the CUDA build of torch appropriate for the GPU host first.
+transformers==5.20.2
+accelerate==1.15.0
+bitsandbytes==0.50.2
+sentence-transformers==5.7.0
+numpy==2.1.3
+safetensors==0.8.0
+tokenizers==0.23.3
+soundfile
+scipy
+mistral-common==1.13.1

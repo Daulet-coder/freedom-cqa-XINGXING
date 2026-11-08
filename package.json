@@ -1,0 +1,9 @@
+{
+  "name": "freedom-cqa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Freedom conversation quality workspace: React, FastAPI and Qwen",
+  "scripts": {
+    "build": "node build.cjs"
+  }
+}

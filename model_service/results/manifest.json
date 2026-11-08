@@ -1,0 +1,364 @@
+{
+  "p1-ru-001": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-002": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-003": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-004": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-005": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-006": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-007": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "312a8af2365d103ebea5af3ec81e6baabbab3291f5a8192cf53327c5570b7e15.json"
+  },
+  "p1-ru-008": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-009": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-010": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-011": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-012": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "3ea1443605fdea7abb320e68e12c5d18f26abd4446ab329e81cc50e4dacad162.json"
+  },
+  "p1-ru-013": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-014": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-015": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-016": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-017": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-018": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-019": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-020": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-021": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-022": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-023": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-024": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-025": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": [
+      {
+        "criterion_id": "consultation",
+        "from": 0,
+        "to": null,
+        "reason": "No substantive client request formulated"
+      }
+    ]
+  },
+  "p1-ru-026": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-027": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-028": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-029": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-ru-030": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-001": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "9d055151b7a17eaa2f157aa34b2e06751d8c43b7916095401f69f7a745a71914.json"
+  },
+  "p1-kz-002": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-003": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-004": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-005": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-006": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-007": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-008": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "e648297b0ca123b9c3f55e99d6b90d4eab323690f8772bdc1ad9ac4a65f25a23.json"
+  },
+  "p1-kz-009": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-010": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "1b5fd90207ce7e36b115dc4facbff2eedcdeaa66a76b75e60426cee834ac3f13.json"
+  },
+  "p1-kz-011": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-012": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-013": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-014": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-kz-015": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-001": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-002": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-003": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-004": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-005": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-006": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-007": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "c357afd9d3097456b59b0f1c615d1de77d679eaf68a01ba46d8c2868b04222df.json"
+  },
+  "p1-en-008": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-009": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-010": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-011": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-012": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-013": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-014": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p1-en-015": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p4-ru-003": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "c17f88c0f3b861d92f129748df7fe62bf96df1baf67cfedfa4d3c237c6184bde.json"
+  },
+  "p4-ru-002": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "220daeb6b4938c9f9f58d9f9d9ac92d1e21e3152ff91ba039833d070fdbece89.json"
+  },
+  "p4-ru-001": {
+    "baseline_pipeline": "41",
+    "baseline_status": "ok",
+    "deterministic_adjustments": []
+  },
+  "p4-ru-005": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "5e6525784113619a569393b54c3212ac9651365c50f76d675127d66931bf9be6.json"
+  },
+  "p4-ru-004": {
+    "baseline_pipeline": "41",
+    "baseline_status": "error",
+    "deterministic_adjustments": [],
+    "repair_pipeline": "42",
+    "repair_status": "ok",
+    "repair_checkpoint": "3d823f26d12dc0118eac6a9dfd5f6b6de081a3065129592daa6787a83cd36135.json"
+  }
+}

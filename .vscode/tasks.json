@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Freedom: запуск",
+      "type": "shell",
+      "command": "./start.command",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Freedom: проверки",
+      "type": "shell",
+      "command": ".venv/bin/python -m unittest discover -s tests -v",
+      "problemMatcher": []
+    },
+    {
+      "label": "Freedom: модель на Mac",
+      "type": "shell",
+      "command": "./start_model_mac.command",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

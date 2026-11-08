@@ -1,0 +1,9 @@
+{
+  "corpus_hash": "d63b37fdfb7334e47a29ed8c46932b2518ee47c57362ef5ad196a44f52257639",
+  "chunks": 530,
+  "embedding_model": "intfloat/multilingual-e5-base",
+  "query_prefix": "query: ",
+  "passage_prefix": "passage: ",
+  "dimension": 768,
+  "exported_at": "2026-11-07T17:25:19.405784+00:00"
+}

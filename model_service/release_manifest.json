@@ -1,0 +1,64 @@
+{
+  "runtime_files_sha256": {
+    "worker.py": "4328cb33cada17fef08b8d170ed96dde5d83c014408ef42c4da2af8089dc8af8",
+    "cqa_runtime.py": "fc072f1fdff219b1a65a2ff4982e262682ebc1e6ee0d1f56bf8ec93b5e9fc702",
+    "service.py": "03d3e94b0f4cf7bc5cbd20326faf3c14c20fc0c8540b9c350e7a05ca4fe75661",
+    "checkpoint.py": "f50a10ea69ef8ea1a039ebadad978c08f0e672165c5624ba60850e8cb0a6a006",
+    "import_freedom_results.py": "2068aadade73042397a14ae760308805993e12786d75074c439072ce21df0e97",
+    "cqa_engine.py": "3ec31bf8d01f876feb391894b7ae2403e0e005d43f0f9e01e9d0c0625b4e15e5",
+    "attention_t4.py": "9e9f35db46a94b698c381683d9a80c8bd2984a0b2308a430ad6ba38fa5179c4f",
+    "audio.py": "70ce149cc598b94785ee117a202f5a8efead4e8da29c704572de4e232931383c"
+  },
+  "checkpoint": {
+    "base_model": "Qwen/Qwen3.5-9B",
+    "revision": null,
+    "training_status": "base_weights_not_finetuned",
+    "quantization": "bitsandbytes NF4 double quantization; fp16 compute",
+    "pipeline_version": "42",
+    "qlora": "excluded_by_user",
+    "files": {
+      "chat_template.jinja": {
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      "config.json": {
+        "bytes": 2427,
+        "sha256": "faf31f1d76c3b1533305b36abae30368e5167e8e434f61c0806257d9b550313a"
+      },
+      "generation_config.json": {
+        "bytes": 116,
+        "sha256": "e1b6129cc934dbc0a6e8f5fbc279e69cbc50d116a92ceb843db9caa68d40ffd0"
+      },
+      "model-00001-of-00004.safetensors": {
+        "bytes": 2034237568,
+        "sha256": "e6310d67ab0a292411cb45663bb852d9e63b405ed1902865291fd184cda60093"
+      },
+      "model-00002-of-00004.safetensors": {
+        "bytes": 2034237592,
+        "sha256": "eb4573dda708de9fb2dbf4c1cac0e5c241de00dd41d5bc461b5763f718bc8eea"
+      },
+      "model-00003-of-00004.safetensors": {
+        "bytes": 1985367458,
+        "sha256": "0a65b654085c7084f277cb43c6f92c59aa1766a4e41ac4b3f22243e47da5b19b"
+      },
+      "model-00004-of-00004.safetensors": {
+        "bytes": 1586334192,
+        "sha256": "1d5774c61fb1467178641abdad875b9e5df8e177718a3567e7767c9248458fb1"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 183885,
+        "sha256": "17656499c3b5e89ba5d01ae2ee7030acfa1851b886def7924ec6f5ee858c92a1"
+      },
+      "tokenizer.json": {
+        "bytes": 19989339,
+        "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f"
+      },
+      "tokenizer_config.json": {
+        "bytes": 1466,
+        "sha256": "f6fdf337c2c5f4ed8190168a772c83f5c9364d225abae63223fde372e3cfb71f"
+      }
+    }
+  },
+  "training_status": "base_weights_not_finetuned",
+  "qlora": "excluded_by_user"
+}

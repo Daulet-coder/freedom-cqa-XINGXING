@@ -1,0 +1,4 @@
+React and ReactDOM 18.3.1, copyright Meta Platforms, Inc. and affiliates, MIT license.
+Babel standalone 7.26.4, copyright Sebastian McKenzie and other contributors, MIT license.
+Downloaded from the npm package distribution on unpkg.com. Original license headers are preserved.
+React UMD bundles run offline; Babel is used only by build.cjs.
