@@ -18,3 +18,5 @@ results/**/results.backup-*.json
 .DS_Store
 
 .venv-model-mac/
+
+data/private_control/
