@@ -44,7 +44,7 @@ GGUF и NF4 используют разные генераторы и квант
 
 ## Приватный репозиторий
 
-Исходники: [Daulet-coder/freedom-cqa](https://github.com/Daulet-coder/freedom-cqa). HTML, JSX, CSS, готовый JS, API, helpers, model runtime, тесты, FAQ и результаты включены. Исключены веса, окружения, рабочая SQLite, аудиоссылки с секретными параметрами и локальная авторизация.
+Исходники: [Daulet-coder/freedom-cqa-XINGXING](https://github.com/Daulet-coder/freedom-cqa-XINGXING). HTML, JSX, CSS, готовый JS, API, helpers, model runtime, тесты, FAQ и результаты включены. Исключены веса, окружения, рабочая SQLite, аудиоссылки с секретными параметрами и локальная авторизация.
 
 `data/dev_dataset.public.json` содержит те же 65 исходных транскриптов с `audio_url: null`. Локально при наличии используется оригинальный `data/dev_dataset.json`. Можно задать `CQA_DATASET_PATH` до первого запуска; секретные ссылки не коммитить. На чистой установке для просмотра результатов импортируйте `model_service/results/results.json` через интерфейс (официальный чек-лист уже установлен).
 
